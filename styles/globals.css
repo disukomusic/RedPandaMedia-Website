@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: CorpRound, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -13,6 +13,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'CorpRound';
+  src: url('https://download1525.mediafire.com/jstir6ozm9bg/ex21dzxza0vq1ks/corp_round_v1.woff2') format('woff2'), url('https://download1349.mediafire.com/w5nzu5mj3oig/rbsgbeuoz3pjxlt/corp_round_v1.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 @media (prefers-color-scheme: dark) {
