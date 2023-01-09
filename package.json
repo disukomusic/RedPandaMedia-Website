@@ -9,7 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@plasmicapp/cli": "^0.1.190",
+    "@plasmicapp/host": "^1.0.92",
     "@plasmicapp/loader-nextjs": "^1.0.201",
+    "@plasmicapp/react-web": "^0.2.136",
+    "@plasmicpkgs/plasmic-basic-components": "^0.0.99",
+    "@plasmicpkgs/react-awesome-reveal": "^3.8.92",
+    "@plasmicpkgs/react-parallax-tilt": "^0.0.90",
+    "@plasmicpkgs/react-twitter-widgets": "^0.0.89",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
