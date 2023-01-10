@@ -164,9 +164,9 @@ function PlasmicAboutUs__RenderFunc(props: {
                 displayMinWidth={"0" as const}
                 displayWidth={"100%" as const}
                 src={{
-                  src: "/plasmic/red_panda_media_website/images/rpmLogopng2.png",
-                  fullWidth: 2018,
-                  fullHeight: 320,
+                  src: "/plasmic/red_panda_media_website/images/rpsLogopng.png",
+                  fullWidth: 1266,
+                  fullHeight: 269,
                   aspectRatio: undefined
                 }}
               />

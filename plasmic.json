@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "public-files",
@@ -53,7 +53,8 @@
           "name": "DataProvider",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "szjgMQpPpxhmkjnaBvZQJG",
@@ -72,7 +73,8 @@
           "name": "Tilt",
           "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
@@ -91,7 +93,8 @@
           "name": "Reveal",
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "itBdcjth19Wasd6ngAYxWR",
@@ -120,7 +123,8 @@
           "name": "FollowWrapper",
           "componentImportPath": "@plasmicpkgs/react-twitter-widgets"
         }
-      ]
+      ],
+      "jsBundleThemes": []
     },
     {
       "projectId": "nazLgTEW7V6FTXLkGvtboX",
@@ -346,6 +350,11 @@
           "id": "yItoIp7uj",
           "name": "comic book.png 2",
           "filePath": "../public/plasmic/red_panda_media_website/images/comicBookpng2.png"
+        },
+        {
+          "id": "B_iCN18sO",
+          "name": "RPS Logo.png",
+          "filePath": "../public/plasmic/red_panda_media_website/images/rpsLogopng.png"
         }
       ],
       "indirect": false,
