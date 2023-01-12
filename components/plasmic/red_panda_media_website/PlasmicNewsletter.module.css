@@ -436,9 +436,8 @@
   color: var(--token-SHJKjXj3_);
   font-family: "Arial Rounded MT";
   background: #ffffff;
-  height: 494px;
-  width: 1018px;
-  flex-shrink: 0;
+  height: auto;
+  width: auto;
   border-radius: 15px;
   padding: 10px;
   margin: 10px;
