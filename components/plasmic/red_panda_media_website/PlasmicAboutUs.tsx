@@ -1339,7 +1339,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{ color: "#F47D31" }}
                       >
-                        {"Our Partners"}
+                        {"Our Friends"}
                       </span>
                     </React.Fragment>
                   </h4>
@@ -1425,7 +1425,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                                       sty.text__kQoFu
                                     )}
                                   >
-                                    {"BLACK CRYSTAL STUDIOS"}
+                                    {"BCS"}
                                   </div>
                                 </div>
 
@@ -1856,7 +1856,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                                       sty.text__wVkpe
                                     )}
                                   >
-                                    {""}
+                                    {"FreeSpvce"}
                                   </div>
                                 </div>
 
