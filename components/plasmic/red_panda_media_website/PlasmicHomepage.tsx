@@ -67,6 +67,8 @@ export type PlasmicHomepage__OverridesType = {
   button?: p.Flex<"button">;
   button2?: p.Flex<typeof Button2>;
   timeline?: p.Flex<typeof TimelineWrapper>;
+  microcosm?: p.Flex<"div">;
+  eggRanger?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -76,7 +78,7 @@ const __wrapUserFunction =
 const __wrapUserPromise =
   globalThis.__PlasmicWrapUserPromise ??
   (async (loc, promise) => {
-    await promise;
+    return await promise;
   });
 
 function PlasmicHomepage__RenderFunc(props: {
@@ -144,6 +146,7 @@ function PlasmicHomepage__RenderFunc(props: {
           name="twitter:image"
           content={PlasmicHomepage.pageMetadata.ogImageSrc}
         />
+        <link ref="canonical" href={PlasmicHomepage.pageMetadata.canonical} />
       </Head>
 
       <style>{`
@@ -437,7 +440,9 @@ function PlasmicHomepage__RenderFunc(props: {
 
                 <div className={classNames(projectcss.all, sty.columns__f6WLu)}>
                   <div
-                    className={classNames(projectcss.all, sty.column__l0V33)}
+                    data-plasmic-name={"microcosm"}
+                    data-plasmic-override={overrides.microcosm}
+                    className={classNames(projectcss.all, sty.microcosm)}
                   >
                     <Tilt
                       className={classNames("__wab_instance", sty.tilt__rl9Eo)}
@@ -512,7 +517,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   </div>
 
                   <div
-                    className={classNames(projectcss.all, sty.column__oe3Pc)}
+                    data-plasmic-name={"eggRanger"}
+                    data-plasmic-override={overrides.eggRanger}
+                    className={classNames(projectcss.all, sty.eggRanger)}
                   >
                     <Tilt
                       className={classNames("__wab_instance", sty.tilt__dJgQx)}
@@ -625,7 +632,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link___4Fhva
                     )}
                     component={Link}
-                    href={"https://twitter.com/RedPandaStudio2" as const}
+                    href={"https://twitter.com/RedPandaMedia" as const}
                     platform={"nextjs"}
                   >
                     <div
@@ -720,11 +727,21 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navBar", "button", "button2", "timeline"],
+  root: [
+    "root",
+    "navBar",
+    "button",
+    "button2",
+    "timeline",
+    "microcosm",
+    "eggRanger"
+  ],
   navBar: ["navBar", "button", "button2"],
   button: ["button"],
   button2: ["button2"],
-  timeline: ["timeline"]
+  timeline: ["timeline"],
+  microcosm: ["microcosm"],
+  eggRanger: ["eggRanger"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -735,6 +752,8 @@ type NodeDefaultElementType = {
   button: "button";
   button2: typeof Button2;
   timeline: typeof TimelineWrapper;
+  microcosm: "div";
+  eggRanger: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -802,6 +821,8 @@ export const PlasmicHomepage = Object.assign(
     button: makeNodeComponent("button"),
     button2: makeNodeComponent("button2"),
     timeline: makeNodeComponent("timeline"),
+    microcosm: makeNodeComponent("microcosm"),
+    eggRanger: makeNodeComponent("eggRanger"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
@@ -810,10 +831,11 @@ export const PlasmicHomepage = Object.assign(
     // Page metadata
     pageMetadata: {
       title: "Home 🐾",
-      description: "~Red Panda Media~\nDigital Artist Collective",
+      description:
+        "~Red Panda Media~\nGames, Music, Comics\nDigital Artist Collective",
       ogImageSrc:
-        "https://site-assets.plasmic.app/42b2189cce0d9e57085eb28199de32f8.jpg",
-      canonical: ""
+        "https://site-assets.plasmic.app/d58a47bfe90ae5acd650ca29bcce987f.png",
+      canonical: "https://redpandamedia.net"
     }
   }
 );

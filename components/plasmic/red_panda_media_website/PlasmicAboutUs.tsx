@@ -76,7 +76,7 @@ const __wrapUserFunction =
 const __wrapUserPromise =
   globalThis.__PlasmicWrapUserPromise ??
   (async (loc, promise) => {
-    await promise;
+    return await promise;
   });
 
 function PlasmicAboutUs__RenderFunc(props: {
@@ -107,7 +107,7 @@ function PlasmicAboutUs__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">{PlasmicAboutUs.pageMetadata.title}</title>
         <meta
           key="og:title"
@@ -119,6 +119,32 @@ function PlasmicAboutUs__RenderFunc(props: {
           name="twitter:title"
           content={PlasmicAboutUs.pageMetadata.title}
         />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicAboutUs.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicAboutUs.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicAboutUs.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicAboutUs.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicAboutUs.pageMetadata.ogImageSrc}
+        />
+        <link ref="canonical" href={PlasmicAboutUs.pageMetadata.canonical} />
       </Head>
 
       <style>{`
@@ -426,6 +452,40 @@ function PlasmicAboutUs__RenderFunc(props: {
             </div>
 
             <div className={classNames(projectcss.all, sty.column__wESyh)}>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__tkLtG
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>{""}</React.Fragment>
+                  {
+                    <h4
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h4,
+                        projectcss.__wab_text,
+                        sty.h4__mOt6H
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#F47D31" }}
+                        >
+                          {"Our Team"}
+                        </span>
+                      </React.Fragment>
+                    </h4>
+                  }
+                  <React.Fragment>{""}</React.Fragment>
+                </React.Fragment>
+              </div>
+
               {true ? (
                 <p.Stack
                   as={"div"}
@@ -473,7 +533,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                                   sty.text__anFih
                                 )}
                               >
-                                {"RPM Identification Card "}
+                                {"RPS Identification Card "}
                               </div>
 
                               <div
@@ -499,9 +559,9 @@ function PlasmicAboutUs__RenderFunc(props: {
                                     displayWidth={"119px" as const}
                                     loading={"lazy" as const}
                                     src={{
-                                      src: "/plasmic/red_panda_media_website/images/disukopng.png",
-                                      fullWidth: 3000,
-                                      fullHeight: 3000,
+                                      src: "/plasmic/red_panda_studios_website/images/logo2023Png.png",
+                                      fullWidth: 2000,
+                                      fullHeight: 2000,
                                       aspectRatio: undefined
                                     }}
                                   />
@@ -541,12 +601,10 @@ function PlasmicAboutUs__RenderFunc(props: {
                                             sty.h5__yvsFx
                                           )}
                                         >
-                                          {"DISUKO A. MUSIC"}
+                                          {"DISUKO"}
                                         </h5>
                                       }
-                                      <React.Fragment>
-                                        {"1021 KAWAII ST.\nEARTH, PROBABLY"}
-                                      </React.Fragment>
+                                      <React.Fragment>{""}</React.Fragment>
                                     </React.Fragment>
                                   </div>
 
@@ -679,7 +737,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                                 sty.text__fwFTl
                               )}
                             >
-                              {"RPM Identification Card "}
+                              {"RPS Identification Card "}
                             </div>
 
                             <div
@@ -750,9 +808,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                                         {"VOID RED"}
                                       </h5>
                                     }
-                                    <React.Fragment>
-                                      {"829 B. GUNNI AVE\nMIDMERICA"}
-                                    </React.Fragment>
+                                    <React.Fragment>{""}</React.Fragment>
                                   </React.Fragment>
                                 </div>
 
@@ -883,7 +939,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                                 sty.text__vrt5X
                               )}
                             >
-                              {"RPM Identification Card "}
+                              {"RPS Identification Card "}
                             </div>
 
                             <div
@@ -954,9 +1010,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                                         {"MIDNIGHT SYNTAX"}
                                       </h5>
                                     }
-                                    <React.Fragment>
-                                      {"177013 N. HEN BLVD \nOHIO (HELL)"}
-                                    </React.Fragment>
+                                    <React.Fragment>{""}</React.Fragment>
                                   </React.Fragment>
                                 </div>
 
@@ -1090,7 +1144,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                                 sty.text__mLI5
                               )}
                             >
-                              {"RPM Identification Card "}
+                              {"RPS Identification Card "}
                             </div>
 
                             <div
@@ -1116,9 +1170,9 @@ function PlasmicAboutUs__RenderFunc(props: {
                                   displayWidth={"119px" as const}
                                   loading={"lazy" as const}
                                   src={{
-                                    src: "/plasmic/red_panda_media_website/images/_0X9Headshotjpg2.jpeg",
-                                    fullWidth: 512,
-                                    fullHeight: 512,
+                                    src: "/plasmic/red_panda_studios_website/images/_0X9Logojpg.jpeg",
+                                    fullWidth: 1000,
+                                    fullHeight: 1000,
                                     aspectRatio: undefined
                                   }}
                                 />
@@ -1161,9 +1215,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                                         {"0X9"}
                                       </h5>
                                     }
-                                    <React.Fragment>
-                                      {"727 W. YOOSEIT DR\nTRIANGULUM CLUSTER"}
-                                    </React.Fragment>
+                                    <React.Fragment>{""}</React.Fragment>
                                   </React.Fragment>
                                 </div>
 
@@ -1273,6 +1325,679 @@ function PlasmicAboutUs__RenderFunc(props: {
                       </Tilt>
                     </Reveal>
                   ) : null}
+
+                  <h4
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h4,
+                      projectcss.__wab_text,
+                      sty.h4__austu
+                    )}
+                  >
+                    <React.Fragment>
+                      <span
+                        className={"plasmic_default__all plasmic_default__span"}
+                        style={{ color: "#F47D31" }}
+                      >
+                        {"Our Partners"}
+                      </span>
+                    </React.Fragment>
+                  </h4>
+
+                  {(
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? true
+                      : true
+                  ) ? (
+                    <Reveal
+                      className={classNames("__wab_instance", sty.reveal__x3Cu)}
+                      damping={0.5 as const}
+                      direction={"up" as const}
+                      duration={1000 as const}
+                      effect={"bounce" as const}
+                      reverse={false}
+                      triggerOnce={true}
+                    >
+                      {(
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <Tilt
+                          className={classNames(
+                            "__wab_instance",
+                            sty.tilt__s19Xl
+                          )}
+                          glareEnable={true}
+                          tiltReverse={true}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__ibApn
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__ty1Tw
+                                )}
+                              >
+                                {"Friend Identification Card "}
+                              </div>
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.columns___2Azt6
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__lguUh
+                                  )}
+                                >
+                                  <p.PlasmicImg
+                                    alt={""}
+                                    className={classNames(sty.img__qK6AN)}
+                                    displayHeight={"116px" as const}
+                                    displayMaxHeight={"none" as const}
+                                    displayMaxWidth={"100%" as const}
+                                    displayMinHeight={"0" as const}
+                                    displayMinWidth={"0" as const}
+                                    displayWidth={"119px" as const}
+                                    loading={"lazy" as const}
+                                    src={{
+                                      src: "/plasmic/red_panda_studios_website/images/image20230202104815725Png.png",
+                                      fullWidth: 400,
+                                      fullHeight: 400,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__kQoFu
+                                    )}
+                                  >
+                                    {"BLACK CRYSTAL STUDIOS"}
+                                  </div>
+                                </div>
+
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__d8VaE
+                                  )}
+                                >
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__mcmf5
+                                    )}
+                                  >
+                                    <React.Fragment>
+                                      <React.Fragment>{""}</React.Fragment>
+                                      {
+                                        <h5
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.h5,
+                                            projectcss.__wab_text,
+                                            sty.h5__natOi
+                                          )}
+                                        >
+                                          {"BETZ"}
+                                        </h5>
+                                      }
+                                      <React.Fragment>{""}</React.Fragment>
+                                    </React.Fragment>
+                                  </div>
+
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__dSxJz
+                                    )}
+                                  >
+                                    <React.Fragment>
+                                      <React.Fragment>{""}</React.Fragment>
+                                      {
+                                        <h5
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.h5,
+                                            projectcss.__wab_text,
+                                            sty.h5__fZr98
+                                          )}
+                                        >
+                                          {
+                                            "Comic Artist, Black Crystal Studios CEO, /v/3 Showrunner"
+                                          }
+                                        </h5>
+                                      }
+                                      <React.Fragment>{""}</React.Fragment>
+                                    </React.Fragment>
+                                  </div>
+
+                                  <p.Stack
+                                    as={"div"}
+                                    hasGap={true}
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.freeBox__xeCJd
+                                    )}
+                                  >
+                                    <p.PlasmicLink
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.a,
+                                        sty.link__hPn9
+                                      )}
+                                      component={Link}
+                                      href={
+                                        "https://twitter.com/blkcrstlstudios" as const
+                                      }
+                                      platform={"nextjs"}
+                                      target={"_blank" as const}
+                                    >
+                                      <IconIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__bd2Yp
+                                        )}
+                                        role={"img"}
+                                      />
+                                    </p.PlasmicLink>
+
+                                    <p.PlasmicLink
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.a,
+                                        sty.link__lOuyR
+                                      )}
+                                      component={Link}
+                                      href={
+                                        "https://www.instagram.com/official_eldonbetz/" as const
+                                      }
+                                      platform={"nextjs"}
+                                      target={"_blank" as const}
+                                    >
+                                      <BrandInstagramsvgIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__entkb
+                                        )}
+                                        role={"img"}
+                                      />
+                                    </p.PlasmicLink>
+
+                                    <p.PlasmicLink
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.a,
+                                        sty.link__pyvc3
+                                      )}
+                                      component={Link}
+                                      href={"https://terriverse.com" as const}
+                                      platform={"nextjs"}
+                                      target={"_blank" as const}
+                                    >
+                                      <NetworksvgIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__xShQp
+                                        )}
+                                        role={"img"}
+                                      />
+                                    </p.PlasmicLink>
+                                  </p.Stack>
+                                </div>
+                              </div>
+                            </div>
+                          ) : null}
+                        </Tilt>
+                      ) : null}
+                      {(
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <Tilt
+                          className={classNames(
+                            "__wab_instance",
+                            sty.tilt__k8TI2
+                          )}
+                          glareEnable={true}
+                          tiltReverse={true}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox__kQbyF
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text___054E
+                                )}
+                              >
+                                {"Friend Identification Card "}
+                              </div>
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.columns___1Oft5
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__vEtdD
+                                  )}
+                                >
+                                  <p.PlasmicImg
+                                    alt={""}
+                                    className={classNames(sty.img__cZpg)}
+                                    displayHeight={"116px" as const}
+                                    displayMaxHeight={"none" as const}
+                                    displayMaxWidth={"100%" as const}
+                                    displayMinHeight={"0" as const}
+                                    displayMinWidth={"0" as const}
+                                    displayWidth={"119px" as const}
+                                    loading={"lazy" as const}
+                                    src={{
+                                      src: "/plasmic/red_panda_studios_website/images/image20230202105315543Png.png",
+                                      fullWidth: 650,
+                                      fullHeight: 650,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__osZfp
+                                    )}
+                                  >
+                                    {""}
+                                  </div>
+                                </div>
+
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__azIuf
+                                  )}
+                                >
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__mNTh
+                                    )}
+                                  >
+                                    <React.Fragment>
+                                      <React.Fragment>{""}</React.Fragment>
+                                      {
+                                        <h5
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.h5,
+                                            projectcss.__wab_text,
+                                            sty.h5__dbKH
+                                          )}
+                                        >
+                                          {"RIAN"}
+                                        </h5>
+                                      }
+                                      <React.Fragment>{""}</React.Fragment>
+                                    </React.Fragment>
+                                  </div>
+
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__oJq07
+                                    )}
+                                  >
+                                    <React.Fragment>
+                                      <React.Fragment>{""}</React.Fragment>
+                                      {
+                                        <h5
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.h5,
+                                            projectcss.__wab_text,
+                                            sty.h5__i0CgC
+                                          )}
+                                        >
+                                          <React.Fragment>
+                                            <React.Fragment>
+                                              {
+                                                "Artist, Pixel Artist, Programmer, Writer, "
+                                              }
+                                            </React.Fragment>
+                                            <span
+                                              className={
+                                                "plasmic_default__all plasmic_default__span"
+                                              }
+                                              style={{ fontStyle: "italic" }}
+                                            >
+                                              {"Auta"}
+                                            </span>
+                                            <React.Fragment>
+                                              {" Creator, Designer"}
+                                            </React.Fragment>
+                                          </React.Fragment>
+                                        </h5>
+                                      }
+                                      <React.Fragment>{""}</React.Fragment>
+                                    </React.Fragment>
+                                  </div>
+
+                                  <p.Stack
+                                    as={"div"}
+                                    hasGap={true}
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.freeBox___3UbtQ
+                                    )}
+                                  >
+                                    <p.PlasmicLink
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.a,
+                                        sty.link___1K2Qn
+                                      )}
+                                      component={Link}
+                                      href={
+                                        "https://twitter.com/KatsuRian" as const
+                                      }
+                                      platform={"nextjs"}
+                                      target={"_blank" as const}
+                                    >
+                                      <IconIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__jZjUv
+                                        )}
+                                        role={"img"}
+                                      />
+                                    </p.PlasmicLink>
+
+                                    <p.PlasmicLink
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.a,
+                                        sty.link___3Dq1Q
+                                      )}
+                                      component={Link}
+                                      href={
+                                        "https://twitter.com/AutaGame" as const
+                                      }
+                                      platform={"nextjs"}
+                                      target={"_blank" as const}
+                                    >
+                                      <IconIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__bQf7R
+                                        )}
+                                        role={"img"}
+                                      />
+                                    </p.PlasmicLink>
+
+                                    <p.PlasmicLink
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.a,
+                                        sty.link___4NYrY
+                                      )}
+                                      component={Link}
+                                      href={
+                                        "https://sites.google.com/view/riansprojects/home?authuser=0" as const
+                                      }
+                                      platform={"nextjs"}
+                                      target={"_blank" as const}
+                                    >
+                                      <NetworksvgIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__yL2Sl
+                                        )}
+                                        role={"img"}
+                                      />
+                                    </p.PlasmicLink>
+                                  </p.Stack>
+                                </div>
+                              </div>
+                            </div>
+                          ) : null}
+                        </Tilt>
+                      ) : null}
+                      {(
+                        hasVariant(globalVariants, "screen", "mobileOnly")
+                          ? true
+                          : true
+                      ) ? (
+                        <Tilt
+                          className={classNames(
+                            "__wab_instance",
+                            sty.tilt___2N1En
+                          )}
+                          glareEnable={true}
+                          tiltReverse={true}
+                        >
+                          {true ? (
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.freeBox___9Swli
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  projectcss.__wab_text,
+                                  sty.text__dspY2
+                                )}
+                              >
+                                {"Friend Identification Card "}
+                              </div>
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.columns__ozpke
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__w6Lcg
+                                  )}
+                                >
+                                  <p.PlasmicImg
+                                    alt={""}
+                                    className={classNames(sty.img__aGwRm)}
+                                    displayHeight={"116px" as const}
+                                    displayMaxHeight={"none" as const}
+                                    displayMaxWidth={"100%" as const}
+                                    displayMinHeight={"0" as const}
+                                    displayMinWidth={"0" as const}
+                                    displayWidth={"119px" as const}
+                                    loading={"lazy" as const}
+                                    src={{
+                                      src: "/plasmic/red_panda_studios_website/images/image20230202105728533Png.png",
+                                      fullWidth: 400,
+                                      fullHeight: 400,
+                                      aspectRatio: undefined
+                                    }}
+                                  />
+
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__wVkpe
+                                    )}
+                                  >
+                                    {""}
+                                  </div>
+                                </div>
+
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.column__udnJq
+                                  )}
+                                >
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text__qiE5L
+                                    )}
+                                  >
+                                    <React.Fragment>
+                                      <React.Fragment>{""}</React.Fragment>
+                                      {
+                                        <h5
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.h5,
+                                            projectcss.__wab_text,
+                                            sty.h5___8QJm9
+                                          )}
+                                        >
+                                          {"EXODIUS"}
+                                        </h5>
+                                      }
+                                      <React.Fragment>{""}</React.Fragment>
+                                    </React.Fragment>
+                                  </div>
+
+                                  <div
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.__wab_text,
+                                      sty.text___78XHm
+                                    )}
+                                  >
+                                    <React.Fragment>
+                                      <React.Fragment>{""}</React.Fragment>
+                                      {
+                                        <h5
+                                          className={classNames(
+                                            projectcss.all,
+                                            projectcss.h5,
+                                            projectcss.__wab_text,
+                                            sty.h5__gqFxU
+                                          )}
+                                        >
+                                          {
+                                            "Content Creator, Videographer, FreeSpvce Founder"
+                                          }
+                                        </h5>
+                                      }
+                                      <React.Fragment>{""}</React.Fragment>
+                                    </React.Fragment>
+                                  </div>
+
+                                  <p.Stack
+                                    as={"div"}
+                                    hasGap={true}
+                                    className={classNames(
+                                      projectcss.all,
+                                      sty.freeBox__yvCyg
+                                    )}
+                                  >
+                                    <p.PlasmicLink
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.a,
+                                        sty.link__y8VZr
+                                      )}
+                                      component={Link}
+                                      href={
+                                        "https://twitter.com/ExodiousLive" as const
+                                      }
+                                      platform={"nextjs"}
+                                      target={"_blank" as const}
+                                    >
+                                      <IconIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__p9YnH
+                                        )}
+                                        role={"img"}
+                                      />
+                                    </p.PlasmicLink>
+
+                                    <p.PlasmicLink
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.a,
+                                        sty.link___5IGsU
+                                      )}
+                                      component={Link}
+                                      href={
+                                        "https://www.youtube.com/Exodious" as const
+                                      }
+                                      platform={"nextjs"}
+                                      target={"_blank" as const}
+                                    >
+                                      <BrandYoutubesvgIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__d5BvX
+                                        )}
+                                        role={"img"}
+                                      />
+                                    </p.PlasmicLink>
+
+                                    <p.PlasmicLink
+                                      className={classNames(
+                                        projectcss.all,
+                                        projectcss.a,
+                                        sty.link__g0OPh
+                                      )}
+                                      component={Link}
+                                      href={"https://freespvce.com" as const}
+                                      platform={"nextjs"}
+                                      target={"_blank" as const}
+                                    >
+                                      <NetworksvgIcon
+                                        className={classNames(
+                                          projectcss.all,
+                                          sty.svg__diYtm
+                                        )}
+                                        role={"img"}
+                                      />
+                                    </p.PlasmicLink>
+                                  </p.Stack>
+                                </div>
+                              </div>
+                            </div>
+                          ) : null}
+                        </Tilt>
+                      ) : null}
+                    </Reveal>
+                  ) : null}
                 </p.Stack>
               ) : null}
             </div>
@@ -1371,9 +2096,11 @@ export const PlasmicAboutUs = Object.assign(
     // Page metadata
     pageMetadata: {
       title: "About Us🐾",
-      description: "",
-      ogImageSrc: "",
-      canonical: ""
+      description:
+        "~Red Panda Media~\nGames, Music, Comics\nDigital Artist Collective",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/d58a47bfe90ae5acd650ca29bcce987f.png",
+      canonical: "https://redpandamedia.net/about/"
     }
   }
 );

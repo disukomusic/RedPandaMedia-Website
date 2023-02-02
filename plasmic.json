@@ -355,6 +355,36 @@
           "id": "B_iCN18sO",
           "name": "RPS Logo.png",
           "filePath": "../public/plasmic/red_panda_media_website/images/rpsLogopng.png"
+        },
+        {
+          "id": "z8S5XnRra",
+          "name": "Website Preview.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/websitePreviewpng.png"
+        },
+        {
+          "id": "bKobFscM7",
+          "name": "0x9 Logo.jpg",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/_0X9Logojpg.jpeg"
+        },
+        {
+          "id": "dG8cnXPME",
+          "name": "image_2023-02-02_104815725.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/image20230202104815725Png.png"
+        },
+        {
+          "id": "WV_J9HaJS",
+          "name": "Logo 2023.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/logo2023Png.png"
+        },
+        {
+          "id": "b6sjc2HBD",
+          "name": "image_2023-02-02_105315543.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/image20230202105315543Png.png"
+        },
+        {
+          "id": "ZstoeT1qu",
+          "name": "image_2023-02-02_105728533.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/image20230202105728533Png.png"
         }
       ],
       "indirect": false,
@@ -387,6 +417,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.192",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.192/dist/plasmic.schema.json"
+  "cliVersion": "0.1.206",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.206/dist/plasmic.schema.json"
 }

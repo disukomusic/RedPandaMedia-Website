@@ -582,7 +582,7 @@
     width: calc((100% - 1 * 0px) * 12 / 12);
   }
 }
-.column__l0V33 {
+.microcosm {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -639,7 +639,7 @@
   padding: 0px;
   margin: 0px 10px 10px;
 }
-.column__oe3Pc {
+.eggRanger {
   display: flex;
   position: relative;
   flex-direction: column;

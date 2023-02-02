@@ -74,7 +74,7 @@ const __wrapUserFunction =
 const __wrapUserPromise =
   globalThis.__PlasmicWrapUserPromise ??
   (async (loc, promise) => {
-    await promise;
+    return await promise;
   });
 
 function PlasmicNewsletter__RenderFunc(props: {
@@ -105,7 +105,7 @@ function PlasmicNewsletter__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">{PlasmicNewsletter.pageMetadata.title}</title>
         <meta
           key="og:title"
@@ -117,6 +117,32 @@ function PlasmicNewsletter__RenderFunc(props: {
           name="twitter:title"
           content={PlasmicNewsletter.pageMetadata.title}
         />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicNewsletter.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicNewsletter.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicNewsletter.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicNewsletter.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicNewsletter.pageMetadata.ogImageSrc}
+        />
+        <link ref="canonical" href={PlasmicNewsletter.pageMetadata.canonical} />
       </Head>
 
       <style>{`
@@ -492,9 +518,11 @@ export const PlasmicNewsletter = Object.assign(
     // Page metadata
     pageMetadata: {
       title: "Newsletter🐾",
-      description: "",
-      ogImageSrc: "",
-      canonical: ""
+      description:
+        "~Red Panda Media~\nGames, Music, Comics\nDigital Artist Collective",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/d58a47bfe90ae5acd650ca29bcce987f.png",
+      canonical: "https://redpandamedia.net/newsletter/"
     }
   }
 );

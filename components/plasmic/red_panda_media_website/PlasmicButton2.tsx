@@ -143,7 +143,7 @@ const __wrapUserFunction =
 const __wrapUserPromise =
   globalThis.__PlasmicWrapUserPromise ??
   (async (loc, promise) => {
-    await promise;
+    return await promise;
   });
 
 function PlasmicButton2__RenderFunc(props: {
@@ -170,32 +170,42 @@ function PlasmicButton2__RenderFunc(props: {
       {
         path: "showStartIcon",
         type: "private",
-        initFunc: ($props, $state, $ctx) => $props.showStartIcon
+        variableType: "variant",
+        initFunc: true
+          ? ($props, $state, $ctx) => $props.showStartIcon
+          : undefined
       },
       {
         path: "showEndIcon",
         type: "private",
-        initFunc: ($props, $state, $ctx) => $props.showEndIcon
+        variableType: "variant",
+        initFunc: true
+          ? ($props, $state, $ctx) => $props.showEndIcon
+          : undefined
       },
       {
         path: "isDisabled",
         type: "private",
-        initFunc: ($props, $state, $ctx) => $props.isDisabled
+        variableType: "variant",
+        initFunc: true ? ($props, $state, $ctx) => $props.isDisabled : undefined
       },
       {
         path: "shape",
         type: "private",
-        initFunc: ($props, $state, $ctx) => $props.shape
+        variableType: "variant",
+        initFunc: true ? ($props, $state, $ctx) => $props.shape : undefined
       },
       {
         path: "size",
         type: "private",
-        initFunc: ($props, $state, $ctx) => $props.size
+        variableType: "variant",
+        initFunc: true ? ($props, $state, $ctx) => $props.size : undefined
       },
       {
         path: "color",
         type: "private",
-        initFunc: ($props, $state, $ctx) => $props.color
+        variableType: "variant",
+        initFunc: true ? ($props, $state, $ctx) => $props.color : undefined
       }
     ],
     [$props, $ctx]

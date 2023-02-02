@@ -73,7 +73,7 @@ const __wrapUserFunction =
 const __wrapUserPromise =
   globalThis.__PlasmicWrapUserPromise ??
   (async (loc, promise) => {
-    await promise;
+    return await promise;
   });
 
 function PlasmicComics__RenderFunc(props: {
@@ -104,7 +104,7 @@ function PlasmicComics__RenderFunc(props: {
   return (
     <React.Fragment>
       <Head>
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <title key="title">{PlasmicComics.pageMetadata.title}</title>
         <meta
           key="og:title"
@@ -116,6 +116,32 @@ function PlasmicComics__RenderFunc(props: {
           name="twitter:title"
           content={PlasmicComics.pageMetadata.title}
         />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicComics.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicComics.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicComics.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicComics.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicComics.pageMetadata.ogImageSrc}
+        />
+        <link ref="canonical" href={PlasmicComics.pageMetadata.canonical} />
       </Head>
 
       <style>{`
@@ -484,9 +510,11 @@ export const PlasmicComics = Object.assign(
     // Page metadata
     pageMetadata: {
       title: "Comics🐾",
-      description: "",
-      ogImageSrc: "",
-      canonical: ""
+      description:
+        "~Red Panda Media~\nGames, Music, Comics\nDigital Artist Collective",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/d58a47bfe90ae5acd650ca29bcce987f.png",
+      canonical: "https://redpandamedia.net/comics/"
     }
   }
 );
