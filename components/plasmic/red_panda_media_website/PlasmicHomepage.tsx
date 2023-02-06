@@ -632,7 +632,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.link___4Fhva
                     )}
                     component={Link}
-                    href={"https://twitter.com/RedPandaMedia" as const}
+                    href={"https://twitter.com/RedPandaStudios" as const}
                     platform={"nextjs"}
                   >
                     <div
