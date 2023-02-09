@@ -93,6 +93,8 @@ function PlasmicNewsletter__RenderFunc(props: {
     ...args,
     ...variants
   };
+  const refsRef = React.useRef({});
+  const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
 

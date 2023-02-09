@@ -211,6 +211,19 @@
           "cssFilePath": "plasmic/red_panda_media_website/PlasmicNewsletter.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "jM_qgBDxgy",
+          "name": "Secret",
+          "type": "managed",
+          "projectId": "nazLgTEW7V6FTXLkGvtboX",
+          "renderModuleFilePath": "plasmic/red_panda_studios_website/PlasmicSecret.tsx",
+          "importSpec": {
+            "modulePath": "../pages/secret.tsx"
+          },
+          "cssFilePath": "plasmic/red_panda_studios_website/PlasmicSecret.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
@@ -385,6 +398,11 @@
           "id": "ZstoeT1qu",
           "name": "image_2023-02-02_105728533.png",
           "filePath": "../public/plasmic/red_panda_studios_website/images/image20230202105728533Png.png"
+        },
+        {
+          "id": "DbsIErfH1",
+          "name": "image_2023-02-09_160211485.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/image20230209160211485Png.png"
         }
       ],
       "indirect": false,
@@ -417,6 +435,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.208",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.208/dist/plasmic.schema.json"
+  "cliVersion": "0.1.211",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.211/dist/plasmic.schema.json"
 }

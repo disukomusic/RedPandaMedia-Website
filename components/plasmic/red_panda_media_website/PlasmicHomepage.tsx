@@ -35,6 +35,7 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Button2 from "../../Button2"; // plasmic-import: mY87X3S2UUL/component
+import { Embed } from "@plasmicpkgs/plasmic-basic-components"; // plasmic-import: PKldDYkH42/codeComponent
 import { TimelineWrapper } from "@plasmicpkgs/react-twitter-widgets"; // plasmic-import: x2j0abJR_t/codeComponent
 import { Reveal } from "@plasmicpkgs/react-awesome-reveal"; // plasmic-import: R6s1FdhksG/codeComponent
 import Tilt from "@plasmicpkgs/react-parallax-tilt"; // plasmic-import: PfY466VIuq/codeComponent
@@ -66,6 +67,7 @@ export type PlasmicHomepage__OverridesType = {
   navBar?: p.Flex<"div">;
   button?: p.Flex<"button">;
   button2?: p.Flex<typeof Button2>;
+  embedHtml?: p.Flex<typeof Embed>;
   timeline?: p.Flex<typeof TimelineWrapper>;
   microcosm?: p.Flex<"div">;
   eggRanger?: p.Flex<"div">;
@@ -97,6 +99,8 @@ function PlasmicHomepage__RenderFunc(props: {
     ...args,
     ...variants
   };
+  const refsRef = React.useRef({});
+  const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
 
@@ -366,19 +370,30 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={"plasmic_default__all plasmic_default__span"}
                         style={{ color: "#F47D31" }}
                       >
-                        {"Recent Activity"}
+                        {"Latest Newsletter"}
                       </span>
                     </React.Fragment>
                   </div>
 
-                  <TimelineWrapper
-                    data-plasmic-name={"timeline"}
-                    data-plasmic-override={overrides.timeline}
-                    className={classNames("__wab_instance", sty.timeline)}
-                    theme={"dark" as const}
-                    tweetLimit={1 as const}
-                    url={"https://twitter.com/redpandamedia_" as const}
+                  <Embed
+                    data-plasmic-name={"embedHtml"}
+                    data-plasmic-override={overrides.embedHtml}
+                    className={classNames("__wab_instance", sty.embedHtml)}
+                    code={
+                      '<iframe src="https://mailchi.mp/73959a8b0951/red-panda-studios-newsletter-febuary" style="border:0px #ffffff none;" name="Newsletter" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="419px" allowfullscreen></iframe>' as const
+                    }
                   />
+
+                  {true ? (
+                    <TimelineWrapper
+                      data-plasmic-name={"timeline"}
+                      data-plasmic-override={overrides.timeline}
+                      className={classNames("__wab_instance", sty.timeline)}
+                      theme={"dark" as const}
+                      tweetLimit={1 as const}
+                      url={"https://twitter.com/redpandamedia_" as const}
+                    />
+                  ) : null}
                 </div>
               ) : null}
             </div>
@@ -732,6 +747,7 @@ const PlasmicDescendants = {
     "navBar",
     "button",
     "button2",
+    "embedHtml",
     "timeline",
     "microcosm",
     "eggRanger"
@@ -739,6 +755,7 @@ const PlasmicDescendants = {
   navBar: ["navBar", "button", "button2"],
   button: ["button"],
   button2: ["button2"],
+  embedHtml: ["embedHtml"],
   timeline: ["timeline"],
   microcosm: ["microcosm"],
   eggRanger: ["eggRanger"]
@@ -751,6 +768,7 @@ type NodeDefaultElementType = {
   navBar: "div";
   button: "button";
   button2: typeof Button2;
+  embedHtml: typeof Embed;
   timeline: typeof TimelineWrapper;
   microcosm: "div";
   eggRanger: "div";
@@ -820,6 +838,7 @@ export const PlasmicHomepage = Object.assign(
     navBar: makeNodeComponent("navBar"),
     button: makeNodeComponent("button"),
     button2: makeNodeComponent("button2"),
+    embedHtml: makeNodeComponent("embedHtml"),
     timeline: makeNodeComponent("timeline"),
     microcosm: makeNodeComponent("microcosm"),
     eggRanger: makeNodeComponent("eggRanger"),
