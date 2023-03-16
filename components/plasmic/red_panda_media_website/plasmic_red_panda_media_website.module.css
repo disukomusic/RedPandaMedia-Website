@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=ABeeZee%3Aital%2Cwght%400%2C400&display=swap");
 
 .plasmic_tokens {
-  --token-OxTzNZuyK: #f4eaf4;
+  --token-OxTzNZuyK: #ffffff;
   --plasmic-token-off-white: var(--token-OxTzNZuyK);
   --token-SHJKjXj3_: #313131;
   --plasmic-token-dark: var(--token-SHJKjXj3_);
@@ -13,6 +13,10 @@
   --plasmic-token-orange: var(--token-oKVpvPi0x);
   --token-U8UwYNlel: #ffdada;
   --plasmic-token-unnamed-style-token-2: var(--token-U8UwYNlel);
+  --token-UAkQA_z-5: var(--token-LXnVtTKbY);
+  --plasmic-token-unnamed-style-token-3: var(--token-UAkQA_z-5);
+  --token-LXnVtTKbY: #7c553b;
+  --plasmic-token-brown: var(--token-LXnVtTKbY);
 }
 
 .plasmic_default_styles {
@@ -454,7 +458,7 @@
 .__wab_expr_html_text {
   white-space: normal;
 }
-.root_reset {
+:where(.root_reset) {
   font-family: var(--mixin-aA0Xgu-60xYQ_font-family);
   font-size: var(--mixin-aA0Xgu-60xYQ_font-size);
   font-weight: var(--mixin-aA0Xgu-60xYQ_font-weight);
@@ -467,10 +471,11 @@
   white-space: var(--mixin-aA0Xgu-60xYQ_white-space);
 }
 
-:where(.root_reset .plasmic_default__h1),
-:where(.root_reset .h1),
-:where(.root_reset :global(.__wab_expr_html_text) h1),
-:where(.root_reset.plasmic_default__h1) {
+:where(.root_reset) h1:where(.h1),
+h1:where(.root_reset.h1),
+:where(.root_reset .__wab_expr_html_text) h1,
+:where(.root_reset_tags) h1,
+h1:where(.root_reset_tags) {
   color: var(--mixin-52_-fpWn_np-_color);
   font-weight: var(--mixin-52_-fpWn_np-_font-weight);
   font-size: var(--mixin-52_-fpWn_np-_font-size);
@@ -478,10 +483,11 @@
   letter-spacing: var(--mixin-52_-fpWn_np-_letter-spacing);
 }
 
-:where(.root_reset .plasmic_default__h2),
-:where(.root_reset .h2),
-:where(.root_reset :global(.__wab_expr_html_text) h2),
-:where(.root_reset.plasmic_default__h2) {
+:where(.root_reset) h2:where(.h2),
+h2:where(.root_reset.h2),
+:where(.root_reset .__wab_expr_html_text) h2,
+:where(.root_reset_tags) h2,
+h2:where(.root_reset_tags) {
   color: var(--mixin-0KDep-20pgbG_color);
   font-size: var(--mixin-0KDep-20pgbG_font-size);
   font-weight: var(--mixin-0KDep-20pgbG_font-weight);
@@ -489,10 +495,11 @@
   line-height: var(--mixin-0KDep-20pgbG_line-height);
 }
 
-:where(.root_reset .plasmic_default__a),
-:where(.root_reset .a),
-:where(.root_reset :global(.__wab_expr_html_text) a),
-:where(.root_reset.plasmic_default__a) {
+:where(.root_reset) a:where(.a),
+a:where(.root_reset.a),
+:where(.root_reset .__wab_expr_html_text) a,
+:where(.root_reset_tags) a,
+a:where(.root_reset_tags) {
   color: var(--mixin-iC2PvvL1WUWm_color);
   font-family: var(--mixin-iC2PvvL1WUWm_font-family);
   font-weight: var(--mixin-iC2PvvL1WUWm_font-weight);
@@ -501,10 +508,11 @@
   flex-column-gap: var(--mixin-iC2PvvL1WUWm_flex-column-gap);
 }
 
-:where(.root_reset .plasmic_default__h3),
-:where(.root_reset .h3),
-:where(.root_reset :global(.__wab_expr_html_text) h3),
-:where(.root_reset.plasmic_default__h3) {
+:where(.root_reset) h3:where(.h3),
+h3:where(.root_reset.h3),
+:where(.root_reset .__wab_expr_html_text) h3,
+:where(.root_reset_tags) h3,
+h3:where(.root_reset_tags) {
   color: var(--mixin-frI9Hhq9QXYc_color);
   font-size: var(--mixin-frI9Hhq9QXYc_font-size);
   font-weight: var(--mixin-frI9Hhq9QXYc_font-weight);
@@ -512,10 +520,11 @@
   line-height: var(--mixin-frI9Hhq9QXYc_line-height);
 }
 
-:where(.root_reset .plasmic_default__h4),
-:where(.root_reset .h4),
-:where(.root_reset :global(.__wab_expr_html_text) h4),
-:where(.root_reset.plasmic_default__h4) {
+:where(.root_reset) h4:where(.h4),
+h4:where(.root_reset.h4),
+:where(.root_reset .__wab_expr_html_text) h4,
+:where(.root_reset_tags) h4,
+h4:where(.root_reset_tags) {
   color: var(--mixin-GYsZJW46gxPG_color);
   font-size: var(--mixin-GYsZJW46gxPG_font-size);
   font-weight: var(--mixin-GYsZJW46gxPG_font-weight);
@@ -523,10 +532,11 @@
   line-height: var(--mixin-GYsZJW46gxPG_line-height);
 }
 
-:where(.root_reset .plasmic_default__code),
-:where(.root_reset .code),
-:where(.root_reset :global(.__wab_expr_html_text) code),
-:where(.root_reset.plasmic_default__code) {
+:where(.root_reset) code:where(.code),
+code:where(.root_reset.code),
+:where(.root_reset .__wab_expr_html_text) code,
+:where(.root_reset_tags) code,
+code:where(.root_reset_tags) {
   background: #f8f8f8;
   font-family: var(--mixin-OuwOfmFx5jVf_font-family);
   border-radius: var(--mixin-OuwOfmFx5jVf_border-top-left-radius)
@@ -551,10 +561,11 @@
     var(--mixin-OuwOfmFx5jVf_border-left-color);
 }
 
-:where(.root_reset .plasmic_default__blockquote),
-:where(.root_reset .blockquote),
-:where(.root_reset :global(.__wab_expr_html_text) blockquote),
-:where(.root_reset.plasmic_default__blockquote) {
+:where(.root_reset) blockquote:where(.blockquote),
+blockquote:where(.root_reset.blockquote),
+:where(.root_reset .__wab_expr_html_text) blockquote,
+:where(.root_reset_tags) blockquote,
+blockquote:where(.root_reset_tags) {
   color: var(--mixin-yLFrA3m9xNiz_color);
   padding-left: var(--mixin-yLFrA3m9xNiz_padding-left);
   border-left: var(--mixin-yLFrA3m9xNiz_border-left-width)
@@ -562,10 +573,11 @@
     var(--mixin-yLFrA3m9xNiz_border-left-color);
 }
 
-:where(.root_reset .plasmic_default__pre),
-:where(.root_reset .pre),
-:where(.root_reset :global(.__wab_expr_html_text) pre),
-:where(.root_reset.plasmic_default__pre) {
+:where(.root_reset) pre:where(.pre),
+pre:where(.root_reset.pre),
+:where(.root_reset .__wab_expr_html_text) pre,
+:where(.root_reset_tags) pre,
+pre:where(.root_reset_tags) {
   background: #f8f8f8;
   font-family: var(--mixin-QKAgsUI_dB7L_font-family);
   border-radius: var(--mixin-QKAgsUI_dB7L_border-top-left-radius)
@@ -590,10 +602,11 @@
     var(--mixin-QKAgsUI_dB7L_border-left-color);
 }
 
-:where(.root_reset .plasmic_default__ul),
-:where(.root_reset .ul),
-:where(.root_reset :global(.__wab_expr_html_text) ul),
-:where(.root_reset.plasmic_default__ul) {
+:where(.root_reset) ul:where(.ul),
+ul:where(.root_reset.ul),
+:where(.root_reset .__wab_expr_html_text) ul,
+:where(.root_reset_tags) ul,
+ul:where(.root_reset_tags) {
   display: var(--mixin-Gxr3U4o81oIE_display);
   flex-direction: var(--mixin-Gxr3U4o81oIE_flex-direction);
   align-items: var(--mixin-Gxr3U4o81oIE_align-items);
@@ -605,10 +618,11 @@
   flex-column-gap: var(--mixin-Gxr3U4o81oIE_flex-column-gap);
 }
 
-:where(.root_reset .plasmic_default__ol),
-:where(.root_reset .ol),
-:where(.root_reset :global(.__wab_expr_html_text) ol),
-:where(.root_reset.plasmic_default__ol) {
+:where(.root_reset) ol:where(.ol),
+ol:where(.root_reset.ol),
+:where(.root_reset .__wab_expr_html_text) ol,
+:where(.root_reset_tags) ol,
+ol:where(.root_reset_tags) {
   display: var(--mixin-YiIucG8QlDSbz_display);
   flex-direction: var(--mixin-YiIucG8QlDSbz_flex-direction);
   align-items: var(--mixin-YiIucG8QlDSbz_align-items);
@@ -620,10 +634,11 @@
   flex-column-gap: var(--mixin-YiIucG8QlDSbz_flex-column-gap);
 }
 
-:where(.root_reset .plasmic_default__h5),
-:where(.root_reset .h5),
-:where(.root_reset :global(.__wab_expr_html_text) h5),
-:where(.root_reset.plasmic_default__h5) {
+:where(.root_reset) h5:where(.h5),
+h5:where(.root_reset.h5),
+:where(.root_reset .__wab_expr_html_text) h5,
+:where(.root_reset_tags) h5,
+h5:where(.root_reset_tags) {
   color: var(--mixin-iR6TqOCV41DVN_color);
   font-size: var(--mixin-iR6TqOCV41DVN_font-size);
   font-weight: var(--mixin-iR6TqOCV41DVN_font-weight);
@@ -631,31 +646,35 @@
   line-height: var(--mixin-iR6TqOCV41DVN_line-height);
 }
 
-:where(.root_reset .plasmic_default__h6),
-:where(.root_reset .h6),
-:where(.root_reset :global(.__wab_expr_html_text) h6),
-:where(.root_reset.plasmic_default__h6) {
+:where(.root_reset) h6:where(.h6),
+h6:where(.root_reset.h6),
+:where(.root_reset .__wab_expr_html_text) h6,
+:where(.root_reset_tags) h6,
+h6:where(.root_reset_tags) {
   color: var(--mixin-pMwYwvRMJTshI_color);
   font-size: var(--mixin-pMwYwvRMJTshI_font-size);
   font-weight: var(--mixin-pMwYwvRMJTshI_font-weight);
   line-height: var(--mixin-pMwYwvRMJTshI_line-height);
 }
 
-:where(.root_reset .plasmic_default__a:hover),
-:where(.root_reset .a:hover),
-:where(.root_reset :global(.__wab_expr_html_text) a:hover),
-:where(.root_reset.plasmic_default__a:hover) {
+:where(.root_reset) a:where(.a):hover,
+a:where(.root_reset.a):hover,
+:where(.root_reset .__wab_expr_html_text) a:hover,
+:where(.root_reset_tags) a:hover,
+a:where(.root_reset_tags):hover {
   color: var(--mixin-MjtZ-Nt_HjYrq_color);
 }
 
-:where(.root_reset .plasmic_default__li),
-:where(.root_reset .li),
-:where(.root_reset :global(.__wab_expr_html_text) li),
-:where(.root_reset.plasmic_default__li) {
+:where(.root_reset) li:where(.li),
+li:where(.root_reset.li),
+:where(.root_reset .__wab_expr_html_text) li,
+:where(.root_reset_tags) li,
+li:where(.root_reset_tags) {
 }
 
-:where(.root_reset .plasmic_default__p),
-:where(.root_reset .p),
-:where(.root_reset :global(.__wab_expr_html_text) p),
-:where(.root_reset.plasmic_default__p) {
+:where(.root_reset) p:where(.p),
+p:where(.root_reset.p),
+:where(.root_reset .__wab_expr_html_text) p,
+:where(.root_reset_tags) p,
+p:where(.root_reset_tags) {
 }

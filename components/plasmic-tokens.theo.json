@@ -1,6 +1,16 @@
 {
   "props": [
     {
+      "name": "Brown",
+      "type": "color",
+      "value": "#7C553B",
+      "category": "color",
+      "meta": {
+        "projectId": "nazLgTEW7V6FTXLkGvtboX",
+        "id": "LXnVtTKbY"
+      }
+    },
+    {
       "name": "Dark",
       "type": "color",
       "value": "#313131",
@@ -23,7 +33,7 @@
     {
       "name": "Off White",
       "type": "color",
-      "value": "#F4EAF4",
+      "value": "#FFFFFF",
       "category": "color",
       "meta": {
         "projectId": "nazLgTEW7V6FTXLkGvtboX",
@@ -58,6 +68,16 @@
       "meta": {
         "projectId": "nazLgTEW7V6FTXLkGvtboX",
         "id": "U8UwYNlel"
+      }
+    },
+    {
+      "name": "UnnamedStyleToken 3",
+      "type": "color",
+      "value": "#7C553B",
+      "category": "color",
+      "meta": {
+        "projectId": "nazLgTEW7V6FTXLkGvtboX",
+        "id": "UAkQA_z-5"
       }
     }
   ],

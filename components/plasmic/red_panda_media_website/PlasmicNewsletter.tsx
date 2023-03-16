@@ -14,9 +14,10 @@ import * as React from "react";
 
 import Head from "next/head";
 import Link, { LinkProps } from "next/link";
+import { useRouter } from "next/router";
 
 import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/host";
+import * as ph from "@plasmicapp/react-web/lib/host";
 
 import {
   hasVariant,
@@ -77,14 +78,21 @@ const __wrapUserPromise =
     return await promise;
   });
 
+function useNextRouter() {
+  try {
+    return useRouter();
+  } catch {}
+  return undefined;
+}
+
 function PlasmicNewsletter__RenderFunc(props: {
   variants: PlasmicNewsletter__VariantsArgs;
   args: PlasmicNewsletter__ArgsType;
   overrides: PlasmicNewsletter__OverridesType;
-
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
+  const __nextRouter = useNextRouter();
 
   const $ctx = ph.useDataEnv?.() || {};
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
@@ -97,7 +105,6 @@ function PlasmicNewsletter__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -363,7 +370,7 @@ function PlasmicNewsletter__RenderFunc(props: {
                   sty.text__uDkIq
                 )}
               >
-                {"Sign up to our Newsletter for Occasional Updates!"}
+                {"Sign up to our Newsletter for Updates!"}
               </div>
 
               <div
@@ -484,7 +491,6 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
         }),
       [props, nodeName]
     );
-
     return PlasmicNewsletter__RenderFunc({
       variants,
       args,

@@ -14,9 +14,10 @@ import * as React from "react";
 
 import Head from "next/head";
 import Link, { LinkProps } from "next/link";
+import { useRouter } from "next/router";
 
 import * as p from "@plasmicapp/react-web";
-import * as ph from "@plasmicapp/host";
+import * as ph from "@plasmicapp/react-web/lib/host";
 
 import {
   hasVariant,
@@ -52,6 +53,7 @@ import BrandInstagramsvgIcon from "./icons/PlasmicIcon__BrandInstagramsvg"; // p
 import NetworksvgIcon from "./icons/PlasmicIcon__Networksvg"; // plasmic-import: cIibErcHe4/icon
 import TanksvgIcon from "./icons/PlasmicIcon__Tanksvg"; // plasmic-import: 6DJUZbx4tI/icon
 import BrandYoutubesvgIcon from "./icons/PlasmicIcon__BrandYoutubesvg"; // plasmic-import: 2IVwYszBQg/icon
+import MusicsvgIcon from "../red_panda_studios_website/icons/PlasmicIcon__Musicsvg"; // plasmic-import: ZZun63J8of/icon
 
 export type PlasmicAboutUs__VariantMembers = {};
 export type PlasmicAboutUs__VariantsArgs = {};
@@ -79,14 +81,21 @@ const __wrapUserPromise =
     return await promise;
   });
 
+function useNextRouter() {
+  try {
+    return useRouter();
+  } catch {}
+  return undefined;
+}
+
 function PlasmicAboutUs__RenderFunc(props: {
   variants: PlasmicAboutUs__VariantsArgs;
   args: PlasmicAboutUs__ArgsType;
   overrides: PlasmicAboutUs__OverridesType;
-
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
+  const __nextRouter = useNextRouter();
 
   const $ctx = ph.useDataEnv?.() || {};
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
@@ -99,7 +108,6 @@ function PlasmicAboutUs__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -1325,6 +1333,209 @@ function PlasmicAboutUs__RenderFunc(props: {
                           </div>
                         ) : null}
                       </Tilt>
+
+                      <Tilt
+                        className={classNames(
+                          "__wab_instance",
+                          sty.tilt___0Ih8E
+                        )}
+                        glareEnable={true}
+                        tiltEnable={true}
+                        tiltReverse={true}
+                      >
+                        {true ? (
+                          <div
+                            className={classNames(
+                              projectcss.all,
+                              sty.freeBox__qoH9T
+                            )}
+                          >
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__siXl4
+                              )}
+                            >
+                              {"RPS Identification Card "}
+                            </div>
+
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                sty.columns__airV5
+                              )}
+                            >
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.column__vtdyj
+                                )}
+                              >
+                                <p.PlasmicImg
+                                  alt={""}
+                                  className={classNames(sty.img__wij6G)}
+                                  displayHeight={"116px" as const}
+                                  displayMaxHeight={"none" as const}
+                                  displayMaxWidth={"100%" as const}
+                                  displayMinHeight={"0" as const}
+                                  displayMinWidth={"0" as const}
+                                  displayWidth={"119px" as const}
+                                  loading={"lazy" as const}
+                                  src={{
+                                    src: "/plasmic/red_panda_studios_website/images/image20230316122512170Png.png",
+                                    fullWidth: 176,
+                                    fullHeight: 176,
+                                    aspectRatio: undefined
+                                  }}
+                                />
+
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__gv7Zq
+                                  )}
+                                >
+                                  {"MUSICIAN"}
+                                </div>
+                              </div>
+
+                              <div
+                                className={classNames(
+                                  projectcss.all,
+                                  sty.column___0ErbM
+                                )}
+                              >
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text___6Srf0
+                                  )}
+                                >
+                                  <React.Fragment>
+                                    <React.Fragment>{""}</React.Fragment>
+                                    {
+                                      <h5
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.h5,
+                                          projectcss.__wab_text,
+                                          sty.h5__fWBn
+                                        )}
+                                      >
+                                        {"TRAC3R"}
+                                      </h5>
+                                    }
+                                    <React.Fragment>{""}</React.Fragment>
+                                  </React.Fragment>
+                                </div>
+
+                                <div
+                                  className={classNames(
+                                    projectcss.all,
+                                    projectcss.__wab_text,
+                                    sty.text__slcZ8
+                                  )}
+                                >
+                                  <React.Fragment>
+                                    <React.Fragment>{""}</React.Fragment>
+                                    {
+                                      <h5
+                                        className={classNames(
+                                          projectcss.all,
+                                          projectcss.h5,
+                                          projectcss.__wab_text,
+                                          sty.h5___1H9AO
+                                        )}
+                                      >
+                                        {"Music Producer"}
+                                      </h5>
+                                    }
+                                    <React.Fragment>{""}</React.Fragment>
+                                  </React.Fragment>
+                                </div>
+
+                                <p.Stack
+                                  as={"div"}
+                                  hasGap={true}
+                                  className={classNames(
+                                    projectcss.all,
+                                    sty.freeBox___1IWg8
+                                  )}
+                                >
+                                  <p.PlasmicLink
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.a,
+                                      sty.link__u5XdM
+                                    )}
+                                    component={Link}
+                                    href={
+                                      "https://soundcloud.com/trac3r" as const
+                                    }
+                                    platform={"nextjs"}
+                                    target={"_blank" as const}
+                                  >
+                                    <MusicsvgIcon
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.svg__i9RQn
+                                      )}
+                                      role={"img"}
+                                    />
+                                  </p.PlasmicLink>
+
+                                  <p.PlasmicLink
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.a,
+                                      sty.link__egFd4
+                                    )}
+                                    component={Link}
+                                    href={
+                                      "https://www.instagram.com/trac3r_music/?hl=en" as const
+                                    }
+                                    platform={"nextjs"}
+                                    target={"_blank" as const}
+                                  >
+                                    <BrandInstagramsvgIcon
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.svg__ldz1O
+                                      )}
+                                      role={"img"}
+                                    />
+                                  </p.PlasmicLink>
+
+                                  <p.PlasmicLink
+                                    className={classNames(
+                                      projectcss.all,
+                                      projectcss.a,
+                                      sty.link__clbqY
+                                    )}
+                                    component={Link}
+                                    href={
+                                      "https://www.youtube.com/channel/UCaP6ZabXDSOfGlOJxdUbhJA" as const
+                                    }
+                                    platform={"nextjs"}
+                                    target={"_blank" as const}
+                                  >
+                                    <BrandYoutubesvgIcon
+                                      className={classNames(
+                                        projectcss.all,
+                                        sty.svg__osvWd
+                                      )}
+                                      role={"img"}
+                                    />
+                                  </p.PlasmicLink>
+                                </p.Stack>
+                              </div>
+                            </div>
+                          </div>
+                        ) : null}
+                      </Tilt>
                     </Reveal>
                   ) : null}
 
@@ -2066,7 +2277,6 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
         }),
       [props, nodeName]
     );
-
     return PlasmicAboutUs__RenderFunc({
       variants,
       args,

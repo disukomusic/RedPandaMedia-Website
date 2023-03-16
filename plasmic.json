@@ -53,8 +53,7 @@
           "name": "DataProvider",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "szjgMQpPpxhmkjnaBvZQJG",
@@ -73,8 +72,7 @@
           "name": "Tilt",
           "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
@@ -93,8 +91,7 @@
           "name": "Reveal",
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "itBdcjth19Wasd6ngAYxWR",
@@ -123,8 +120,7 @@
           "name": "FollowWrapper",
           "componentImportPath": "@plasmicpkgs/react-twitter-widgets"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "nazLgTEW7V6FTXLkGvtboX",
@@ -224,6 +220,46 @@
           "cssFilePath": "plasmic/red_panda_studios_website/PlasmicSecret.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "NhlkZfQForq",
+          "name": "Switch",
+          "type": "managed",
+          "projectId": "nazLgTEW7V6FTXLkGvtboX",
+          "renderModuleFilePath": "plasmic/red_panda_studios_website/PlasmicSwitch.tsx",
+          "importSpec": {
+            "modulePath": "Switch.tsx"
+          },
+          "cssFilePath": "plasmic/red_panda_studios_website/PlasmicSwitch.module.css",
+          "scheme": "blackbox",
+          "componentType": "component",
+          "plumeType": "switch"
+        },
+        {
+          "id": "LXhJm1UX0gu",
+          "name": "HomepageTest",
+          "type": "managed",
+          "projectId": "nazLgTEW7V6FTXLkGvtboX",
+          "renderModuleFilePath": "plasmic/red_panda_studios_website/PlasmicHomepageTest.tsx",
+          "importSpec": {
+            "modulePath": "../pages/SECRETTESTPAGE.tsx"
+          },
+          "cssFilePath": "plasmic/red_panda_studios_website/PlasmicHomepageTest.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "CIy-AvfP5yL",
+          "name": "NavBar2",
+          "type": "managed",
+          "projectId": "nazLgTEW7V6FTXLkGvtboX",
+          "renderModuleFilePath": "plasmic/red_panda_studios_website/PlasmicNavBar2.tsx",
+          "importSpec": {
+            "modulePath": "NavBar2.tsx"
+          },
+          "cssFilePath": "plasmic/red_panda_studios_website/PlasmicNavBar2.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -271,6 +307,11 @@
           "id": "2IVwYszBQg",
           "name": "BrandYoutubesvgIcon",
           "moduleFilePath": "plasmic/red_panda_media_website/icons/PlasmicIcon__BrandYoutubesvg.tsx"
+        },
+        {
+          "id": "ZZun63J8of",
+          "name": "MusicsvgIcon",
+          "moduleFilePath": "plasmic/red_panda_studios_website/icons/PlasmicIcon__Musicsvg.tsx"
         }
       ],
       "images": [
@@ -403,6 +444,21 @@
           "id": "DbsIErfH1",
           "name": "image_2023-02-09_160211485.png",
           "filePath": "../public/plasmic/red_panda_studios_website/images/image20230209160211485Png.png"
+        },
+        {
+          "id": "KoEVg2s4X",
+          "name": "DDSLogo.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/ddsLogopng.png"
+        },
+        {
+          "id": "_ut7RGKID",
+          "name": "Logo.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/logopng.png"
+        },
+        {
+          "id": "KmIAH_1CT",
+          "name": "image_2023-03-16_122512170.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/image20230316122512170Png.png"
         }
       ],
       "indirect": false,
@@ -417,6 +473,25 @@
           "id": "YQm9uW7AJX",
           "name": "Fetcher",
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ]
+    },
+    {
+      "projectId": "r3ASNrnyvLLLAtDvzUioQ",
+      "projectApiToken": "eSFGpQaYCtO9sRbPuQ2Ll9dmLOg8I4oKhx6e1PuCrsfmUIVbFbSXcy32UrPTwF9zX2HVXA0xaIKJNhCMHvA",
+      "projectName": "react-slick",
+      "version": "3.9.0",
+      "cssFilePath": "plasmic/react_slick/plasmic_react_slick.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "codeComponents": [
+        {
+          "id": "HOQUyOpClJ",
+          "name": "Slider",
+          "componentImportPath": "react-slick"
         }
       ]
     }
@@ -435,6 +510,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.211",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.211/dist/plasmic.schema.json"
+  "cliVersion": "0.1.229",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.229/dist/plasmic.schema.json"
 }
