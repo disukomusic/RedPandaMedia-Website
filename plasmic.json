@@ -213,19 +213,6 @@
           "componentType": "page"
         },
         {
-          "id": "jM_qgBDxgy",
-          "name": "Secret",
-          "type": "managed",
-          "projectId": "nazLgTEW7V6FTXLkGvtboX",
-          "renderModuleFilePath": "plasmic/red_panda_studios_website/PlasmicSecret.tsx",
-          "importSpec": {
-            "modulePath": "../pages/secret.tsx"
-          },
-          "cssFilePath": "plasmic/red_panda_studios_website/PlasmicSecret.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "NhlkZfQForq",
           "name": "Switch",
           "type": "managed",
@@ -251,6 +238,19 @@
           "cssFilePath": "plasmic/red_panda_studios_website/PlasmicNavBar2.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "jM_qgBDxgy",
+          "name": "Date",
+          "type": "managed",
+          "projectId": "nazLgTEW7V6FTXLkGvtboX",
+          "renderModuleFilePath": "plasmic/red_panda_studios_website/PlasmicDate.tsx",
+          "importSpec": {
+            "modulePath": "../pages/date.tsx"
+          },
+          "cssFilePath": "plasmic/red_panda_studios_website/PlasmicDate.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [
