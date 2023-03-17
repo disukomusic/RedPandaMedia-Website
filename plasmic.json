@@ -240,19 +240,6 @@
           "plumeType": "switch"
         },
         {
-          "id": "LXhJm1UX0gu",
-          "name": "HomepageTest",
-          "type": "managed",
-          "projectId": "nazLgTEW7V6FTXLkGvtboX",
-          "renderModuleFilePath": "plasmic/red_panda_studios_website/PlasmicHomepageTest.tsx",
-          "importSpec": {
-            "modulePath": "../pages/SECRETTESTPAGE.tsx"
-          },
-          "cssFilePath": "plasmic/red_panda_studios_website/PlasmicHomepageTest.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "CIy-AvfP5yL",
           "name": "NavBar2",
           "type": "managed",
@@ -463,6 +450,26 @@
           "id": "KmIAH_1CT",
           "name": "image_2023-03-16_122512170.png",
           "filePath": "../public/plasmic/red_panda_studios_website/images/image20230316122512170Png.png"
+        },
+        {
+          "id": "C27WoP1nF",
+          "name": "schoolBG-blur.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/schoolBgBlurpng.png"
+        },
+        {
+          "id": "ym-IOx4KH",
+          "name": "DisukoBaseAnime.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/disukoBaseAnimepng.png"
+        },
+        {
+          "id": "ABSApAn6c",
+          "name": "ShikuBase.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/shikuBasepng.png"
+        },
+        {
+          "id": "aDXGu3jQe",
+          "name": "Date~!.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/datepng.png"
         }
       ],
       "indirect": false,
