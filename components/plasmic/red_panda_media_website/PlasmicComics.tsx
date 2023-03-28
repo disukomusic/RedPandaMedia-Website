@@ -61,7 +61,7 @@ export const PlasmicComics__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicComics__OverridesType = {
   root?: p.Flex<"div">;
-  navBar?: p.Flex<"div">;
+  navBar2?: p.Flex<"div">;
   button?: p.Flex<"button">;
   button2?: p.Flex<typeof Button2>;
   reveal?: p.Flex<typeof Reveal>;
@@ -177,19 +177,19 @@ function PlasmicComics__RenderFunc(props: {
         >
           <p.Stack
             as={"div"}
-            data-plasmic-name={"navBar"}
-            data-plasmic-override={overrides.navBar}
+            data-plasmic-name={"navBar2"}
+            data-plasmic-override={overrides.navBar2}
             hasGap={true}
-            className={classNames(projectcss.all, sty.navBar)}
+            className={classNames(projectcss.all, sty.navBar2)}
           >
             <p.Stack
               as={"div"}
               hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__meN1E)}
+              className={classNames(projectcss.all, sty.freeBox__yQqEg)}
             >
               <p.PlasmicImg
                 alt={""}
-                className={classNames(sty.img__deEjr)}
+                className={classNames(sty.img__isHjd)}
                 displayHeight={"auto" as const}
                 displayMaxHeight={"none" as const}
                 displayMaxWidth={"343px" as const}
@@ -207,13 +207,13 @@ function PlasmicComics__RenderFunc(props: {
               <p.Stack
                 as={"div"}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox___7O2Y1)}
+                className={classNames(projectcss.all, sty.freeBox__f4ZPx)}
               >
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link__yl3Xv
+                    sty.link__uskl9
                   )}
                   component={Link}
                   href={`/`}
@@ -224,18 +224,17 @@ function PlasmicComics__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__n0Rvj
+                      sty.text__dwrvS
                     )}
                   >
                     {"Home"}
                   </div>
                 </p.PlasmicLink>
-
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link__d4QV2
+                    sty.link__ySnYw
                   )}
                   component={Link}
                   href={`/about`}
@@ -246,40 +245,39 @@ function PlasmicComics__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__aSodp
+                      sty.text__ra9LQ
                     )}
                   >
                     {"About Us"}
                   </div>
                 </p.PlasmicLink>
-
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link__v4FSn
+                    sty.link__mzFnI
                   )}
                   component={Link}
                   href={`/comics`}
                   platform={"nextjs"}
+                  target={undefined}
                   title={"Comics" as const}
                 >
                   <div
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text___4J5IY
+                      sty.text__wtgCc
                     )}
                   >
                     {"Comics"}
                   </div>
                 </p.PlasmicLink>
-
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,
                     projectcss.a,
-                    sty.link__ae9Ez
+                    sty.link__xJjyn
                   )}
                   component={Link}
                   href={`/newsletter`}
@@ -290,16 +288,38 @@ function PlasmicComics__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__sq7Ka
+                      sty.text__vWomI
                     )}
                   >
                     {"Newsletter"}
                   </div>
                 </p.PlasmicLink>
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__zr4Ge
+                  )}
+                  component={Link}
+                  href={`/radio`}
+                  platform={"nextjs"}
+                  title={"Newsletter" as const}
+                >
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ghPm5
+                    )}
+                  >
+                    {"Radio"}
+                  </div>
+                </p.PlasmicLink>
               </p.Stack>
-
               {false ? (
-                <div className={classNames(projectcss.all, sty.freeBox__dK3Ns)}>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___1Tqbl)}
+                >
                   <button
                     data-plasmic-name={"button"}
                     data-plasmic-override={overrides.button}
@@ -312,7 +332,6 @@ function PlasmicComics__RenderFunc(props: {
                   >
                     {"Sign up"}
                   </button>
-
                   {true ? (
                     <Button2
                       data-plasmic-name={"button2"}
@@ -321,13 +340,16 @@ function PlasmicComics__RenderFunc(props: {
                       color={"clear" as const}
                       endIcon={
                         <Icon38Icon
-                          className={classNames(projectcss.all, sty.svg__wRvRc)}
+                          className={classNames(
+                            projectcss.all,
+                            sty.svg___1CeH1
+                          )}
                           role={"img"}
                         />
                       }
                       startIcon={
                         <ChecksvgIcon
-                          className={classNames(projectcss.all, sty.svg__b8FKe)}
+                          className={classNames(projectcss.all, sty.svg__zZwnl)}
                           role={"img"}
                         />
                       }
@@ -336,7 +358,7 @@ function PlasmicComics__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__rychy
+                          sty.text__tm5Ss
                         )}
                       >
                         {"Log in"}
@@ -347,7 +369,6 @@ function PlasmicComics__RenderFunc(props: {
               ) : null}
             </p.Stack>
           </p.Stack>
-
           <p.PlasmicImg
             alt={""}
             className={classNames(sty.img__whvpZ)}
@@ -427,8 +448,8 @@ function PlasmicComics__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "navBar", "button", "button2", "reveal", "tilt"],
-  navBar: ["navBar", "button", "button2"],
+  root: ["root", "navBar2", "button", "button2", "reveal", "tilt"],
+  navBar2: ["navBar2", "button", "button2"],
   button: ["button"],
   button2: ["button2"],
   reveal: ["reveal", "tilt"],
@@ -439,7 +460,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  navBar: "div";
+  navBar2: "div";
   button: "button";
   button2: typeof Button2;
   reveal: typeof Reveal;
@@ -506,7 +527,7 @@ export const PlasmicComics = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    navBar: makeNodeComponent("navBar"),
+    navBar2: makeNodeComponent("navBar2"),
     button: makeNodeComponent("button"),
     button2: makeNodeComponent("button2"),
     reveal: makeNodeComponent("reveal"),

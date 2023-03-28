@@ -131,22 +131,18 @@ function PlasmicSwitch__RenderFunc(props: {
         path: "noLabel",
         type: "private",
         variableType: "variant",
-        initFunc: true
-          ? ({ $props, $state, $queries, $ctx }) => $props.noLabel
-          : undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.noLabel
       },
       {
         path: "isDisabled",
         type: "private",
         variableType: "variant",
-        initFunc: true
-          ? ({ $props, $state, $queries, $ctx }) => $props.isDisabled
-          : undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.isDisabled
       },
       {
         path: "isChecked",
         type: "writable",
-        variableType: "text",
+        variableType: "boolean",
 
         valueProp: "isChecked",
         onChangeProp: "onChange"
@@ -218,7 +214,6 @@ function PlasmicSwitch__RenderFunc(props: {
           })}
         />
       </div>
-
       {(hasVariant($state, "noLabel", "noLabel") ? false : true) ? (
         <div
           data-plasmic-name={"labelContainer"}

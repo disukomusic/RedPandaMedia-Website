@@ -278,6 +278,27 @@
     text-align: center;
   }
 }
+.link___8A4K {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: auto;
+  background: none;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  flex-shrink: 0;
+  flex-grow: 1;
+  padding: 5px 10px;
+}
+.text__gsR2Z {
+  position: relative;
+  width: auto;
+  height: auto;
+  font-family: "Arial Rounded MT";
+  color: var(--token-OxTzNZuyK);
+}
 .freeBox__xaxU {
   display: flex;
   position: relative;

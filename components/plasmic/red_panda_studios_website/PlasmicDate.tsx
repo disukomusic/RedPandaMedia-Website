@@ -207,7 +207,6 @@ function PlasmicDate__RenderFunc(props: {
                   }}
                 />
               ) : null}
-
               <p.PlasmicImg
                 alt={""}
                 className={classNames(sty.img__n5UGf)}

@@ -180,7 +180,6 @@ function PlasmicNavBar__RenderFunc(props: {
               {"Home"}
             </div>
           </Button2>
-
           <Button2
             className={classNames("__wab_instance", sty.button2__o8NDa)}
             color={"clear" as const}
@@ -207,7 +206,6 @@ function PlasmicNavBar__RenderFunc(props: {
               {"About Us"}
             </div>
           </Button2>
-
           <Button2
             className={classNames("__wab_instance", sty.button2__x0TSj)}
             color={"clear" as const}
@@ -234,7 +232,6 @@ function PlasmicNavBar__RenderFunc(props: {
               {"Comics"}
             </div>
           </Button2>
-
           <Button2
             className={classNames("__wab_instance", sty.button2__omIIp)}
             color={"clear" as const}
@@ -262,7 +259,6 @@ function PlasmicNavBar__RenderFunc(props: {
             </div>
           </Button2>
         </p.Stack>
-
         {false ? (
           <div className={classNames(projectcss.all, sty.freeBox__rx4Qo)}>
             <button
@@ -277,7 +273,6 @@ function PlasmicNavBar__RenderFunc(props: {
             >
               {"Sign up"}
             </button>
-
             {true ? (
               <Button2
                 className={classNames("__wab_instance", sty.button2__cfqN)}

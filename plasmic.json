@@ -53,8 +53,7 @@
           "name": "DataProvider",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "szjgMQpPpxhmkjnaBvZQJG",
@@ -73,8 +72,7 @@
           "name": "Tilt",
           "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
@@ -93,8 +91,7 @@
           "name": "Reveal",
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "itBdcjth19Wasd6ngAYxWR",
@@ -123,8 +120,7 @@
           "name": "FollowWrapper",
           "componentImportPath": "@plasmicpkgs/react-twitter-widgets"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "nazLgTEW7V6FTXLkGvtboX",
@@ -249,6 +245,19 @@
             "modulePath": "../pages/date.tsx"
           },
           "cssFilePath": "plasmic/red_panda_studios_website/PlasmicDate.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "vzfMdSUs_S",
+          "name": "Radio",
+          "type": "managed",
+          "projectId": "nazLgTEW7V6FTXLkGvtboX",
+          "renderModuleFilePath": "plasmic/red_panda_studios_website/PlasmicRadio.tsx",
+          "importSpec": {
+            "modulePath": "../pages/radio.tsx"
+          },
+          "cssFilePath": "plasmic/red_panda_studios_website/PlasmicRadio.module.css",
           "scheme": "blackbox",
           "componentType": "page"
         }
@@ -504,8 +513,7 @@
           "name": "Slider",
           "componentImportPath": "react-slick"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     }
   ],
   "globalVariants": {
@@ -522,6 +530,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.231",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.231/dist/plasmic.schema.json"
+  "cliVersion": "0.1.245",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.245/dist/plasmic.schema.json"
 }

@@ -226,7 +226,6 @@ function PlasmicHomepage__RenderFunc(props: {
                             </span>
                           </React.Fragment>
                         </div>
-
                         <Embed
                           data-plasmic-name={"embedHtml"}
                           data-plasmic-override={overrides.embedHtml}
@@ -256,7 +255,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     ) : null}
                   </div>
                 ) : null}
-
                 <div className={classNames(projectcss.all, sty.column__pcMc6)}>
                   <div
                     className={classNames(
@@ -274,7 +272,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       </span>
                     </React.Fragment>
                   </div>
-
                   <div
                     className={classNames(
                       projectcss.all,
@@ -286,7 +283,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       "We’re Red Panda Studios, an indie digital media group focusing on games, music, and more.  On this site you can check out our games and other digital content, as well as information about the members of our crew and blog posts."
                     }
                   </div>
-
                   <Reveal
                     cascade={true}
                     className={classNames("__wab_instance", sty.reveal__gfZv)}
@@ -318,7 +314,6 @@ function PlasmicHomepage__RenderFunc(props: {
                           </span>
                         </React.Fragment>
                       </div>
-
                       <p.Stack
                         as={"div"}
                         hasGap={true}
@@ -377,7 +372,6 @@ function PlasmicHomepage__RenderFunc(props: {
                               />
                             </p.PlasmicLink>
                           </Tilt>
-
                           <div
                             className={classNames(
                               projectcss.all,
@@ -396,7 +390,6 @@ function PlasmicHomepage__RenderFunc(props: {
                               </span>
                             </React.Fragment>
                           </div>
-
                           <div
                             className={classNames(
                               projectcss.all,
@@ -409,7 +402,6 @@ function PlasmicHomepage__RenderFunc(props: {
                             }
                           </div>
                         </div>
-
                         <div
                           data-plasmic-name={"grooveMachines"}
                           data-plasmic-override={overrides.grooveMachines}
@@ -459,7 +451,6 @@ function PlasmicHomepage__RenderFunc(props: {
                               />
                             </p.PlasmicLink>
                           </Tilt>
-
                           <div
                             className={classNames(
                               projectcss.all,
@@ -478,7 +469,6 @@ function PlasmicHomepage__RenderFunc(props: {
                               </span>
                             </React.Fragment>
                           </div>
-
                           <div
                             className={classNames(
                               projectcss.all,
@@ -493,7 +483,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         </div>
                       </p.Stack>
                     </div>
-
                     <div
                       className={classNames(projectcss.all, sty.freeBox__p7T0B)}
                     >
@@ -515,7 +504,6 @@ function PlasmicHomepage__RenderFunc(props: {
                           </span>
                         </React.Fragment>
                       </div>
-
                       <div
                         className={classNames(
                           projectcss.all,
@@ -569,7 +557,6 @@ function PlasmicHomepage__RenderFunc(props: {
                               />
                             </p.PlasmicLink>
                           </Tilt>
-
                           <div
                             className={classNames(
                               projectcss.all,
@@ -588,7 +575,6 @@ function PlasmicHomepage__RenderFunc(props: {
                               </span>
                             </React.Fragment>
                           </div>
-
                           <div
                             className={classNames(
                               projectcss.all,
@@ -601,7 +587,6 @@ function PlasmicHomepage__RenderFunc(props: {
                             }
                           </div>
                         </div>
-
                         <div
                           data-plasmic-name={"eggRanger2"}
                           data-plasmic-override={overrides.eggRanger2}
@@ -648,7 +633,6 @@ function PlasmicHomepage__RenderFunc(props: {
                               />
                             </p.PlasmicLink>
                           </Tilt>
-
                           <div
                             className={classNames(
                               projectcss.all,
@@ -667,7 +651,6 @@ function PlasmicHomepage__RenderFunc(props: {
                               </span>
                             </React.Fragment>
                           </div>
-
                           <div
                             className={classNames(
                               projectcss.all,
@@ -684,7 +667,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     </div>
                   </Reveal>
                 </div>
-
                 <div className={classNames(projectcss.all, sty.column___7KFxr)}>
                   {(
                     hasVariant(globalVariants, "screen", "mobileOnly")
@@ -725,7 +707,6 @@ function PlasmicHomepage__RenderFunc(props: {
                             </span>
                           </React.Fragment>
                         </div>
-
                         <p.PlasmicLink
                           className={classNames(
                             projectcss.all,
@@ -761,7 +742,6 @@ function PlasmicHomepage__RenderFunc(props: {
                             </div>
                           </div>
                         </p.PlasmicLink>
-
                         <p.PlasmicLink
                           className={classNames(
                             projectcss.all,
@@ -799,7 +779,6 @@ function PlasmicHomepage__RenderFunc(props: {
                             </div>
                           </div>
                         </p.PlasmicLink>
-
                         <p.PlasmicLink
                           className={classNames(
                             projectcss.all,

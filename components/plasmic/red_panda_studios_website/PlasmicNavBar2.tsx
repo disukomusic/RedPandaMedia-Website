@@ -176,7 +176,6 @@ function PlasmicNavBar2__RenderFunc(props: {
               {"Home"}
             </div>
           </p.PlasmicLink>
-
           <p.PlasmicLink
             className={classNames(
               projectcss.all,
@@ -198,7 +197,6 @@ function PlasmicNavBar2__RenderFunc(props: {
               {"About Us"}
             </div>
           </p.PlasmicLink>
-
           <p.PlasmicLink
             className={classNames(
               projectcss.all,
@@ -221,7 +219,6 @@ function PlasmicNavBar2__RenderFunc(props: {
               {"Comics"}
             </div>
           </p.PlasmicLink>
-
           <p.PlasmicLink
             className={classNames(
               projectcss.all,
@@ -243,8 +240,28 @@ function PlasmicNavBar2__RenderFunc(props: {
               {"Newsletter"}
             </div>
           </p.PlasmicLink>
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link___8A4K
+            )}
+            component={Link}
+            href={`/radio`}
+            platform={"nextjs"}
+            title={"Newsletter" as const}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__gsR2Z
+              )}
+            >
+              {"Radio"}
+            </div>
+          </p.PlasmicLink>
         </p.Stack>
-
         {false ? (
           <div className={classNames(projectcss.all, sty.freeBox__xaxU)}>
             <button
@@ -259,7 +276,6 @@ function PlasmicNavBar2__RenderFunc(props: {
             >
               {"Sign up"}
             </button>
-
             {true ? (
               <Button2
                 data-plasmic-name={"button2"}
