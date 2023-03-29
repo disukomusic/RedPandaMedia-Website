@@ -212,27 +212,33 @@ function PlasmicNewsletter__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox___8Kreq)}
               >
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__a65K
-                  )}
-                  component={Link}
-                  href={`/`}
-                  platform={"nextjs"}
-                  title={"Home" as const}
-                >
-                  <div
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : true
+                ) ? (
+                  <p.PlasmicLink
                     className={classNames(
                       projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__ycfcF
+                      projectcss.a,
+                      sty.link__a65K
                     )}
+                    component={Link}
+                    href={`/`}
+                    platform={"nextjs"}
+                    title={"Home" as const}
                   >
-                    {"Home"}
-                  </div>
-                </p.PlasmicLink>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__ycfcF
+                      )}
+                    >
+                      {"Home"}
+                    </div>
+                  </p.PlasmicLink>
+                ) : null}
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,

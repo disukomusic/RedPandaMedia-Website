@@ -202,6 +202,11 @@
   flex-shrink: 0;
   padding: 5px 10px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .link__uskl9 {
+    display: none;
+  }
+}
 .text__dwrvS {
   position: relative;
   width: 100%;
@@ -254,7 +259,10 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .link__mzFnI {
-    display: none;
+    background: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
 }
 .text__wtgCc {

@@ -213,27 +213,33 @@ function PlasmicAboutUs__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox___3CXsg)}
               >
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link___5QhzX
-                  )}
-                  component={Link}
-                  href={`/`}
-                  platform={"nextjs"}
-                  title={"Home" as const}
-                >
-                  <div
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : true
+                ) ? (
+                  <p.PlasmicLink
                     className={classNames(
                       projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__qes7W
+                      projectcss.a,
+                      sty.link___5QhzX
                     )}
+                    component={Link}
+                    href={`/`}
+                    platform={"nextjs"}
+                    title={"Home" as const}
                   >
-                    {"Home"}
-                  </div>
-                </p.PlasmicLink>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__qes7W
+                      )}
+                    >
+                      {"Home"}
+                    </div>
+                  </p.PlasmicLink>
+                ) : null}
                 {(
                   hasVariant(globalVariants, "screen", "mobileOnly")
                     ? true

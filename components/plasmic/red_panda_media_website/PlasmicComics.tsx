@@ -209,27 +209,33 @@ function PlasmicComics__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__f4ZPx)}
               >
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__uskl9
-                  )}
-                  component={Link}
-                  href={`/`}
-                  platform={"nextjs"}
-                  title={"Home" as const}
-                >
-                  <div
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : true
+                ) ? (
+                  <p.PlasmicLink
                     className={classNames(
                       projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__dwrvS
+                      projectcss.a,
+                      sty.link__uskl9
                     )}
+                    component={Link}
+                    href={`/`}
+                    platform={"nextjs"}
+                    title={"Home" as const}
                   >
-                    {"Home"}
-                  </div>
-                </p.PlasmicLink>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__dwrvS
+                      )}
+                    >
+                      {"Home"}
+                    </div>
+                  </p.PlasmicLink>
+                ) : null}
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,

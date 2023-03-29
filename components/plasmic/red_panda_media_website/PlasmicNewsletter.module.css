@@ -197,6 +197,11 @@
   flex-shrink: 0;
   padding: 5px 10px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .link__a65K {
+    display: none;
+  }
+}
 .text__ycfcF {
   position: relative;
   width: 100%;
@@ -278,7 +283,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .link__zXjr {
     background: none;
-    display: none;
+    display: flex;
   }
 }
 .text__r5Lic {
@@ -440,7 +445,7 @@
   max-width: 800px;
   color: var(--token-oKVpvPi0x);
   text-align: center;
-  font-family: "ABeeZee", sans-serif;
+  font-family: "Arial Rounded MT";
   font-size: 24px;
   font-weight: 700;
   min-width: 0;
