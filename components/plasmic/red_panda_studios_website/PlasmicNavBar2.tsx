@@ -155,27 +155,31 @@ function PlasmicNavBar2__RenderFunc(props: {
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox___2Iwi7)}
         >
-          <p.PlasmicLink
-            className={classNames(
-              projectcss.all,
-              projectcss.a,
-              sty.link__ingV6
-            )}
-            component={Link}
-            href={`/`}
-            platform={"nextjs"}
-            title={"Home" as const}
-          >
-            <div
+          {(
+            hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
+          ) ? (
+            <p.PlasmicLink
               className={classNames(
                 projectcss.all,
-                projectcss.__wab_text,
-                sty.text__adC7E
+                projectcss.a,
+                sty.link__ingV6
               )}
+              component={Link}
+              href={`/`}
+              platform={"nextjs"}
+              title={"Home" as const}
             >
-              {"Home"}
-            </div>
-          </p.PlasmicLink>
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__adC7E
+                )}
+              >
+                {"Home"}
+              </div>
+            </p.PlasmicLink>
+          ) : null}
           <p.PlasmicLink
             className={classNames(
               projectcss.all,

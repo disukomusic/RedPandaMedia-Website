@@ -251,28 +251,34 @@ function PlasmicComics__RenderFunc(props: {
                     {"About Us"}
                   </div>
                 </p.PlasmicLink>
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__mzFnI
-                  )}
-                  component={Link}
-                  href={`/comics`}
-                  platform={"nextjs"}
-                  target={undefined}
-                  title={"Comics" as const}
-                >
-                  <div
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : true
+                ) ? (
+                  <p.PlasmicLink
                     className={classNames(
                       projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__wtgCc
+                      projectcss.a,
+                      sty.link__mzFnI
                     )}
+                    component={Link}
+                    href={`/comics`}
+                    platform={"nextjs"}
+                    target={undefined}
+                    title={"Comics" as const}
                   >
-                    {"Comics"}
-                  </div>
-                </p.PlasmicLink>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__wtgCc
+                      )}
+                    >
+                      {"Comics"}
+                    </div>
+                  </p.PlasmicLink>
+                ) : null}
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,
@@ -376,7 +382,7 @@ function PlasmicComics__RenderFunc(props: {
             displayMaxHeight={"none" as const}
             displayMaxWidth={
               hasVariant(globalVariants, "screen", "mobileOnly")
-                ? ("90%" as const)
+                ? ("80%" as const)
                 : ("100%" as const)
             }
             displayMinHeight={"0" as const}
@@ -426,7 +432,11 @@ function PlasmicComics__RenderFunc(props: {
                   className={classNames(sty.img__skKQr)}
                   displayHeight={"auto" as const}
                   displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
+                  displayMaxWidth={
+                    hasVariant(globalVariants, "screen", "mobileOnly")
+                      ? ("90%" as const)
+                      : ("100%" as const)
+                  }
                   displayMinHeight={"0" as const}
                   displayMinWidth={"0" as const}
                   displayWidth={"478px" as const}

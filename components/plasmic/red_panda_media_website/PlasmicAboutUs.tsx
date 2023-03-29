@@ -234,27 +234,33 @@ function PlasmicAboutUs__RenderFunc(props: {
                     {"Home"}
                   </div>
                 </p.PlasmicLink>
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link__iJk1
-                  )}
-                  component={Link}
-                  href={`/about`}
-                  platform={"nextjs"}
-                  title={"About Us" as const}
-                >
-                  <div
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : true
+                ) ? (
+                  <p.PlasmicLink
                     className={classNames(
                       projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__b6Ezz
+                      projectcss.a,
+                      sty.link__iJk1
                     )}
+                    component={Link}
+                    href={`/about`}
+                    platform={"nextjs"}
+                    title={"About Us" as const}
                   >
-                    {"About Us"}
-                  </div>
-                </p.PlasmicLink>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__b6Ezz
+                      )}
+                    >
+                      {"About Us"}
+                    </div>
+                  </p.PlasmicLink>
+                ) : null}
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,

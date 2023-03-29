@@ -11,6 +11,12 @@
   min-height: 0;
   padding: 0px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .root {
+    justify-content: center;
+    align-items: center;
+  }
+}
 .navBar2 {
   display: flex;
   flex-direction: row;
@@ -93,8 +99,8 @@
     align-items: center;
     margin-left: calc(0px - 0px);
     width: calc(100% + 0px);
-    margin-top: calc(0px - 16px);
-    height: calc(100% + 16px);
+    margin-top: calc(0px - 0px);
+    height: calc(100% + 0px);
   }
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -107,7 +113,7 @@
     > picture
     > img {
     margin-left: 0px;
-    margin-top: 16px;
+    margin-top: 0px;
   }
 }
 .img__isHjd {
@@ -131,7 +137,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .img__isHjd {
     margin-left: calc(10px + 0px) !important;
-    margin-top: calc(10px + 16px) !important;
+    margin-top: calc(10px + 0px) !important;
   }
 }
 .freeBox__f4ZPx {
@@ -245,6 +251,11 @@
   flex-grow: 1;
   min-height: 0;
   padding: 5px 10px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .link__mzFnI {
+    display: none;
+  }
 }
 .text__wtgCc {
   position: relative;
@@ -375,7 +386,7 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .img__whvpZ {
     width: 100%;
-    max-width: 90%;
+    max-width: 80%;
     object-fit: contain;
     min-width: 0;
     margin: 10px;
@@ -406,6 +417,12 @@
   display: flex;
   margin: 10px;
 }
+@media (min-width: 0px) and (max-width: 768px) {
+  .link___7SBSq {
+    justify-content: center;
+    align-items: center;
+  }
+}
 .img__skKQr {
   object-fit: cover;
   max-width: 100%;
@@ -418,4 +435,9 @@
 }
 .img__skKQr > :global(.__wab_img-spacer) > img {
   object-fit: cover;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .img__skKQr {
+    max-width: 90%;
+  }
 }

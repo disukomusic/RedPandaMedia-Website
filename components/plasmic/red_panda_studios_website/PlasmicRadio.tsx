@@ -256,27 +256,33 @@ function PlasmicRadio__RenderFunc(props: {
                     {"Newsletter"}
                   </div>
                 </p.PlasmicLink>
-                <p.PlasmicLink
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.a,
-                    sty.link___2DNrp
-                  )}
-                  component={Link}
-                  href={`/radio`}
-                  platform={"nextjs"}
-                  title={"Newsletter" as const}
-                >
-                  <div
+                {(
+                  hasVariant(globalVariants, "screen", "mobileOnly")
+                    ? true
+                    : true
+                ) ? (
+                  <p.PlasmicLink
                     className={classNames(
                       projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__h3UpW
+                      projectcss.a,
+                      sty.link___2DNrp
                     )}
+                    component={Link}
+                    href={`/radio`}
+                    platform={"nextjs"}
+                    title={"Newsletter" as const}
                   >
-                    {"Radio"}
-                  </div>
-                </p.PlasmicLink>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__h3UpW
+                      )}
+                    >
+                      {"Radio"}
+                    </div>
+                  </p.PlasmicLink>
+                ) : null}
               </p.Stack>
               {false ? (
                 <div className={classNames(projectcss.all, sty.freeBox__zxzH)}>
