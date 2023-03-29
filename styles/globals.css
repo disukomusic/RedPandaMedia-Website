@@ -23,6 +23,14 @@ a {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Arial Rounded MT Bold';
+  src: url('../fonts/Arial Rounded MT Bold.woff2') format('woff2'), url('../fonts/Arial Rounded MT Bold.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
