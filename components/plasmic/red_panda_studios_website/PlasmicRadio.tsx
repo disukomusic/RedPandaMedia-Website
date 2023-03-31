@@ -343,7 +343,7 @@ function PlasmicRadio__RenderFunc(props: {
             data-plasmic-override={overrides.embedHtml}
             className={classNames("__wab_instance", sty.embedHtml)}
             code={
-              '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/pLxUwHcgToA?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>' as const
+              '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/i6fblBeFYPk?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>' as const
             }
           />
         </div>
