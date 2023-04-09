@@ -25,6 +25,17 @@
   > img {
   margin-left: 16px;
 }
+.navBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+  background: url("/plasmic/red_panda_media_website/images/shikuForestBlurDarkpng.png") top 0% left 50% / cover repeat;
+  min-width: 0;
+  padding: 16px 16px 0px;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .navBar {
     width: 100%;
@@ -35,6 +46,13 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .navBar > :global(.__wab_flex-container) {
     min-width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .navBar {
+    width: 100%;
+    min-width: 0;
+    padding: 32px;
   }
 }
 .freeBox__csQfp {
@@ -63,6 +81,16 @@
   > img {
   margin-left: 16px;
 }
+.freeBox__csQfp {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1080px;
+  min-width: 0;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__csQfp {
     display: flex;
@@ -90,6 +118,13 @@
     > img {
     margin-left: 0px;
     margin-top: 16px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__csQfp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .img {
@@ -127,6 +162,13 @@
   > img {
   margin-left: 8px;
 }
+.freeBox__aSeVx {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
 @media (min-width: 0px) and (max-width: 768px) {
   .freeBox__aSeVx > :global(.__wab_flex-container) {
     flex-wrap: wrap;
@@ -145,6 +187,12 @@
     > picture
     > img {
     margin-top: 8px;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .freeBox__aSeVx {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .button2___0Y5Fe:global(.__wab_instance) {

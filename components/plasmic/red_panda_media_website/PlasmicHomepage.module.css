@@ -265,12 +265,6 @@
   margin-left: calc(0px - 10px);
   width: calc(100% + 10px);
 }
-.columns__f6WLu > :global(.__wab_flex-container) > :nth-child(2n + 1) {
-  width: calc((100% - 2 * 10px) * 6 / 12);
-}
-.columns__f6WLu > :global(.__wab_flex-container) > :nth-child(2n + 2) {
-  width: calc((100% - 2 * 10px) * 6 / 12);
-}
 .columns__f6WLu > :global(.__wab_flex-container) > *,
 .columns__f6WLu > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
 .columns__f6WLu > :global(.__wab_flex-container) > picture > img,
@@ -280,6 +274,25 @@
   > picture
   > img {
   margin-left: 10px;
+}
+.columns__f6WLu {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 20%;
+  align-items: stretch;
+  flex-shrink: 1;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  flex-grow: 0;
+  min-width: 0;
+  padding: 10px;
+}
+.columns__f6WLu > :global(.__wab_flex-container) > :nth-child(2n + 1) {
+  width: calc((100% - 2 * 10px) * 6 / 12);
+}
+.columns__f6WLu > :global(.__wab_flex-container) > :nth-child(2n + 2) {
+  width: calc((100% - 2 * 10px) * 6 / 12);
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__f6WLu {
@@ -291,6 +304,15 @@
 }
 @media (min-width: 0px) and (max-width: 768px) {
   .columns__f6WLu > :global(.__wab_flex-container) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .columns__f6WLu {
+    width: 100%;
+    height: auto;
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 0;
