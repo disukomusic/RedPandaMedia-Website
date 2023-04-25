@@ -53,8 +53,7 @@
           "name": "DataProvider",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "szjgMQpPpxhmkjnaBvZQJG",
@@ -73,8 +72,7 @@
           "name": "Tilt",
           "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
@@ -93,8 +91,7 @@
           "name": "Reveal",
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "itBdcjth19Wasd6ngAYxWR",
@@ -123,8 +120,7 @@
           "name": "FollowWrapper",
           "componentImportPath": "@plasmicpkgs/react-twitter-widgets"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "nazLgTEW7V6FTXLkGvtboX",
@@ -517,8 +513,7 @@
           "name": "Slider",
           "componentImportPath": "react-slick"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     }
   ],
   "globalVariants": {
@@ -535,6 +530,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.255",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.255/dist/plasmic.schema.json"
+  "cliVersion": "0.1.261",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.261/dist/plasmic.schema.json"
 }
