@@ -45,6 +45,8 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "../red_panda_media_website/plasmic_red_panda_media_website.module.css"; // plasmic-import: nazLgTEW7V6FTXLkGvtboX/projectcss
 import sty from "./PlasmicDate.module.css"; // plasmic-import: jM_qgBDxgy/css
 
+createPlasmicElementProxy;
+
 export type PlasmicDate__VariantMembers = {};
 export type PlasmicDate__VariantsArgs = {};
 type VariantPropType = keyof PlasmicDate__VariantsArgs;
@@ -97,6 +99,7 @@ function PlasmicDate__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
+
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -273,7 +276,7 @@ const PlasmicDescendants = {
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
-  (typeof PlasmicDescendants)[T][number];
+  typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
   freeBox: "div";

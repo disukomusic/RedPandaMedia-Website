@@ -48,6 +48,8 @@ import sty from "./PlasmicNavBar2.module.css"; // plasmic-import: CIy-AvfP5yL/cs
 import ChecksvgIcon from "../red_panda_media_website/icons/PlasmicIcon__Checksvg"; // plasmic-import: -8WdXkfhmn7/icon
 import Icon38Icon from "../red_panda_media_website/icons/PlasmicIcon__Icon38"; // plasmic-import: gCQki7ZDykM/icon
 
+createPlasmicElementProxy;
+
 export type PlasmicNavBar2__VariantMembers = {};
 export type PlasmicNavBar2__VariantsArgs = {};
 type VariantPropType = keyof PlasmicNavBar2__VariantsArgs;
@@ -103,6 +105,7 @@ function PlasmicNavBar2__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
+
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -298,6 +301,7 @@ function PlasmicNavBar2__RenderFunc(props: {
                     role={"img"}
                   />
                 }
+                submitsForm={true}
               >
                 <div
                   className={classNames(
@@ -325,7 +329,7 @@ const PlasmicDescendants = {
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
-  (typeof PlasmicDescendants)[T][number];
+  typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   navBar: "div";
   img: typeof p.PlasmicImg;

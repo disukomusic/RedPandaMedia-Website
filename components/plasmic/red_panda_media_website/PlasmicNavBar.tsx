@@ -48,6 +48,8 @@ import sty from "./PlasmicNavBar.module.css"; // plasmic-import: GMeueXNIKkV/css
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: -8WdXkfhmn7/icon
 import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: gCQki7ZDykM/icon
 
+createPlasmicElementProxy;
+
 export type PlasmicNavBar__VariantMembers = {};
 export type PlasmicNavBar__VariantsArgs = {};
 type VariantPropType = keyof PlasmicNavBar__VariantsArgs;
@@ -102,6 +104,7 @@ function PlasmicNavBar__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
+
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -169,6 +172,7 @@ function PlasmicNavBar__RenderFunc(props: {
                 role={"img"}
               />
             }
+            submitsForm={true}
           >
             <div
               className={classNames(
@@ -195,6 +199,7 @@ function PlasmicNavBar__RenderFunc(props: {
                 role={"img"}
               />
             }
+            submitsForm={true}
           >
             <div
               className={classNames(
@@ -221,6 +226,7 @@ function PlasmicNavBar__RenderFunc(props: {
                 role={"img"}
               />
             }
+            submitsForm={true}
           >
             <div
               className={classNames(
@@ -247,6 +253,7 @@ function PlasmicNavBar__RenderFunc(props: {
                 role={"img"}
               />
             }
+            submitsForm={true}
           >
             <div
               className={classNames(
@@ -289,6 +296,7 @@ function PlasmicNavBar__RenderFunc(props: {
                     role={"img"}
                   />
                 }
+                submitsForm={true}
               >
                 <div
                   className={classNames(
@@ -315,7 +323,7 @@ const PlasmicDescendants = {
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
-  (typeof PlasmicDescendants)[T][number];
+  typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   navBar: "div";
   img: typeof p.PlasmicImg;

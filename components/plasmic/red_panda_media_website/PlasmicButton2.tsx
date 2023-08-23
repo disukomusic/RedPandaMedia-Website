@@ -46,6 +46,8 @@ import sty from "./PlasmicButton2.module.css"; // plasmic-import: mY87X3S2UUL/cs
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: -8WdXkfhmn7/icon
 import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: gCQki7ZDykM/icon
 
+createPlasmicElementProxy;
+
 export type PlasmicButton2__VariantMembers = {
   showStartIcon: "showStartIcon";
   showEndIcon: "showEndIcon";
@@ -104,13 +106,17 @@ export type PlasmicButton2__ArgsType = {
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
   link?: string;
+  submitsForm?: boolean;
+  target?: boolean;
 };
 type ArgPropType = keyof PlasmicButton2__ArgsType;
 export const PlasmicButton2__ArgProps = new Array<ArgPropType>(
   "children",
   "startIcon",
   "endIcon",
-  "link"
+  "link",
+  "submitsForm",
+  "target"
 );
 
 export type PlasmicButton2__OverridesType = {
@@ -121,6 +127,8 @@ export type PlasmicButton2__OverridesType = {
 };
 
 export interface DefaultButton2Props extends pp.BaseButtonProps {
+  submitsForm?: boolean;
+  target?: boolean;
   shape?: SingleChoiceArg<"rounded" | "round" | "sharp">;
   size?: SingleChoiceArg<"compact" | "minimal">;
   color?: SingleChoiceArg<
@@ -175,7 +183,9 @@ function PlasmicButton2__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
+
   const [$queries, setDollarQueries] = React.useState({});
+
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -215,9 +225,14 @@ function PlasmicButton2__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.color
       }
     ],
-    [$props, $ctx]
+    [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
+  const $state = p.useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries,
+    $refs
+  });
 
   const [isRootFocusVisibleWithin, triggerRootFocusVisibleWithinProps] =
     useTrigger("useFocusVisibleWithin", {
@@ -607,7 +622,7 @@ function PlasmicButton2__RenderFunc(props: {
   ) as React.ReactElement | null;
 }
 
-function useBehavior<P extends pp.BaseButtonProps>(
+function useBehavior<P extends pp.PlumeButtonProps>(
   props: P,
   ref: pp.ButtonRef
 ) {
@@ -645,7 +660,7 @@ const PlasmicDescendants = {
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
-  (typeof PlasmicDescendants)[T][number];
+  typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "button";
   startIconContainer: "div";

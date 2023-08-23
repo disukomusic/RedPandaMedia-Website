@@ -43,6 +43,8 @@ import "@plasmicapp/react-web/lib/plasmic.css";
 import projectcss from "../red_panda_media_website/plasmic_red_panda_media_website.module.css"; // plasmic-import: nazLgTEW7V6FTXLkGvtboX/projectcss
 import sty from "./PlasmicSwitch.module.css"; // plasmic-import: NhlkZfQForq/css
 
+createPlasmicElementProxy;
+
 export type PlasmicSwitch__VariantMembers = {
   noLabel: "noLabel";
   isDisabled: "isDisabled";
@@ -124,7 +126,9 @@ function PlasmicSwitch__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
+
   const [$queries, setDollarQueries] = React.useState({});
+
   const stateSpecs = React.useMemo(
     () => [
       {
@@ -148,9 +152,14 @@ function PlasmicSwitch__RenderFunc(props: {
         onChangeProp: "onChange"
       }
     ],
-    [$props, $ctx]
+    [$props, $ctx, $refs]
   );
-  const $state = p.useDollarState(stateSpecs, { $props, $ctx, $queries });
+  const $state = p.useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries,
+    $refs
+  });
 
   const [isRootFocusVisibleWithin, triggerRootFocusVisibleWithinProps] =
     useTrigger("useFocusVisibleWithin", {
@@ -283,7 +292,7 @@ const PlasmicDescendants = {
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
-  (typeof PlasmicDescendants)[T][number];
+  typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
   toggle: "div";

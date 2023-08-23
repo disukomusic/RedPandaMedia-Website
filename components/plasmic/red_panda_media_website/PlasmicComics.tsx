@@ -50,6 +50,8 @@ import sty from "./PlasmicComics.module.css"; // plasmic-import: 7gGZxN9wXqQ/css
 import ChecksvgIcon from "./icons/PlasmicIcon__Checksvg"; // plasmic-import: -8WdXkfhmn7/icon
 import Icon38Icon from "./icons/PlasmicIcon__Icon38"; // plasmic-import: gCQki7ZDykM/icon
 
+createPlasmicElementProxy;
+
 export type PlasmicComics__VariantMembers = {};
 export type PlasmicComics__VariantsArgs = {};
 type VariantPropType = keyof PlasmicComics__VariantsArgs;
@@ -105,6 +107,7 @@ function PlasmicComics__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
+
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -365,6 +368,7 @@ function PlasmicComics__RenderFunc(props: {
                           role={"img"}
                         />
                       }
+                      submitsForm={true}
                     >
                       <div
                         className={classNames(
@@ -473,7 +477,7 @@ const PlasmicDescendants = {
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
-  (typeof PlasmicDescendants)[T][number];
+  typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
   navBar2: "div";

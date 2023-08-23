@@ -53,6 +53,8 @@ import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: 20vkZ39fVK/
 import BrandInstagramsvgIcon from "./icons/PlasmicIcon__BrandInstagramsvg"; // plasmic-import: FPnuh-tu2Q/icon
 import BrandFacebooksvgIcon from "./icons/PlasmicIcon__BrandFacebooksvg"; // plasmic-import: 1x1GOS4HV3/icon
 
+createPlasmicElementProxy;
+
 export type PlasmicHomepage__VariantMembers = {};
 export type PlasmicHomepage__VariantsArgs = {};
 type VariantPropType = keyof PlasmicHomepage__VariantsArgs;
@@ -110,6 +112,7 @@ function PlasmicHomepage__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
+
   const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
@@ -280,7 +283,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     {
-                      "We’re Red Panda Studios, an indie digital media group focusing on games, music, and more.  On this site you can check out our games and other digital content, as well as information about the members of our crew and blog posts."
+                      "We\u2019re Red Panda Studios, an indie digital media group focusing on games, music, and more.  On this site you can check out our games and other digital content, as well as information about the members of our crew and blog posts."
                     }
                   </div>
                   <Reveal
@@ -850,7 +853,7 @@ const PlasmicDescendants = {
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
-  (typeof PlasmicDescendants)[T][number];
+  typeof PlasmicDescendants[T][number];
 type NodeDefaultElementType = {
   root: "div";
   navBar2: typeof NavBar2;

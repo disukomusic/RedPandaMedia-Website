@@ -36,21 +36,31 @@
         {
           "id": "CMDBvOhaI4s",
           "name": "Iframe",
+          "displayName": "hostless-iframe",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         },
         {
           "id": "RhitNJW5Zu-",
           "name": "Video",
+          "displayName": "hostless-html-video",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         },
         {
           "id": "PKldDYkH42",
           "name": "Embed",
+          "displayName": "hostless-embed",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         },
         {
           "id": "D4RbnlpRXg3",
           "name": "DataProvider",
+          "displayName": "hostless-data-provider",
+          "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
+        },
+        {
+          "id": "zlBHsvkFlN",
+          "name": "ConditionGuard",
+          "displayName": "hostless-condition-guard",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ]
@@ -70,6 +80,7 @@
         {
           "id": "PfY466VIuq",
           "name": "Tilt",
+          "displayName": "hostless-parallax-tilt",
           "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
         }
       ]
@@ -89,6 +100,7 @@
         {
           "id": "R6s1FdhksG",
           "name": "Reveal",
+          "displayName": "hostless-reveal",
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
       ]
@@ -108,16 +120,19 @@
         {
           "id": "RZqWqT2DfR",
           "name": "TweetWrapper",
+          "displayName": "hostless-react-twitter-widgets-tweet",
           "componentImportPath": "@plasmicpkgs/react-twitter-widgets"
         },
         {
           "id": "x2j0abJR_t",
           "name": "TimelineWrapper",
+          "displayName": "hostless-react-twitter-widgets-timeline",
           "componentImportPath": "@plasmicpkgs/react-twitter-widgets"
         },
         {
           "id": "zqQBieQcfl",
           "name": "FollowWrapper",
+          "displayName": "hostless-react-twitter-widgets-follow",
           "componentImportPath": "@plasmicpkgs/react-twitter-widgets"
         }
       ]
@@ -487,11 +502,13 @@
         {
           "id": "HUOHF0rTpE",
           "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
           "componentImportPath": "@plasmicapp/react-web"
         },
         {
           "id": "YQm9uW7AJX",
           "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
           "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
         }
       ]
@@ -511,6 +528,7 @@
         {
           "id": "HOQUyOpClJ",
           "name": "Slider",
+          "displayName": "hostless-slider",
           "componentImportPath": "react-slick"
         }
       ]
@@ -530,6 +548,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.261",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.261/dist/plasmic.schema.json"
+  "cliVersion": "0.1.304",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.304/dist/plasmic.schema.json"
 }
