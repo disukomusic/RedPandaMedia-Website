@@ -545,7 +545,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                           "__wab_instance",
                           sty.tilt___5Y6S
                         )}
-                        glareEnable={true}
+                        glareEnable={false}
                         tiltReverse={true}
                       >
                         {true ? (
@@ -738,7 +738,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                     ) : null}
                     <Tilt
                       className={classNames("__wab_instance", sty.tilt__jxIet)}
-                      glareEnable={true}
+                      glareEnable={false}
                       tiltEnable={true}
                       tiltReverse={true}
                     >
@@ -933,7 +933,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                     </Tilt>
                     <Tilt
                       className={classNames("__wab_instance", sty.tilt__kVXa)}
-                      glareEnable={true}
+                      glareEnable={false}
                       tiltEnable={true}
                       tiltReverse={true}
                     >
@@ -1128,7 +1128,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                     </Tilt>
                     <Tilt
                       className={classNames("__wab_instance", sty.tilt___0LypT)}
-                      glareEnable={true}
+                      glareEnable={false}
                       tiltEnable={true}
                       tiltReverse={true}
                     >
@@ -1321,7 +1321,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                     </Tilt>
                     <Tilt
                       className={classNames("__wab_instance", sty.tilt___0Ih8E)}
-                      glareEnable={true}
+                      glareEnable={false}
                       tiltEnable={true}
                       tiltReverse={true}
                     >
@@ -1543,7 +1543,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                           "__wab_instance",
                           sty.tilt__s19Xl
                         )}
-                        glareEnable={true}
+                        glareEnable={false}
                         tiltReverse={true}
                       >
                         {true ? (
@@ -1744,7 +1744,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                           "__wab_instance",
                           sty.tilt__k8TI2
                         )}
-                        glareEnable={true}
+                        glareEnable={false}
                         tiltReverse={true}
                       >
                         {true ? (
@@ -1962,7 +1962,7 @@ function PlasmicAboutUs__RenderFunc(props: {
                           "__wab_instance",
                           sty.tilt___2N1En
                         )}
-                        glareEnable={true}
+                        glareEnable={false}
                         tiltReverse={true}
                       >
                         {true ? (
