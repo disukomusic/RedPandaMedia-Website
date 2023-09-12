@@ -70,14 +70,6 @@ export interface DefaultNavBar2Props {
   className?: string;
 }
 
-const __wrapUserFunction =
-  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
-const __wrapUserPromise =
-  globalThis.__PlasmicWrapUserPromise ??
-  (async (loc, promise) => {
-    return await promise;
-  });
-
 function useNextRouter() {
   try {
     return useRouter();
@@ -92,21 +84,20 @@ function PlasmicNavBar2__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const __nextRouter = useNextRouter();
 
-  const $ctx = ph.useDataEnv?.() || {};
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
 
   const $props = {
     ...args,
     ...variants
   };
+
+  const __nextRouter = useNextRouter();
+  const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
-  const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantszpgDFsEUbio()
@@ -139,16 +130,16 @@ function PlasmicNavBar2__RenderFunc(props: {
           data-plasmic-override={overrides.img}
           alt={""}
           className={classNames(sty.img)}
-          displayHeight={"auto" as const}
-          displayMaxHeight={"none" as const}
-          displayMaxWidth={"343px" as const}
-          displayMinHeight={"0" as const}
-          displayMinWidth={"0" as const}
-          displayWidth={"100%" as const}
+          displayHeight={"auto"}
+          displayMaxHeight={"none"}
+          displayMaxWidth={"343px"}
+          displayMinHeight={"0"}
+          displayMinWidth={"0"}
+          displayWidth={"100%"}
           src={{
-            src: "/plasmic/red_panda_media_website/images/rpsLogopng.png",
-            fullWidth: 1266,
-            fullHeight: 269,
+            src: "/plasmic/red_panda_studios_website/images/rpsLogo2023Png.png",
+            fullWidth: 2421,
+            fullHeight: 532,
             aspectRatio: undefined
           }}
         />
@@ -158,31 +149,27 @@ function PlasmicNavBar2__RenderFunc(props: {
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox___2Iwi7)}
         >
-          {(
-            hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-          ) ? (
-            <p.PlasmicLink
+          <p.PlasmicLink
+            className={classNames(
+              projectcss.all,
+              projectcss.a,
+              sty.link__ingV6
+            )}
+            component={Link}
+            href={`/`}
+            platform={"nextjs"}
+            title={"Home"}
+          >
+            <div
               className={classNames(
                 projectcss.all,
-                projectcss.a,
-                sty.link__ingV6
+                projectcss.__wab_text,
+                sty.text__adC7E
               )}
-              component={Link}
-              href={`/`}
-              platform={"nextjs"}
-              title={"Home" as const}
             >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__adC7E
-                )}
-              >
-                {"Home"}
-              </div>
-            </p.PlasmicLink>
-          ) : null}
+              {"Home"}
+            </div>
+          </p.PlasmicLink>
           <p.PlasmicLink
             className={classNames(
               projectcss.all,
@@ -192,7 +179,7 @@ function PlasmicNavBar2__RenderFunc(props: {
             component={Link}
             href={`/about`}
             platform={"nextjs"}
-            title={"About Us" as const}
+            title={"About Us"}
           >
             <div
               className={classNames(
@@ -214,7 +201,7 @@ function PlasmicNavBar2__RenderFunc(props: {
             href={`/comics`}
             platform={"nextjs"}
             target={undefined}
-            title={"Comics" as const}
+            title={"Comics"}
           >
             <div
               className={classNames(
@@ -235,7 +222,7 @@ function PlasmicNavBar2__RenderFunc(props: {
             component={Link}
             href={`/newsletter`}
             platform={"nextjs"}
-            title={"Newsletter" as const}
+            title={"Newsletter"}
           >
             <div
               className={classNames(
@@ -256,7 +243,7 @@ function PlasmicNavBar2__RenderFunc(props: {
             component={Link}
             href={`/radio`}
             platform={"nextjs"}
-            title={"Newsletter" as const}
+            title={"Newsletter"}
           >
             <div
               className={classNames(
@@ -283,37 +270,35 @@ function PlasmicNavBar2__RenderFunc(props: {
             >
               {"Sign up"}
             </button>
-            {true ? (
-              <Button2
-                data-plasmic-name={"button2"}
-                data-plasmic-override={overrides.button2}
-                className={classNames("__wab_instance", sty.button2)}
-                color={"clear" as const}
-                endIcon={
-                  <Icon38Icon
-                    className={classNames(projectcss.all, sty.svg__xAbbI)}
-                    role={"img"}
-                  />
-                }
-                startIcon={
-                  <ChecksvgIcon
-                    className={classNames(projectcss.all, sty.svg__tbCds)}
-                    role={"img"}
-                  />
-                }
-                submitsForm={true}
+            <Button2
+              data-plasmic-name={"button2"}
+              data-plasmic-override={overrides.button2}
+              className={classNames("__wab_instance", sty.button2)}
+              color={"clear"}
+              endIcon={
+                <Icon38Icon
+                  className={classNames(projectcss.all, sty.svg__xAbbI)}
+                  role={"img"}
+                />
+              }
+              startIcon={
+                <ChecksvgIcon
+                  className={classNames(projectcss.all, sty.svg__tbCds)}
+                  role={"img"}
+                />
+              }
+              submitsForm={true}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__rkpgk
+                )}
               >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__rkpgk
-                  )}
-                >
-                  {"Log in"}
-                </div>
-              </Button2>
-            ) : null}
+                {"Log in"}
+              </div>
+            </Button2>
           </div>
         ) : null}
       </p.Stack>

@@ -63,8 +63,7 @@
           "displayName": "hostless-condition-guard",
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "szjgMQpPpxhmkjnaBvZQJG",
@@ -84,8 +83,7 @@
           "displayName": "hostless-parallax-tilt",
           "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
@@ -105,8 +103,7 @@
           "displayName": "hostless-reveal",
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "itBdcjth19Wasd6ngAYxWR",
@@ -138,8 +135,7 @@
           "displayName": "hostless-react-twitter-widgets-follow",
           "componentImportPath": "@plasmicpkgs/react-twitter-widgets"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     },
     {
       "projectId": "nazLgTEW7V6FTXLkGvtboX",
@@ -498,6 +494,16 @@
           "id": "aDXGu3jQe",
           "name": "Date~!.png",
           "filePath": "../public/plasmic/red_panda_studios_website/images/datepng.png"
+        },
+        {
+          "id": "n-IQbu0mGkIn",
+          "name": "RPS Logo 2023.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/rpsLogo2023Png.png"
+        },
+        {
+          "id": "ewCAbM8Bn7jT",
+          "name": "RPS Website Preview.png",
+          "filePath": "../public/plasmic/red_panda_studios_website/images/rpsWebsitePreviewpng.png"
         }
       ],
       "indirect": false,
@@ -535,8 +541,7 @@
           "displayName": "hostless-slider",
           "componentImportPath": "react-slick"
         }
-      ],
-      "jsBundleThemes": []
+      ]
     }
   ],
   "globalVariants": {
@@ -553,6 +558,6 @@
   "nextjsConfig": {
     "pagesDir": "../pages"
   },
-  "cliVersion": "0.1.304",
-  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.304/dist/plasmic.schema.json"
+  "cliVersion": "0.1.308",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.308/dist/plasmic.schema.json"
 }

@@ -73,14 +73,6 @@ export type PlasmicNewsletter__OverridesType = {
 
 export interface DefaultNewsletterProps {}
 
-const __wrapUserFunction =
-  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
-const __wrapUserPromise =
-  globalThis.__PlasmicWrapUserPromise ??
-  (async (loc, promise) => {
-    return await promise;
-  });
-
 function useNextRouter() {
   try {
     return useRouter();
@@ -95,21 +87,20 @@ function PlasmicNewsletter__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const __nextRouter = useNextRouter();
 
-  const $ctx = ph.useDataEnv?.() || {};
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
 
   const $props = {
     ...args,
     ...variants
   };
+
+  const __nextRouter = useNextRouter();
+  const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
-  const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantszpgDFsEUbio()
@@ -196,16 +187,16 @@ function PlasmicNewsletter__RenderFunc(props: {
                 data-plasmic-override={overrides.img}
                 alt={""}
                 className={classNames(sty.img)}
-                displayHeight={"auto" as const}
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"343px" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={"100%" as const}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"343px"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
                 src={{
-                  src: "/plasmic/red_panda_media_website/images/rpsLogopng.png",
-                  fullWidth: 1266,
-                  fullHeight: 269,
+                  src: "/plasmic/red_panda_studios_website/images/rpsLogo2023Png.png",
+                  fullWidth: 2421,
+                  fullHeight: 532,
                   aspectRatio: undefined
                 }}
               />
@@ -215,33 +206,27 @@ function PlasmicNewsletter__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox___8Kreq)}
               >
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <p.PlasmicLink
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__a65K
+                  )}
+                  component={Link}
+                  href={`/`}
+                  platform={"nextjs"}
+                  title={"Home"}
+                >
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.a,
-                      sty.link__a65K
+                      projectcss.__wab_text,
+                      sty.text__ycfcF
                     )}
-                    component={Link}
-                    href={`/`}
-                    platform={"nextjs"}
-                    title={"Home" as const}
                   >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ycfcF
-                      )}
-                    >
-                      {"Home"}
-                    </div>
-                  </p.PlasmicLink>
-                ) : null}
+                    {"Home"}
+                  </div>
+                </p.PlasmicLink>
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,
@@ -251,7 +236,7 @@ function PlasmicNewsletter__RenderFunc(props: {
                   component={Link}
                   href={`/about`}
                   platform={"nextjs"}
-                  title={"About Us" as const}
+                  title={"About Us"}
                 >
                   <div
                     className={classNames(
@@ -273,7 +258,7 @@ function PlasmicNewsletter__RenderFunc(props: {
                   href={`/comics`}
                   platform={"nextjs"}
                   target={undefined}
-                  title={"Comics" as const}
+                  title={"Comics"}
                 >
                   <div
                     className={classNames(
@@ -285,33 +270,27 @@ function PlasmicNewsletter__RenderFunc(props: {
                     {"Comics"}
                   </div>
                 </p.PlasmicLink>
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <p.PlasmicLink
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__zXjr
+                  )}
+                  component={Link}
+                  href={`/newsletter`}
+                  platform={"nextjs"}
+                  title={"Newsletter"}
+                >
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.a,
-                      sty.link__zXjr
+                      projectcss.__wab_text,
+                      sty.text__r5Lic
                     )}
-                    component={Link}
-                    href={`/newsletter`}
-                    platform={"nextjs"}
-                    title={"Newsletter" as const}
                   >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__r5Lic
-                      )}
-                    >
-                      {"Newsletter"}
-                    </div>
-                  </p.PlasmicLink>
-                ) : null}
+                    {"Newsletter"}
+                  </div>
+                </p.PlasmicLink>
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,
@@ -321,7 +300,7 @@ function PlasmicNewsletter__RenderFunc(props: {
                   component={Link}
                   href={`/radio`}
                   platform={"nextjs"}
-                  title={"Newsletter" as const}
+                  title={"Newsletter"}
                 >
                   <div
                     className={classNames(
@@ -334,53 +313,49 @@ function PlasmicNewsletter__RenderFunc(props: {
                   </div>
                 </p.PlasmicLink>
               </p.Stack>
-              {true ? (
-                <div className={classNames(projectcss.all, sty.freeBox__oiOia)}>
-                  <button
-                    data-plasmic-name={"button"}
-                    data-plasmic-override={overrides.button}
+              <div className={classNames(projectcss.all, sty.freeBox__oiOia)}>
+                <button
+                  data-plasmic-name={"button"}
+                  data-plasmic-override={overrides.button}
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.button,
+                    projectcss.__wab_text,
+                    sty.button
+                  )}
+                >
+                  {"Sign up"}
+                </button>
+                <Button2
+                  data-plasmic-name={"button2"}
+                  data-plasmic-override={overrides.button2}
+                  className={classNames("__wab_instance", sty.button2)}
+                  color={"clear"}
+                  endIcon={
+                    <Icon38Icon
+                      className={classNames(projectcss.all, sty.svg__mrB1)}
+                      role={"img"}
+                    />
+                  }
+                  startIcon={
+                    <ChecksvgIcon
+                      className={classNames(projectcss.all, sty.svg__c6Ame)}
+                      role={"img"}
+                    />
+                  }
+                  submitsForm={true}
+                >
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.button,
                       projectcss.__wab_text,
-                      sty.button
+                      sty.text__ehj1N
                     )}
                   >
-                    {"Sign up"}
-                  </button>
-                  {true ? (
-                    <Button2
-                      data-plasmic-name={"button2"}
-                      data-plasmic-override={overrides.button2}
-                      className={classNames("__wab_instance", sty.button2)}
-                      color={"clear" as const}
-                      endIcon={
-                        <Icon38Icon
-                          className={classNames(projectcss.all, sty.svg__mrB1)}
-                          role={"img"}
-                        />
-                      }
-                      startIcon={
-                        <ChecksvgIcon
-                          className={classNames(projectcss.all, sty.svg__c6Ame)}
-                          role={"img"}
-                        />
-                      }
-                      submitsForm={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__ehj1N
-                        )}
-                      >
-                        {"Log in"}
-                      </div>
-                    </Button2>
-                  ) : null}
-                </div>
-              ) : null}
+                    {"Log in"}
+                  </div>
+                </Button2>
+              </div>
             </p.Stack>
           </p.Stack>
           <div
@@ -388,11 +363,8 @@ function PlasmicNewsletter__RenderFunc(props: {
             data-plasmic-override={overrides.columns}
             className={classNames(projectcss.all, sty.columns)}
           >
-            {(
-              hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-            ) ? (
-              <div className={classNames(projectcss.all, sty.column__xx8Y3)} />
-            ) : null}
+            <div className={classNames(projectcss.all, sty.column__xx8Y3)} />
+
             <div className={classNames(projectcss.all, sty.column__fGjGs)}>
               <div
                 className={classNames(
@@ -435,8 +407,8 @@ function PlasmicNewsletter__RenderFunc(props: {
                 className={classNames("__wab_instance", sty.embedHtml)}
                 code={
                   hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ('<!-- Begin Mailchimp Signup Form -->\r\n<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">\r\n<style type="text/css">\r\n\t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:100%;}\r\n\t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.\r\n\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n</style>\r\n<div id="mc_embed_signup">\r\n    <form action="https://redpandamedia.us21.list-manage.com/subscribe/post?u=5a8108f71213626646884cfba&amp;id=407b9777fc&amp;f_id=0024dbe1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>\r\n        <div id="mc_embed_signup_scroll">\r\n        <h2>Subscribe</h2>\r\n        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>\r\n\t<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-FNAME">First Name </label>\r\n\t<input type="text" value="" name="FNAME" class="" id="mce-FNAME">\r\n\t<span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-LNAME">Last Name </label>\r\n\t<input type="text" value="" name="LNAME" class="" id="mce-LNAME">\r\n\t<span id="mce-LNAME-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group size1of2">\r\n\t<label for="mce-BIRTHDAY-month">Birthday </label>\r\n\t<div class="datefield">\r\n\t\t<span class="subfield monthfield">\r\n\t\t\t<input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month">\r\n\t\t</span> / \r\n\t\t<span class="subfield dayfield">\r\n\t\t\t<input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day">\r\n\t\t</span> \r\n\t\t<span class="small-meta nowrap">( mm / dd )</span>\r\n\t</div>\r\n\t<span id="mce-BIRTHDAY-HELPERTEXT" class="helper_text"></span>\r\n</div>\t<div id="mce-responses" class="clear foot">\r\n\t\t<div class="response" id="mce-error-response" style="display:none"></div>\r\n\t\t<div class="response" id="mce-success-response" style="display:none"></div>\r\n\t</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5a8108f71213626646884cfba_407b9777fc" tabindex="-1" value=""></div>\r\n        <div class="optionalParent">\r\n            <div class="clear foot">\r\n                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">\r\n                <p class="brandingLogo"><a href="http://eepurl.com/ihNcXT" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n</div>\r\n<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'FNAME\';ftypes[1]=\'text\';fnames[2]=\'LNAME\';ftypes[2]=\'text\';fnames[3]=\'ADDRESS\';ftypes[3]=\'address\';fnames[4]=\'PHONE\';ftypes[4]=\'phone\';fnames[5]=\'BIRTHDAY\';ftypes[5]=\'birthday\';}(jQuery));var $mcj = jQuery.noConflict(true);</script>\r\n<!--End mc_embed_signup-->' as const)
-                    : ('<!-- Begin Mailchimp Signup Form -->\r\n<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">\r\n<style type="text/css">\r\n\t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}\r\n\t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.\r\n\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n</style>\r\n<div id="mc_embed_signup">\r\n    <form action="https://redpandamedia.us21.list-manage.com/subscribe/post?u=5a8108f71213626646884cfba&amp;id=407b9777fc&amp;f_id=0024dbe1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>\r\n        <div id="mc_embed_signup_scroll">\r\n        <h2>Subscribe</h2>\r\n        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>\r\n\t<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-FNAME">First Name </label>\r\n\t<input type="text" value="" name="FNAME" class="" id="mce-FNAME">\r\n\t<span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-LNAME">Last Name </label>\r\n\t<input type="text" value="" name="LNAME" class="" id="mce-LNAME">\r\n\t<span id="mce-LNAME-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group size1of2">\r\n\t<label for="mce-BIRTHDAY-month">Birthday </label>\r\n\t<div class="datefield">\r\n\t\t<span class="subfield monthfield">\r\n\t\t\t<input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month">\r\n\t\t</span> / \r\n\t\t<span class="subfield dayfield">\r\n\t\t\t<input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day">\r\n\t\t</span> \r\n\t\t<span class="small-meta nowrap">( mm / dd )</span>\r\n\t</div>\r\n\t<span id="mce-BIRTHDAY-HELPERTEXT" class="helper_text"></span>\r\n</div>\t<div id="mce-responses" class="clear foot">\r\n\t\t<div class="response" id="mce-error-response" style="display:none"></div>\r\n\t\t<div class="response" id="mce-success-response" style="display:none"></div>\r\n\t</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5a8108f71213626646884cfba_407b9777fc" tabindex="-1" value=""></div>\r\n        <div class="optionalParent">\r\n            <div class="clear foot">\r\n                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">\r\n                <p class="brandingLogo"><a href="http://eepurl.com/ihNcXT" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n</div>\r\n<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'FNAME\';ftypes[1]=\'text\';fnames[2]=\'LNAME\';ftypes[2]=\'text\';fnames[3]=\'ADDRESS\';ftypes[3]=\'address\';fnames[4]=\'PHONE\';ftypes[4]=\'phone\';fnames[5]=\'BIRTHDAY\';ftypes[5]=\'birthday\';}(jQuery));var $mcj = jQuery.noConflict(true);</script>\r\n<!--End mc_embed_signup-->' as const)
+                    ? '<!-- Begin Mailchimp Signup Form -->\r\n<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">\r\n<style type="text/css">\r\n\t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:100%;}\r\n\t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.\r\n\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n</style>\r\n<div id="mc_embed_signup">\r\n    <form action="https://redpandamedia.us21.list-manage.com/subscribe/post?u=5a8108f71213626646884cfba&amp;id=407b9777fc&amp;f_id=0024dbe1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>\r\n        <div id="mc_embed_signup_scroll">\r\n        <h2>Subscribe</h2>\r\n        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>\r\n\t<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-FNAME">First Name </label>\r\n\t<input type="text" value="" name="FNAME" class="" id="mce-FNAME">\r\n\t<span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-LNAME">Last Name </label>\r\n\t<input type="text" value="" name="LNAME" class="" id="mce-LNAME">\r\n\t<span id="mce-LNAME-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group size1of2">\r\n\t<label for="mce-BIRTHDAY-month">Birthday </label>\r\n\t<div class="datefield">\r\n\t\t<span class="subfield monthfield">\r\n\t\t\t<input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month">\r\n\t\t</span> / \r\n\t\t<span class="subfield dayfield">\r\n\t\t\t<input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day">\r\n\t\t</span> \r\n\t\t<span class="small-meta nowrap">( mm / dd )</span>\r\n\t</div>\r\n\t<span id="mce-BIRTHDAY-HELPERTEXT" class="helper_text"></span>\r\n</div>\t<div id="mce-responses" class="clear foot">\r\n\t\t<div class="response" id="mce-error-response" style="display:none"></div>\r\n\t\t<div class="response" id="mce-success-response" style="display:none"></div>\r\n\t</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5a8108f71213626646884cfba_407b9777fc" tabindex="-1" value=""></div>\r\n        <div class="optionalParent">\r\n            <div class="clear foot">\r\n                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">\r\n                <p class="brandingLogo"><a href="http://eepurl.com/ihNcXT" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n</div>\r\n<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'FNAME\';ftypes[1]=\'text\';fnames[2]=\'LNAME\';ftypes[2]=\'text\';fnames[3]=\'ADDRESS\';ftypes[3]=\'address\';fnames[4]=\'PHONE\';ftypes[4]=\'phone\';fnames[5]=\'BIRTHDAY\';ftypes[5]=\'birthday\';}(jQuery));var $mcj = jQuery.noConflict(true);</script>\r\n<!--End mc_embed_signup-->'
+                    : '<!-- Begin Mailchimp Signup Form -->\r\n<link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">\r\n<style type="text/css">\r\n\t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}\r\n\t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.\r\n\t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */\r\n</style>\r\n<div id="mc_embed_signup">\r\n    <form action="https://redpandamedia.us21.list-manage.com/subscribe/post?u=5a8108f71213626646884cfba&amp;id=407b9777fc&amp;f_id=0024dbe1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>\r\n        <div id="mc_embed_signup_scroll">\r\n        <h2>Subscribe</h2>\r\n        <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>\r\n</label>\r\n\t<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>\r\n\t<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-FNAME">First Name </label>\r\n\t<input type="text" value="" name="FNAME" class="" id="mce-FNAME">\r\n\t<span id="mce-FNAME-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group">\r\n\t<label for="mce-LNAME">Last Name </label>\r\n\t<input type="text" value="" name="LNAME" class="" id="mce-LNAME">\r\n\t<span id="mce-LNAME-HELPERTEXT" class="helper_text"></span>\r\n</div>\r\n<div class="mc-field-group size1of2">\r\n\t<label for="mce-BIRTHDAY-month">Birthday </label>\r\n\t<div class="datefield">\r\n\t\t<span class="subfield monthfield">\r\n\t\t\t<input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="MM" size="2" maxlength="2" name="BIRTHDAY[month]" id="mce-BIRTHDAY-month">\r\n\t\t</span> / \r\n\t\t<span class="subfield dayfield">\r\n\t\t\t<input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day">\r\n\t\t</span> \r\n\t\t<span class="small-meta nowrap">( mm / dd )</span>\r\n\t</div>\r\n\t<span id="mce-BIRTHDAY-HELPERTEXT" class="helper_text"></span>\r\n</div>\t<div id="mce-responses" class="clear foot">\r\n\t\t<div class="response" id="mce-error-response" style="display:none"></div>\r\n\t\t<div class="response" id="mce-success-response" style="display:none"></div>\r\n\t</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->\r\n    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5a8108f71213626646884cfba_407b9777fc" tabindex="-1" value=""></div>\r\n        <div class="optionalParent">\r\n            <div class="clear foot">\r\n                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">\r\n                <p class="brandingLogo"><a href="http://eepurl.com/ihNcXT" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n</div>\r\n<script type=\'text/javascript\' src=\'//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js\'></script><script type=\'text/javascript\'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=\'EMAIL\';ftypes[0]=\'email\';fnames[1]=\'FNAME\';ftypes[1]=\'text\';fnames[2]=\'LNAME\';ftypes[2]=\'text\';fnames[3]=\'ADDRESS\';ftypes[3]=\'address\';fnames[4]=\'PHONE\';ftypes[4]=\'phone\';fnames[5]=\'BIRTHDAY\';ftypes[5]=\'birthday\';}(jQuery));var $mcj = jQuery.noConflict(true);</script>\r\n<!--End mc_embed_signup-->'
                 }
               />
             </div>
@@ -557,10 +529,10 @@ export const PlasmicNewsletter = Object.assign(
     pageMetadata: {
       title: "Newsletter🐾",
       description:
-        "~Red Panda Media~\nGames, Music, Comics\nDigital Artist Collective",
+        "~Red Panda Studios~\nGames, Music, Comics\nDigital Artist Collective",
       ogImageSrc:
-        "https://site-assets.plasmic.app/d58a47bfe90ae5acd650ca29bcce987f.png",
-      canonical: "https://redpandamedia.net/newsletter/"
+        "https://site-assets.plasmic.app/a2c33f01c1400c74a999e4a32898279d.png",
+      canonical: "https://redpandastudios.net/newsletter/"
     }
   }
 );

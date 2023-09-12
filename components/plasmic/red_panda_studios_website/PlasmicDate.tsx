@@ -64,14 +64,6 @@ export type PlasmicDate__OverridesType = {
 
 export interface DefaultDateProps {}
 
-const __wrapUserFunction =
-  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
-const __wrapUserPromise =
-  globalThis.__PlasmicWrapUserPromise ??
-  (async (loc, promise) => {
-    return await promise;
-  });
-
 function useNextRouter() {
   try {
     return useRouter();
@@ -86,21 +78,20 @@ function PlasmicDate__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const __nextRouter = useNextRouter();
 
-  const $ctx = ph.useDataEnv?.() || {};
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
 
   const $props = {
     ...args,
     ...variants
   };
+
+  const __nextRouter = useNextRouter();
+  const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
-  const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantszpgDFsEUbio()
@@ -130,140 +121,135 @@ function PlasmicDate__RenderFunc(props: {
       `}</style>
 
       <div className={projectcss.plasmic_page_wrapper}>
-        {true ? (
+        <div
+          data-plasmic-name={"root"}
+          data-plasmic-override={overrides.root}
+          data-plasmic-root={true}
+          data-plasmic-for-node={forNode}
+          className={classNames(
+            projectcss.all,
+            projectcss.root_reset,
+            projectcss.plasmic_default_styles,
+            projectcss.plasmic_mixins,
+            projectcss.plasmic_tokens,
+            sty.root
+          )}
+        >
           <div
-            data-plasmic-name={"root"}
-            data-plasmic-override={overrides.root}
-            data-plasmic-root={true}
-            data-plasmic-for-node={forNode}
-            className={classNames(
-              projectcss.all,
-              projectcss.root_reset,
-              projectcss.plasmic_default_styles,
-              projectcss.plasmic_mixins,
-              projectcss.plasmic_tokens,
-              sty.root
-            )}
+            data-plasmic-name={"freeBox"}
+            data-plasmic-override={overrides.freeBox}
+            className={classNames(projectcss.all, sty.freeBox)}
           >
-            <div
-              data-plasmic-name={"freeBox"}
-              data-plasmic-override={overrides.freeBox}
-              className={classNames(projectcss.all, sty.freeBox)}
-            >
-              <Embed
-                data-plasmic-name={"embedHtml"}
-                data-plasmic-override={overrides.embedHtml}
-                className={classNames("__wab_instance", sty.embedHtml)}
-                code={
-                  '<script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>\r\n<div class="commonninja_component pid-d12750fd-b04d-4e98-a4c4-1926d4b61802"></div>' as const
-                }
-              />
+            <Embed
+              data-plasmic-name={"embedHtml"}
+              data-plasmic-override={overrides.embedHtml}
+              className={classNames("__wab_instance", sty.embedHtml)}
+              code={
+                '<script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>\r\n<div class="commonninja_component pid-d12750fd-b04d-4e98-a4c4-1926d4b61802"></div>'
+              }
+            />
 
-              <p.PlasmicImg
-                alt={""}
-                className={classNames(sty.img__quWk)}
-                displayHeight={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ("90px" as const)
-                    : ("258px" as const)
-                }
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"100%" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ("184px" as const)
-                    : ("auto" as const)
-                }
-                loading={"lazy" as const}
-                src={{
-                  src: "/plasmic/red_panda_studios_website/images/ddsLogopng.png",
-                  fullWidth: 2075,
-                  fullHeight: 963,
-                  aspectRatio: undefined
-                }}
-              />
+            <p.PlasmicImg
+              alt={""}
+              className={classNames(sty.img__quWk)}
+              displayHeight={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "90px"
+                  : "258px"
+              }
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "184px"
+                  : "auto"
+              }
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/red_panda_studios_website/images/ddsLogopng.png",
+                fullWidth: 2075,
+                fullHeight: 963,
+                aspectRatio: undefined
+              }}
+            />
 
-              {(
-                hasVariant(globalVariants, "screen", "mobileOnly") ? true : true
-              ) ? (
-                <p.PlasmicImg
-                  alt={""}
-                  className={classNames(sty.img___2Qiqv)}
-                  displayHeight={"auto" as const}
-                  displayMaxHeight={"none" as const}
-                  displayMaxWidth={"100%" as const}
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? ("196px" as const)
-                      : ("597px" as const)
-                  }
-                  loading={"lazy" as const}
-                  src={{
-                    src: "/plasmic/red_panda_studios_website/images/datepng.png",
-                    fullWidth: 512,
-                    fullHeight: 152,
-                    aspectRatio: undefined
-                  }}
-                />
-              ) : null}
-              <p.PlasmicImg
-                alt={""}
-                className={classNames(sty.img__n5UGf)}
-                displayHeight={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ("339px" as const)
-                    : ("768px" as const)
-                }
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"100%" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ("321px" as const)
-                    : ("auto" as const)
-                }
-                loading={"lazy" as const}
-                src={{
-                  src: "/plasmic/red_panda_studios_website/images/disukoBaseAnimepng.png",
-                  fullWidth: 768,
-                  fullHeight: 768,
-                  aspectRatio: undefined
-                }}
-              />
+            <p.PlasmicImg
+              alt={""}
+              className={classNames(sty.img___2Qiqv)}
+              displayHeight={"auto"}
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "196px"
+                  : "597px"
+              }
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/red_panda_studios_website/images/datepng.png",
+                fullWidth: 512,
+                fullHeight: 152,
+                aspectRatio: undefined
+              }}
+            />
 
-              <p.PlasmicImg
-                alt={""}
-                className={classNames(sty.img__eqzuJ)}
-                displayHeight={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ("353px" as const)
-                    : ("768px" as const)
-                }
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"100%" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? ("167px" as const)
-                    : ("auto" as const)
-                }
-                loading={"lazy" as const}
-                src={{
-                  src: "/plasmic/red_panda_studios_website/images/shikuBasepng.png",
-                  fullWidth: 768,
-                  fullHeight: 768,
-                  aspectRatio: undefined
-                }}
-              />
-            </div>
+            <p.PlasmicImg
+              alt={""}
+              className={classNames(sty.img__n5UGf)}
+              displayHeight={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "339px"
+                  : "768px"
+              }
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "321px"
+                  : "auto"
+              }
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/red_panda_studios_website/images/disukoBaseAnimepng.png",
+                fullWidth: 768,
+                fullHeight: 768,
+                aspectRatio: undefined
+              }}
+            />
+
+            <p.PlasmicImg
+              alt={""}
+              className={classNames(sty.img__eqzuJ)}
+              displayHeight={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "353px"
+                  : "768px"
+              }
+              displayMaxHeight={"none"}
+              displayMaxWidth={"100%"}
+              displayMinHeight={"0"}
+              displayMinWidth={"0"}
+              displayWidth={
+                hasVariant(globalVariants, "screen", "mobileOnly")
+                  ? "167px"
+                  : "auto"
+              }
+              loading={"lazy"}
+              src={{
+                src: "/plasmic/red_panda_studios_website/images/shikuBasepng.png",
+                fullWidth: 768,
+                fullHeight: 768,
+                aspectRatio: undefined
+              }}
+            />
           </div>
-        ) : null}
+        </div>
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;

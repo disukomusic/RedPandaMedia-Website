@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=ABeeZee%3Aital%2Cwght%400%2C400%3B1%2C400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Inconsolata%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900&family=Changa%3Aital%2Cwght%400%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800&family=ABeeZee%3Aital%2Cwght%400%2C400%3B1%2C400&display=swap");
 
 .plasmic_tokens {
-  --token-OxTzNZuyK: #ffffff;
+  --token-OxTzNZuyK: #fff4f0;
   --plasmic-token-off-white: var(--token-OxTzNZuyK);
   --token-SHJKjXj3_: #22150a8a;
   --plasmic-token-dark: var(--token-SHJKjXj3_);
@@ -9,7 +9,7 @@
   --plasmic-token-darker: var(--token-Nx7DqWjWf);
   --token-aB57THyYh: Roboto;
   --plasmic-token-unnamed-style-token: var(--token-aB57THyYh);
-  --token-oKVpvPi0x: #f47d31;
+  --token-oKVpvPi0x: #f38441;
   --plasmic-token-orange: var(--token-oKVpvPi0x);
   --token-U8UwYNlel: #ffdada;
   --plasmic-token-unnamed-style-token-2: var(--token-U8UwYNlel);
@@ -17,6 +17,10 @@
   --plasmic-token-unnamed-style-token-3: var(--token-UAkQA_z-5);
   --token-LXnVtTKbY: #7c553b;
   --plasmic-token-brown: var(--token-LXnVtTKbY);
+  --token-JsBSyf2xM-P-: #fff4f0;
+  --plasmic-token-light-2023: var(--token-JsBSyf2xM-P-);
+  --token-ukAbDriWTafL: #f38441;
+  --plasmic-token-orange-2023: var(--token-ukAbDriWTafL);
 }
 
 .plasmic_tokens {

@@ -120,8 +120,8 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  color: #f47d31;
-  font-family: "Arial Rounded MT";
+  color: var(--token-ukAbDriWTafL);
+  font-family: "Changa", sans-serif;
   font-size: 24px;
   background: none;
   text-align: center;
@@ -175,11 +175,12 @@
   position: relative;
   width: 100%;
   height: auto;
-  color: #f47d31;
-  font-family: "Arial Rounded MT";
+  color: var(--token-ukAbDriWTafL);
+  font-family: "Changa", sans-serif;
   font-size: 48px;
   text-align: center;
   font-weight: 700;
+  box-shadow: none;
   min-width: 0;
   padding: 0px;
   margin: 10px;
@@ -193,7 +194,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  color: var(--token-OxTzNZuyK);
+  color: var(--token-JsBSyf2xM-P-);
   font-family: "Arial Rounded MT";
   padding-right: 0px;
   padding-bottom: 0px;
@@ -349,7 +350,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  color: #f47d31;
+  color: var(--token-ukAbDriWTafL);
   font-family: "Arial Rounded MT";
   font-size: 18px;
   font-weight: 700;
@@ -406,7 +407,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  color: #f47d31;
+  color: var(--token-oKVpvPi0x);
   font-family: "Arial Rounded MT";
   font-size: 18px;
   font-weight: 700;
@@ -528,7 +529,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  color: #f47d31;
+  color: var(--token-oKVpvPi0x);
   font-family: "Arial Rounded MT";
   font-size: 18px;
   font-weight: 700;
@@ -584,7 +585,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  color: #f47d31;
+  color: var(--token-oKVpvPi0x);
   font-family: "Arial Rounded MT";
   font-size: 18px;
   font-weight: 700;
@@ -662,8 +663,8 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  color: #f47d31;
-  font-family: "Arial Rounded MT";
+  color: var(--token-ukAbDriWTafL);
+  font-family: "Changa", sans-serif;
   font-size: 24px;
   background: none;
   text-align: center;

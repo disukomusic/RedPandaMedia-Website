@@ -207,7 +207,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   color: var(--token-OxTzNZuyK);
   min-width: 0;
 }
@@ -232,7 +232,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   color: var(--token-OxTzNZuyK);
   min-width: 0;
 }
@@ -257,7 +257,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   color: var(--token-OxTzNZuyK);
   min-width: 0;
 }
@@ -291,7 +291,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   color: var(--token-OxTzNZuyK);
   box-shadow: none;
   min-width: 0;
@@ -314,7 +314,7 @@
   position: relative;
   width: auto;
   height: auto;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   color: var(--token-OxTzNZuyK);
 }
 .freeBox__oiOia {
@@ -448,7 +448,7 @@
   max-width: 800px;
   color: var(--token-oKVpvPi0x);
   text-align: center;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   font-size: 24px;
   font-weight: 700;
   min-width: 0;

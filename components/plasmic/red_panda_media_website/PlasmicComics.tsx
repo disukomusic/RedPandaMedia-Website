@@ -72,14 +72,6 @@ export type PlasmicComics__OverridesType = {
 
 export interface DefaultComicsProps {}
 
-const __wrapUserFunction =
-  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
-const __wrapUserPromise =
-  globalThis.__PlasmicWrapUserPromise ??
-  (async (loc, promise) => {
-    return await promise;
-  });
-
 function useNextRouter() {
   try {
     return useRouter();
@@ -94,21 +86,20 @@ function PlasmicComics__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const __nextRouter = useNextRouter();
 
-  const $ctx = ph.useDataEnv?.() || {};
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
 
   const $props = {
     ...args,
     ...variants
   };
+
+  const __nextRouter = useNextRouter();
+  const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
-  const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantszpgDFsEUbio()
@@ -193,16 +184,16 @@ function PlasmicComics__RenderFunc(props: {
               <p.PlasmicImg
                 alt={""}
                 className={classNames(sty.img__isHjd)}
-                displayHeight={"auto" as const}
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"343px" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={"100%" as const}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"343px"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
                 src={{
-                  src: "/plasmic/red_panda_media_website/images/rpsLogopng.png",
-                  fullWidth: 1266,
-                  fullHeight: 269,
+                  src: "/plasmic/red_panda_studios_website/images/rpsLogo2023Png.png",
+                  fullWidth: 2421,
+                  fullHeight: 532,
                   aspectRatio: undefined
                 }}
               />
@@ -212,33 +203,27 @@ function PlasmicComics__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__f4ZPx)}
               >
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <p.PlasmicLink
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__uskl9
+                  )}
+                  component={Link}
+                  href={`/`}
+                  platform={"nextjs"}
+                  title={"Home"}
+                >
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.a,
-                      sty.link__uskl9
+                      projectcss.__wab_text,
+                      sty.text__dwrvS
                     )}
-                    component={Link}
-                    href={`/`}
-                    platform={"nextjs"}
-                    title={"Home" as const}
                   >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__dwrvS
-                      )}
-                    >
-                      {"Home"}
-                    </div>
-                  </p.PlasmicLink>
-                ) : null}
+                    {"Home"}
+                  </div>
+                </p.PlasmicLink>
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,
@@ -248,7 +233,7 @@ function PlasmicComics__RenderFunc(props: {
                   component={Link}
                   href={`/about`}
                   platform={"nextjs"}
-                  title={"About Us" as const}
+                  title={"About Us"}
                 >
                   <div
                     className={classNames(
@@ -260,34 +245,28 @@ function PlasmicComics__RenderFunc(props: {
                     {"About Us"}
                   </div>
                 </p.PlasmicLink>
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <p.PlasmicLink
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link__mzFnI
+                  )}
+                  component={Link}
+                  href={`/comics`}
+                  platform={"nextjs"}
+                  target={undefined}
+                  title={"Comics"}
+                >
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.a,
-                      sty.link__mzFnI
+                      projectcss.__wab_text,
+                      sty.text__wtgCc
                     )}
-                    component={Link}
-                    href={`/comics`}
-                    platform={"nextjs"}
-                    target={undefined}
-                    title={"Comics" as const}
                   >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__wtgCc
-                      )}
-                    >
-                      {"Comics"}
-                    </div>
-                  </p.PlasmicLink>
-                ) : null}
+                    {"Comics"}
+                  </div>
+                </p.PlasmicLink>
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,
@@ -297,7 +276,7 @@ function PlasmicComics__RenderFunc(props: {
                   component={Link}
                   href={`/newsletter`}
                   platform={"nextjs"}
-                  title={"Newsletter" as const}
+                  title={"Newsletter"}
                 >
                   <div
                     className={classNames(
@@ -318,7 +297,7 @@ function PlasmicComics__RenderFunc(props: {
                   component={Link}
                   href={`/radio`}
                   platform={"nextjs"}
-                  title={"Newsletter" as const}
+                  title={"Newsletter"}
                 >
                   <div
                     className={classNames(
@@ -347,40 +326,35 @@ function PlasmicComics__RenderFunc(props: {
                   >
                     {"Sign up"}
                   </button>
-                  {true ? (
-                    <Button2
-                      data-plasmic-name={"button2"}
-                      data-plasmic-override={overrides.button2}
-                      className={classNames("__wab_instance", sty.button2)}
-                      color={"clear" as const}
-                      endIcon={
-                        <Icon38Icon
-                          className={classNames(
-                            projectcss.all,
-                            sty.svg___1CeH1
-                          )}
-                          role={"img"}
-                        />
-                      }
-                      startIcon={
-                        <ChecksvgIcon
-                          className={classNames(projectcss.all, sty.svg__zZwnl)}
-                          role={"img"}
-                        />
-                      }
-                      submitsForm={true}
+                  <Button2
+                    data-plasmic-name={"button2"}
+                    data-plasmic-override={overrides.button2}
+                    className={classNames("__wab_instance", sty.button2)}
+                    color={"clear"}
+                    endIcon={
+                      <Icon38Icon
+                        className={classNames(projectcss.all, sty.svg___1CeH1)}
+                        role={"img"}
+                      />
+                    }
+                    startIcon={
+                      <ChecksvgIcon
+                        className={classNames(projectcss.all, sty.svg__zZwnl)}
+                        role={"img"}
+                      />
+                    }
+                    submitsForm={true}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__tm5Ss
+                      )}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__tm5Ss
-                        )}
-                      >
-                        {"Log in"}
-                      </div>
-                    </Button2>
-                  ) : null}
+                      {"Log in"}
+                    </div>
+                  </Button2>
                 </div>
               ) : null}
             </p.Stack>
@@ -388,21 +362,21 @@ function PlasmicComics__RenderFunc(props: {
           <p.PlasmicImg
             alt={""}
             className={classNames(sty.img__whvpZ)}
-            displayHeight={"153px" as const}
-            displayMaxHeight={"none" as const}
+            displayHeight={"153px"}
+            displayMaxHeight={"none"}
             displayMaxWidth={
               hasVariant(globalVariants, "screen", "mobileOnly")
-                ? ("80%" as const)
-                : ("100%" as const)
+                ? "80%"
+                : "100%"
             }
-            displayMinHeight={"0" as const}
-            displayMinWidth={"0" as const}
+            displayMinHeight={"0"}
+            displayMinWidth={"0"}
             displayWidth={
               hasVariant(globalVariants, "screen", "mobileOnly")
-                ? ("100%" as const)
-                : ("auto" as const)
+                ? "100%"
+                : "auto"
             }
-            loading={"lazy" as const}
+            loading={"lazy"}
             src={{
               src: "/plasmic/red_panda_media_website/images/terriversepng.png",
               fullWidth: 882,
@@ -416,7 +390,7 @@ function PlasmicComics__RenderFunc(props: {
             data-plasmic-override={overrides.reveal}
             cascade={false}
             className={classNames("__wab_instance", sty.reveal)}
-            effect={"jackinthebox" as const}
+            effect={"jackinthebox"}
             reverse={false}
             triggerOnce={true}
           >
@@ -433,24 +407,24 @@ function PlasmicComics__RenderFunc(props: {
                   sty.link___7SBSq
                 )}
                 component={Link}
-                href={"https://terriverse.com" as const}
+                href={"https://terriverse.com"}
                 platform={"nextjs"}
-                target={"_blank" as const}
+                target={"_blank"}
               >
                 <p.PlasmicImg
                   alt={""}
                   className={classNames(sty.img__skKQr)}
-                  displayHeight={"auto" as const}
-                  displayMaxHeight={"none" as const}
+                  displayHeight={"auto"}
+                  displayMaxHeight={"none"}
                   displayMaxWidth={
                     hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? ("90%" as const)
-                      : ("100%" as const)
+                      ? "90%"
+                      : "100%"
                   }
-                  displayMinHeight={"0" as const}
-                  displayMinWidth={"0" as const}
-                  displayWidth={"478px" as const}
-                  loading={"eager" as const}
+                  displayMinHeight={"0"}
+                  displayMinWidth={"0"}
+                  displayWidth={"478px"}
+                  loading={"eager"}
                   src={{
                     src: "/plasmic/red_panda_media_website/images/comicBookpng2.png",
                     fullWidth: 853,
@@ -561,10 +535,10 @@ export const PlasmicComics = Object.assign(
     pageMetadata: {
       title: "Comics🐾",
       description:
-        "~Red Panda Media~\nGames, Music, Comics\nDigital Artist Collective",
+        "~Red Panda Studios~\nGames, Music, Comics\nDigital Artist Collective",
       ogImageSrc:
-        "https://site-assets.plasmic.app/d58a47bfe90ae5acd650ca29bcce987f.png",
-      canonical: "https://redpandamedia.net/comics/"
+        "https://site-assets.plasmic.app/a2c33f01c1400c74a999e4a32898279d.png",
+      canonical: "https://redpandastudios.net/comics/"
     }
   }
 );

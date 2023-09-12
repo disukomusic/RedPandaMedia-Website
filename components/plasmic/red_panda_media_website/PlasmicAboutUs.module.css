@@ -211,7 +211,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   color: var(--token-OxTzNZuyK);
   min-width: 0;
 }
@@ -243,7 +243,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   color: var(--token-OxTzNZuyK);
   min-width: 0;
 }
@@ -268,7 +268,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   color: var(--token-OxTzNZuyK);
   min-width: 0;
 }
@@ -293,7 +293,7 @@
   width: 100%;
   height: auto;
   max-width: 800px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   color: var(--token-OxTzNZuyK);
   min-width: 0;
 }
@@ -315,7 +315,7 @@
   position: relative;
   width: auto;
   height: auto;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   color: var(--token-OxTzNZuyK);
 }
 .freeBox__bRpKk {
@@ -724,11 +724,12 @@
   max-width: 800px;
   color: var(--token-OxTzNZuyK);
   margin-top: 0px;
-  background: #b37b57;
+  background: #865236;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   font-size: 18px;
+  font-weight: 700;
   min-width: 0;
   padding: 10px;
 }
@@ -833,6 +834,9 @@
   font-family: "Arial Rounded MT";
   color: var(--token-SHJKjXj3_);
   min-width: 0;
+}
+.h5__yvsFx {
+  font-family: "Changa", sans-serif;
 }
 .text__uDvTb {
   position: relative;
@@ -965,8 +969,9 @@
   background: #b37b57;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   font-size: 18px;
+  font-weight: 700;
   min-width: 0;
   padding: 10px;
 }
@@ -1063,6 +1068,9 @@
   font-family: "Arial Rounded MT";
   color: var(--token-SHJKjXj3_);
   min-width: 0;
+}
+.h5__dS9Wg {
+  font-family: "Changa", sans-serif;
 }
 .text___63UzS {
   position: relative;
@@ -1195,9 +1203,10 @@
   background: #b37b57;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   font-size: 18px;
   align-self: auto;
+  font-weight: 700;
   min-width: 0;
   padding: 10px;
 }
@@ -1297,6 +1306,9 @@
   color: var(--token-SHJKjXj3_);
   padding-bottom: 0px;
   min-width: 0;
+}
+.h5__qhmoL {
+  font-family: "Changa", sans-serif;
 }
 .text__oh5Ll {
   position: relative;
@@ -1424,8 +1436,9 @@
   background: #b37b57;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   font-size: 18px;
+  font-weight: 700;
   min-width: 0;
   padding: 10px;
 }
@@ -1523,6 +1536,9 @@
   font-family: "Arial Rounded MT";
   color: var(--token-SHJKjXj3_);
   min-width: 0;
+}
+.h5__x1FCh {
+  font-family: "Changa", sans-serif;
 }
 .text__uTfE {
   position: relative;
@@ -1650,8 +1666,9 @@
   background: #b37b57;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   font-size: 18px;
+  font-weight: 700;
   min-width: 0;
   padding: 10px;
 }
@@ -1749,6 +1766,9 @@
   font-family: "Arial Rounded MT";
   color: var(--token-SHJKjXj3_);
   min-width: 0;
+}
+.h5__fWBn {
+  font-family: "Changa", sans-serif;
 }
 .text__slcZ8 {
   position: relative;
@@ -1919,8 +1939,9 @@
   padding-right: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   font-size: 18px;
+  font-weight: 700;
   min-width: 0;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -2023,6 +2044,9 @@
   font-family: "Arial Rounded MT";
   color: var(--token-SHJKjXj3_);
   min-width: 0;
+}
+.h5__natOi {
+  font-family: "Changa", sans-serif;
 }
 .text__dSxJz {
   position: relative;
@@ -2159,8 +2183,9 @@
   background: #b37b57;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   font-size: 18px;
+  font-weight: 700;
   min-width: 0;
   padding: 10px;
 }
@@ -2257,6 +2282,9 @@
   font-family: "Arial Rounded MT";
   color: var(--token-SHJKjXj3_);
   min-width: 0;
+}
+.h5__dbKH {
+  font-family: "Changa", sans-serif;
 }
 .text__oJq07 {
   position: relative;
@@ -2393,8 +2421,9 @@
   background: #b37b57;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  font-family: "Arial Rounded MT";
+  font-family: "Changa", sans-serif;
   font-size: 18px;
+  font-weight: 700;
   min-width: 0;
   padding: 10px;
 }
@@ -2491,6 +2520,9 @@
   font-family: "Arial Rounded MT";
   color: var(--token-SHJKjXj3_);
   min-width: 0;
+}
+.h5___8QJm9 {
+  font-family: "Changa", sans-serif;
 }
 .text___78XHm {
   position: relative;

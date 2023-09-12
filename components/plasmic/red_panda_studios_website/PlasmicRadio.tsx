@@ -71,14 +71,6 @@ export type PlasmicRadio__OverridesType = {
 
 export interface DefaultRadioProps {}
 
-const __wrapUserFunction =
-  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
-const __wrapUserPromise =
-  globalThis.__PlasmicWrapUserPromise ??
-  (async (loc, promise) => {
-    return await promise;
-  });
-
 function useNextRouter() {
   try {
     return useRouter();
@@ -93,21 +85,20 @@ function PlasmicRadio__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const __nextRouter = useNextRouter();
 
-  const $ctx = ph.useDataEnv?.() || {};
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
 
   const $props = {
     ...args,
     ...variants
   };
+
+  const __nextRouter = useNextRouter();
+  const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
-  const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantszpgDFsEUbio()
@@ -115,7 +106,46 @@ function PlasmicRadio__RenderFunc(props: {
 
   return (
     <React.Fragment>
-      <Head></Head>
+      <Head>
+        <meta name="twitter:card" content="summary_large_image" />
+        <title key="title">{PlasmicRadio.pageMetadata.title}</title>
+        <meta
+          key="og:title"
+          property="og:title"
+          content={PlasmicRadio.pageMetadata.title}
+        />
+        <meta
+          key="twitter:title"
+          name="twitter:title"
+          content={PlasmicRadio.pageMetadata.title}
+        />
+        <meta
+          key="description"
+          name="description"
+          content={PlasmicRadio.pageMetadata.description}
+        />
+        <meta
+          key="og:description"
+          property="og:description"
+          content={PlasmicRadio.pageMetadata.description}
+        />
+        <meta
+          key="twitter:description"
+          name="twitter:description"
+          content={PlasmicRadio.pageMetadata.description}
+        />
+        <meta
+          key="og:image"
+          property="og:image"
+          content={PlasmicRadio.pageMetadata.ogImageSrc}
+        />
+        <meta
+          key="twitter:image"
+          name="twitter:image"
+          content={PlasmicRadio.pageMetadata.ogImageSrc}
+        />
+        <link ref="canonical" href={PlasmicRadio.pageMetadata.canonical} />
+      </Head>
 
       <style>{`
         body {
@@ -155,16 +185,16 @@ function PlasmicRadio__RenderFunc(props: {
                 data-plasmic-override={overrides.img}
                 alt={""}
                 className={classNames(sty.img)}
-                displayHeight={"auto" as const}
-                displayMaxHeight={"none" as const}
-                displayMaxWidth={"343px" as const}
-                displayMinHeight={"0" as const}
-                displayMinWidth={"0" as const}
-                displayWidth={"100%" as const}
+                displayHeight={"auto"}
+                displayMaxHeight={"none"}
+                displayMaxWidth={"343px"}
+                displayMinHeight={"0"}
+                displayMinWidth={"0"}
+                displayWidth={"100%"}
                 src={{
-                  src: "/plasmic/red_panda_media_website/images/rpsLogopng.png",
-                  fullWidth: 1266,
-                  fullHeight: 269,
+                  src: "/plasmic/red_panda_studios_website/images/rpsLogo2023Png.png",
+                  fullWidth: 2421,
+                  fullHeight: 532,
                   aspectRatio: undefined
                 }}
               />
@@ -174,33 +204,27 @@ function PlasmicRadio__RenderFunc(props: {
                 hasGap={true}
                 className={classNames(projectcss.all, sty.freeBox__l6L5E)}
               >
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <p.PlasmicLink
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link___5Y8Mj
+                  )}
+                  component={Link}
+                  href={`/`}
+                  platform={"nextjs"}
+                  title={"Home"}
+                >
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.a,
-                      sty.link___5Y8Mj
+                      projectcss.__wab_text,
+                      sty.text__l6LKf
                     )}
-                    component={Link}
-                    href={`/`}
-                    platform={"nextjs"}
-                    title={"Home" as const}
                   >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__l6LKf
-                      )}
-                    >
-                      {"Home"}
-                    </div>
-                  </p.PlasmicLink>
-                ) : null}
+                    {"Home"}
+                  </div>
+                </p.PlasmicLink>
                 <p.PlasmicLink
                   className={classNames(
                     projectcss.all,
@@ -210,7 +234,7 @@ function PlasmicRadio__RenderFunc(props: {
                   component={Link}
                   href={`/about`}
                   platform={"nextjs"}
-                  title={"About Us" as const}
+                  title={"About Us"}
                 >
                   <div
                     className={classNames(
@@ -232,7 +256,7 @@ function PlasmicRadio__RenderFunc(props: {
                   href={`/comics`}
                   platform={"nextjs"}
                   target={undefined}
-                  title={"Comics" as const}
+                  title={"Comics"}
                 >
                   <div
                     className={classNames(
@@ -253,7 +277,7 @@ function PlasmicRadio__RenderFunc(props: {
                   component={Link}
                   href={`/newsletter`}
                   platform={"nextjs"}
-                  title={"Newsletter" as const}
+                  title={"Newsletter"}
                 >
                   <div
                     className={classNames(
@@ -265,33 +289,27 @@ function PlasmicRadio__RenderFunc(props: {
                     {"Newsletter"}
                   </div>
                 </p.PlasmicLink>
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <p.PlasmicLink
+                <p.PlasmicLink
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.a,
+                    sty.link___2DNrp
+                  )}
+                  component={Link}
+                  href={`/radio`}
+                  platform={"nextjs"}
+                  title={"Newsletter"}
+                >
+                  <div
                     className={classNames(
                       projectcss.all,
-                      projectcss.a,
-                      sty.link___2DNrp
+                      projectcss.__wab_text,
+                      sty.text__h3UpW
                     )}
-                    component={Link}
-                    href={`/radio`}
-                    platform={"nextjs"}
-                    title={"Newsletter" as const}
                   >
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__h3UpW
-                      )}
-                    >
-                      {"Radio"}
-                    </div>
-                  </p.PlasmicLink>
-                ) : null}
+                    {"Radio"}
+                  </div>
+                </p.PlasmicLink>
               </p.Stack>
               {false ? (
                 <div className={classNames(projectcss.all, sty.freeBox__zxzH)}>
@@ -307,37 +325,35 @@ function PlasmicRadio__RenderFunc(props: {
                   >
                     {"Sign up"}
                   </button>
-                  {true ? (
-                    <Button2
-                      data-plasmic-name={"button2"}
-                      data-plasmic-override={overrides.button2}
-                      className={classNames("__wab_instance", sty.button2)}
-                      color={"clear" as const}
-                      endIcon={
-                        <Icon38Icon
-                          className={classNames(projectcss.all, sty.svg__gKvtK)}
-                          role={"img"}
-                        />
-                      }
-                      startIcon={
-                        <ChecksvgIcon
-                          className={classNames(projectcss.all, sty.svg__ibUyG)}
-                          role={"img"}
-                        />
-                      }
-                      submitsForm={true}
+                  <Button2
+                    data-plasmic-name={"button2"}
+                    data-plasmic-override={overrides.button2}
+                    className={classNames("__wab_instance", sty.button2)}
+                    color={"clear"}
+                    endIcon={
+                      <Icon38Icon
+                        className={classNames(projectcss.all, sty.svg__gKvtK)}
+                        role={"img"}
+                      />
+                    }
+                    startIcon={
+                      <ChecksvgIcon
+                        className={classNames(projectcss.all, sty.svg__ibUyG)}
+                        role={"img"}
+                      />
+                    }
+                    submitsForm={true}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__kbQbs
+                      )}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__kbQbs
-                        )}
-                      >
-                        {"Log in"}
-                      </div>
-                    </Button2>
-                  ) : null}
+                      {"Log in"}
+                    </div>
+                  </Button2>
                 </div>
               ) : null}
             </p.Stack>
@@ -347,7 +363,7 @@ function PlasmicRadio__RenderFunc(props: {
             data-plasmic-override={overrides.embedHtml}
             className={classNames("__wab_instance", sty.embedHtml)}
             code={
-              '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/WeyVK0GqBAU?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>' as const
+              '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/WeyVK0GqBAU?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
             }
           />
         </div>
@@ -448,10 +464,12 @@ export const PlasmicRadio = Object.assign(
 
     // Page metadata
     pageMetadata: {
-      title: "",
-      description: "",
-      ogImageSrc: "",
-      canonical: ""
+      title: "Radio 🐾",
+      description:
+        "~Red Panda Studios~\nGames, Music, Comics\nDigital Artist Collective",
+      ogImageSrc:
+        "https://site-assets.plasmic.app/a2c33f01c1400c74a999e4a32898279d.png",
+      canonical: "https://redpandastudios.net/radio"
     }
   }
 );

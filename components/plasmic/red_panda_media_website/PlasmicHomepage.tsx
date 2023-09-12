@@ -77,14 +77,6 @@ export type PlasmicHomepage__OverridesType = {
 
 export interface DefaultHomepageProps {}
 
-const __wrapUserFunction =
-  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
-const __wrapUserPromise =
-  globalThis.__PlasmicWrapUserPromise ??
-  (async (loc, promise) => {
-    return await promise;
-  });
-
 function useNextRouter() {
   try {
     return useRouter();
@@ -99,21 +91,20 @@ function PlasmicHomepage__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const __nextRouter = useNextRouter();
 
-  const $ctx = ph.useDataEnv?.() || {};
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
 
   const $props = {
     ...args,
     ...variants
   };
+
+  const __nextRouter = useNextRouter();
+  const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
-  const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantszpgDFsEUbio()
@@ -189,514 +180,147 @@ function PlasmicHomepage__RenderFunc(props: {
             className={classNames("__wab_instance", sty.navBar2)}
           />
 
-          {true ? (
-            <div className={classNames(projectcss.all, sty.freeBox__uKxYv)}>
-              <div className={classNames(projectcss.all, sty.columns__ic8T)}>
-                {(
-                  hasVariant(globalVariants, "screen", "mobileOnly")
-                    ? true
-                    : true
-                ) ? (
-                  <div
-                    className={classNames(projectcss.all, sty.column__s61Wh)}
-                  >
-                    {(
-                      hasVariant(globalVariants, "screen", "mobileOnly")
-                        ? true
-                        : true
-                    ) ? (
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___80AHz
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__xkr20
-                          )}
-                        >
-                          <React.Fragment>
-                            <span
-                              className={
-                                "plasmic_default__all plasmic_default__span"
-                              }
-                              style={{ color: "#F47D31" }}
-                            >
-                              {"Latest Newsletter"}
-                            </span>
-                          </React.Fragment>
-                        </div>
-                        <Embed
-                          data-plasmic-name={"embedHtml"}
-                          data-plasmic-override={overrides.embedHtml}
-                          className={classNames(
-                            "__wab_instance",
-                            sty.embedHtml
-                          )}
-                          code={
-                            '<iframe src="https://mailchi.mp/73959a8b0951/red-panda-studios-newsletter-febuary" style="border:0px #ffffff none;" name="Newsletter" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="100%" allowfullscreen></iframe>' as const
-                          }
-                        />
-
-                        {true ? (
-                          <TimelineWrapper
-                            data-plasmic-name={"timeline"}
-                            data-plasmic-override={overrides.timeline}
-                            className={classNames(
-                              "__wab_instance",
-                              sty.timeline
-                            )}
-                            theme={"dark" as const}
-                            tweetLimit={1 as const}
-                            url={"https://twitter.com/redpandamedia_" as const}
-                          />
-                        ) : null}
-                      </div>
-                    ) : null}
-                  </div>
-                ) : null}
-                <div className={classNames(projectcss.all, sty.column__pcMc6)}>
+          <div className={classNames(projectcss.all, sty.freeBox__uKxYv)}>
+            <div className={classNames(projectcss.all, sty.columns__ic8T)}>
+              <div className={classNames(projectcss.all, sty.column__s61Wh)}>
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___80AHz)}
+                >
                   <div
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text___37G9D
+                      sty.text__xkr20
                     )}
                   >
-                    <React.Fragment>
-                      <span
-                        className={"plasmic_default__all plasmic_default__span"}
-                        style={{ color: "#F47D31" }}
-                      >
-                        {"Welcome!"}
-                      </span>
-                    </React.Fragment>
+                    {"Latest Newsletter"}
                   </div>
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__oI6G
-                    )}
-                  >
-                    {
-                      "We\u2019re Red Panda Studios, an indie digital media group focusing on games, music, and more.  On this site you can check out our games and other digital content, as well as information about the members of our crew and blog posts."
+                  <Embed
+                    data-plasmic-name={"embedHtml"}
+                    data-plasmic-override={overrides.embedHtml}
+                    className={classNames("__wab_instance", sty.embedHtml)}
+                    code={
+                      '<iframe src="https://mailchi.mp/73959a8b0951/red-panda-studios-newsletter-febuary" style="border:0px #ffffff none;" name="Newsletter" scrolling="yes" frameborder="1" marginheight="0px" marginwidth="0px" height="500px" width="100%" allowfullscreen></iframe>'
                     }
-                  </div>
-                  <Reveal
-                    cascade={true}
-                    className={classNames("__wab_instance", sty.reveal__gfZv)}
-                    direction={"up" as const}
-                    effect={"bounce" as const}
-                    triggerOnce={true}
+                  />
+
+                  <TimelineWrapper
+                    data-plasmic-name={"timeline"}
+                    data-plasmic-override={overrides.timeline}
+                    className={classNames("__wab_instance", sty.timeline)}
+                    theme={"dark"}
+                    tweetLimit={1}
+                    url={"https://twitter.com/redpandamedia_"}
+                  />
+                </div>
+              </div>
+              <div className={classNames(projectcss.all, sty.column__pcMc6)}>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___37G9D
+                  )}
+                >
+                  {"Welcome!"}
+                </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__oI6G
+                  )}
+                >
+                  {
+                    "We\u2019re Red Panda Studios, an indie digital media group focusing on games, music, and more.  On this site you can check out our games and other digital content, as well as information about the members of our crew and blog posts."
+                  }
+                </div>
+                <Reveal
+                  cascade={true}
+                  className={classNames("__wab_instance", sty.reveal__gfZv)}
+                  direction={"up"}
+                  effect={"bounce"}
+                  triggerOnce={true}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox___2TLeu)}
                   >
                     <div
                       className={classNames(
                         projectcss.all,
-                        sty.freeBox___2TLeu
+                        projectcss.__wab_text,
+                        sty.text__tRrBj
                       )}
                     >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__tRrBj
-                        )}
-                      >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "#F47D31" }}
-                          >
-                            {"In Development"}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                      <p.Stack
-                        as={"div"}
-                        hasGap={true}
-                        className={classNames(
-                          projectcss.all,
-                          sty.columns__f6WLu
-                        )}
-                      >
-                        <div
-                          data-plasmic-name={"disukoDatingSim"}
-                          data-plasmic-override={overrides.disukoDatingSim}
-                          className={classNames(
-                            projectcss.all,
-                            sty.disukoDatingSim
-                          )}
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#F47D31" }}
                         >
-                          <Tilt
-                            className={classNames(
-                              "__wab_instance",
-                              sty.tilt__rl9Eo
-                            )}
-                            glareEnable={false}
-                            tiltMaxAngleX={20 as const}
-                            tiltMaxAngleY={20 as const}
-                            tiltReverse={true}
-                          >
-                            <p.PlasmicLink
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                sty.link__vzKUg
-                              )}
-                              component={Link}
-                              href={
-                                "https://www.youtube.com/watch?v=fgJZq3t5ewI" as const
-                              }
-                              platform={"nextjs"}
-                              target={"_blank" as const}
-                            >
-                              <p.PlasmicImg
-                                alt={""}
-                                className={classNames(sty.img__nlcyl)}
-                                displayHeight={"auto" as const}
-                                displayMaxHeight={"none" as const}
-                                displayMaxWidth={"100%" as const}
-                                displayMinHeight={"0" as const}
-                                displayMinWidth={"0" as const}
-                                displayWidth={"auto" as const}
-                                loading={"lazy" as const}
-                                src={{
-                                  src: "/plasmic/red_panda_studios_website/images/ddsLogopng.png",
-                                  fullWidth: 2075,
-                                  fullHeight: 963,
-                                  aspectRatio: undefined
-                                }}
-                              />
-                            </p.PlasmicLink>
-                          </Tilt>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___0GclI
-                            )}
-                          >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "#F47D31" }}
-                              >
-                                {"Disuko Dating Simulator"}
-                              </span>
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__s6Icj
-                            )}
-                          >
-                            {
-                              "Join Disuko for a visual novel adventure filled with music, humor, and romance! Coming soon."
-                            }
-                          </div>
-                        </div>
-                        <div
-                          data-plasmic-name={"grooveMachines"}
-                          data-plasmic-override={overrides.grooveMachines}
-                          className={classNames(
-                            projectcss.all,
-                            sty.grooveMachines
-                          )}
-                        >
-                          <Tilt
-                            className={classNames(
-                              "__wab_instance",
-                              sty.tilt__dJgQx
-                            )}
-                            tiltMaxAngleX={20 as const}
-                            tiltMaxAngleY={20 as const}
-                            tiltReverse={true}
-                          >
-                            <p.PlasmicLink
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                sty.link__qgoOa
-                              )}
-                              component={Link}
-                              href={
-                                "https://www.youtube.com/watch?v=0MVvdh-E7vI" as const
-                              }
-                              platform={"nextjs"}
-                              target={"_blank" as const}
-                            >
-                              <p.PlasmicImg
-                                alt={""}
-                                className={classNames(sty.img___2BJn)}
-                                displayHeight={"auto" as const}
-                                displayMaxHeight={"none" as const}
-                                displayMaxWidth={"100%" as const}
-                                displayMinHeight={"0" as const}
-                                displayMinWidth={"0" as const}
-                                displayWidth={"auto" as const}
-                                loading={"lazy" as const}
-                                src={{
-                                  src: "/plasmic/red_panda_studios_website/images/logopng.png",
-                                  fullWidth: 952,
-                                  fullHeight: 377,
-                                  aspectRatio: undefined
-                                }}
-                              />
-                            </p.PlasmicLink>
-                          </Tilt>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__jixCa
-                            )}
-                          >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "#F47D31" }}
-                              >
-                                {"Groove Machines"}
-                              </span>
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__p4Tor
-                            )}
-                          >
-                            {
-                              "Groove Machines is a card game with a twist- any card you play is powered by music! Expand your collection and battle others online with 100+ unique Machines to master your skills in rhythm and strategy."
-                            }
-                          </div>
-                        </div>
-                      </p.Stack>
+                          {"In Development"}
+                        </span>
+                      </React.Fragment>
                     </div>
-                    <div
-                      className={classNames(projectcss.all, sty.freeBox__p7T0B)}
+                    <p.Stack
+                      as={"div"}
+                      hasGap={true}
+                      className={classNames(projectcss.all, sty.columns__f6WLu)}
                     >
                       <div
+                        data-plasmic-name={"disukoDatingSim"}
+                        data-plasmic-override={overrides.disukoDatingSim}
                         className={classNames(
                           projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text___5I5Gc
+                          sty.disukoDatingSim
                         )}
                       >
-                        <React.Fragment>
-                          <span
-                            className={
-                              "plasmic_default__all plasmic_default__span"
-                            }
-                            style={{ color: "#F47D31" }}
-                          >
-                            {"Game Jam Projects"}
-                          </span>
-                        </React.Fragment>
-                      </div>
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.columns___2Gq2Z
-                        )}
-                      >
-                        <div
-                          data-plasmic-name={"microcosm2"}
-                          data-plasmic-override={overrides.microcosm2}
-                          className={classNames(projectcss.all, sty.microcosm2)}
+                        <Tilt
+                          className={classNames(
+                            "__wab_instance",
+                            sty.tilt__rl9Eo
+                          )}
+                          glareEnable={false}
+                          tiltMaxAngleX={20}
+                          tiltMaxAngleY={20}
+                          tiltReverse={true}
                         >
-                          <Tilt
-                            className={classNames(
-                              "__wab_instance",
-                              sty.tilt__lmGka
-                            )}
-                            glareEnable={false}
-                            tiltMaxAngleX={20 as const}
-                            tiltMaxAngleY={20 as const}
-                            tiltReverse={true}
-                          >
-                            <p.PlasmicLink
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                sty.link__tGeh
-                              )}
-                              component={Link}
-                              href={
-                                "https://red-panda-studios.itch.io/microcosm" as const
-                              }
-                              platform={"nextjs"}
-                              target={"_blank" as const}
-                            >
-                              <p.PlasmicImg
-                                alt={""}
-                                className={classNames(sty.img__upMtI)}
-                                displayHeight={"auto" as const}
-                                displayMaxHeight={"none" as const}
-                                displayMaxWidth={"100%" as const}
-                                displayMinHeight={"0" as const}
-                                displayMinWidth={"0" as const}
-                                displayWidth={"auto" as const}
-                                loading={"lazy" as const}
-                                src={{
-                                  src: "/plasmic/red_panda_media_website/images/image2.png",
-                                  fullWidth: 461,
-                                  fullHeight: 76,
-                                  aspectRatio: undefined
-                                }}
-                              />
-                            </p.PlasmicLink>
-                          </Tilt>
-                          <div
+                          <p.PlasmicLink
                             className={classNames(
                               projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__wFt7
+                              projectcss.a,
+                              sty.link__vzKUg
                             )}
+                            component={Link}
+                            href={"https://www.youtube.com/watch?v=fgJZq3t5ewI"}
+                            platform={"nextjs"}
+                            target={"_blank"}
                           >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "#F47D31" }}
-                              >
-                                {"Made during SHOWTIME Event"}
-                              </span>
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__lmXl2
-                            )}
-                          >
-                            {
-                              "microcosm is a Lovecraft-inspired pet simulation game. Feed, nurture, and make sacrifices to your own being of horror (and also cuteness)!"
-                            }
-                          </div>
-                        </div>
-                        <div
-                          data-plasmic-name={"eggRanger2"}
-                          data-plasmic-override={overrides.eggRanger2}
-                          className={classNames(projectcss.all, sty.eggRanger2)}
-                        >
-                          <Tilt
-                            className={classNames(
-                              "__wab_instance",
-                              sty.tilt___0ENuj
-                            )}
-                            tiltMaxAngleX={20 as const}
-                            tiltMaxAngleY={20 as const}
-                            tiltReverse={true}
-                          >
-                            <p.PlasmicLink
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.a,
-                                sty.link__cgSp
-                              )}
-                              component={Link}
-                              href={
-                                "https://www.newgrounds.com/portal/view/807191?updated=1627282135" as const
-                              }
-                              platform={"nextjs"}
-                              target={"_blank" as const}
-                            >
-                              <p.PlasmicImg
-                                alt={""}
-                                className={classNames(sty.img__u5Dc8)}
-                                displayHeight={"auto" as const}
-                                displayMaxHeight={"none" as const}
-                                displayMaxWidth={"100%" as const}
-                                displayMinHeight={"0" as const}
-                                displayMinWidth={"0" as const}
-                                displayWidth={"auto" as const}
-                                loading={"lazy" as const}
-                                src={{
-                                  src: "/plasmic/red_panda_media_website/images/image3.png",
-                                  fullWidth: 441,
-                                  fullHeight: 114,
-                                  aspectRatio: undefined
-                                }}
-                              />
-                            </p.PlasmicLink>
-                          </Tilt>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text__mY8A
-                            )}
-                          >
-                            <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
-                                }
-                                style={{ color: "#F47D31" }}
-                              >
-                                {"Made for Newgrounds Egg Jam"}
-                              </span>
-                            </React.Fragment>
-                          </div>
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.text___9Fo0Z
-                            )}
-                          >
-                            {
-                              "Egg Ranger is a top down bullet hell game. Zip through other worlds in a futuristic aircraft in search of exotic eggs! Prove your worth by shooting and weaving through waves of enemies. This omlette better be damn worth it."
-                            }
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </Reveal>
-                </div>
-                <div className={classNames(projectcss.all, sty.column___7KFxr)}>
-                  {(
-                    hasVariant(globalVariants, "screen", "mobileOnly")
-                      ? true
-                      : true
-                  ) ? (
-                    <Reveal
-                      cascade={true}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.reveal___5U8X1
-                      )}
-                      direction={"right" as const}
-                      effect={"bounce" as const}
-                      triggerOnce={true}
-                    >
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__e4Mmr
-                        )}
-                      >
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img__nlcyl)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              loading={"lazy"}
+                              src={{
+                                src: "/plasmic/red_panda_studios_website/images/ddsLogopng.png",
+                                fullWidth: 2075,
+                                fullHeight: 963,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </p.PlasmicLink>
+                        </Tilt>
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__xEmfa
+                            sty.text___0GclI
                           )}
                         >
                           <React.Fragment>
@@ -706,126 +330,416 @@ function PlasmicHomepage__RenderFunc(props: {
                               }
                               style={{ color: "#F47D31" }}
                             >
-                              {"Social Links"}
+                              {"Disuko Dating Simulator"}
                             </span>
                           </React.Fragment>
                         </div>
-                        <p.PlasmicLink
+                        <div
                           className={classNames(
                             projectcss.all,
-                            projectcss.a,
-                            sty.link___4Fhva
+                            projectcss.__wab_text,
+                            sty.text__s6Icj
                           )}
-                          component={Link}
-                          href={"https://twitter.com/RedPandaStudios" as const}
-                          platform={"nextjs"}
                         >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__xTMln
-                            )}
-                          >
-                            <IconIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg___6GMw3
-                              )}
-                              role={"img"}
-                            />
-
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__rIhZz
-                              )}
-                            >
-                              {"Twitter"}
-                            </div>
-                          </div>
-                        </p.PlasmicLink>
-                        <p.PlasmicLink
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.a,
-                            sty.link__zB4Mc
-                          )}
-                          component={Link}
-                          href={
-                            "https://www.instagram.com/redpandastudios_/" as const
+                          {
+                            "Join Disuko for a visual novel adventure filled with music, humor, and romance! Coming soon."
                           }
-                          platform={"nextjs"}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__luykD
-                            )}
-                          >
-                            <BrandInstagramsvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg___1Va8Y
-                              )}
-                              role={"img"}
-                            />
-
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__n17Yf
-                              )}
-                            >
-                              {"Instagram"}
-                            </div>
-                          </div>
-                        </p.PlasmicLink>
-                        <p.PlasmicLink
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.a,
-                            sty.link__jKmhG
-                          )}
-                          component={Link}
-                          href={
-                            "https://www.facebook.com/redpandastudio2/" as const
-                          }
-                          platform={"nextjs"}
-                        >
-                          <div
-                            className={classNames(
-                              projectcss.all,
-                              sty.freeBox__sCJ
-                            )}
-                          >
-                            <BrandFacebooksvgIcon
-                              className={classNames(
-                                projectcss.all,
-                                sty.svg__gz0We
-                              )}
-                              role={"img"}
-                            />
-
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__l99Ma
-                              )}
-                            >
-                              {"Facebook"}
-                            </div>
-                          </div>
-                        </p.PlasmicLink>
+                        </div>
                       </div>
-                    </Reveal>
-                  ) : null}
-                </div>
+                      <div
+                        data-plasmic-name={"grooveMachines"}
+                        data-plasmic-override={overrides.grooveMachines}
+                        className={classNames(
+                          projectcss.all,
+                          sty.grooveMachines
+                        )}
+                      >
+                        <Tilt
+                          className={classNames(
+                            "__wab_instance",
+                            sty.tilt__dJgQx
+                          )}
+                          tiltMaxAngleX={20}
+                          tiltMaxAngleY={20}
+                          tiltReverse={true}
+                        >
+                          <p.PlasmicLink
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              sty.link__qgoOa
+                            )}
+                            component={Link}
+                            href={"https://www.youtube.com/watch?v=0MVvdh-E7vI"}
+                            platform={"nextjs"}
+                            target={"_blank"}
+                          >
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img___2BJn)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              loading={"lazy"}
+                              src={{
+                                src: "/plasmic/red_panda_studios_website/images/logopng.png",
+                                fullWidth: 952,
+                                fullHeight: 377,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </p.PlasmicLink>
+                        </Tilt>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__jixCa
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "#F47D31" }}
+                            >
+                              {"Groove Machines"}
+                            </span>
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__p4Tor
+                          )}
+                        >
+                          {
+                            "Groove Machines is a card game with a twist- any card you play is powered by music! Expand your collection and battle others online with 100+ unique Machines to master your skills in rhythm and strategy."
+                          }
+                        </div>
+                      </div>
+                    </p.Stack>
+                  </div>
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__p7T0B)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text___5I5Gc
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#F47D31" }}
+                        >
+                          {"Game Jam Projects"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        sty.columns___2Gq2Z
+                      )}
+                    >
+                      <div
+                        data-plasmic-name={"microcosm2"}
+                        data-plasmic-override={overrides.microcosm2}
+                        className={classNames(projectcss.all, sty.microcosm2)}
+                      >
+                        <Tilt
+                          className={classNames(
+                            "__wab_instance",
+                            sty.tilt__lmGka
+                          )}
+                          glareEnable={false}
+                          tiltMaxAngleX={20}
+                          tiltMaxAngleY={20}
+                          tiltReverse={true}
+                        >
+                          <p.PlasmicLink
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              sty.link__tGeh
+                            )}
+                            component={Link}
+                            href={"https://red-panda-studios.itch.io/microcosm"}
+                            platform={"nextjs"}
+                            target={"_blank"}
+                          >
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img__upMtI)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              loading={"lazy"}
+                              src={{
+                                src: "/plasmic/red_panda_media_website/images/image2.png",
+                                fullWidth: 461,
+                                fullHeight: 76,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </p.PlasmicLink>
+                        </Tilt>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__wFt7
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "#F47D31" }}
+                            >
+                              {"Made during SHOWTIME Event"}
+                            </span>
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__lmXl2
+                          )}
+                        >
+                          {
+                            "microcosm is a Lovecraft-inspired pet simulation game. Feed, nurture, and make sacrifices to your own being of horror (and also cuteness)!"
+                          }
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"eggRanger2"}
+                        data-plasmic-override={overrides.eggRanger2}
+                        className={classNames(projectcss.all, sty.eggRanger2)}
+                      >
+                        <Tilt
+                          className={classNames(
+                            "__wab_instance",
+                            sty.tilt___0ENuj
+                          )}
+                          tiltMaxAngleX={20}
+                          tiltMaxAngleY={20}
+                          tiltReverse={true}
+                        >
+                          <p.PlasmicLink
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              sty.link__cgSp
+                            )}
+                            component={Link}
+                            href={
+                              "https://www.newgrounds.com/portal/view/807191?updated=1627282135"
+                            }
+                            platform={"nextjs"}
+                            target={"_blank"}
+                          >
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img__u5Dc8)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              loading={"lazy"}
+                              src={{
+                                src: "/plasmic/red_panda_media_website/images/image3.png",
+                                fullWidth: 441,
+                                fullHeight: 114,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </p.PlasmicLink>
+                        </Tilt>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__mY8A
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "#F47D31" }}
+                            >
+                              {"Made for Newgrounds Egg Jam"}
+                            </span>
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___9Fo0Z
+                          )}
+                        >
+                          {
+                            "Egg Ranger is a top down bullet hell game. Zip through other worlds in a futuristic aircraft in search of exotic eggs! Prove your worth by shooting and weaving through waves of enemies. This omlette better be damn worth it."
+                          }
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
+              </div>
+              <div className={classNames(projectcss.all, sty.column___7KFxr)}>
+                <Reveal
+                  cascade={true}
+                  className={classNames("__wab_instance", sty.reveal___5U8X1)}
+                  direction={"right"}
+                  effect={"bounce"}
+                  triggerOnce={true}
+                >
+                  <div
+                    className={classNames(projectcss.all, sty.freeBox__e4Mmr)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__xEmfa
+                      )}
+                    >
+                      <React.Fragment>
+                        <span
+                          className={
+                            "plasmic_default__all plasmic_default__span"
+                          }
+                          style={{ color: "#F47D31" }}
+                        >
+                          {"Social Links"}
+                        </span>
+                      </React.Fragment>
+                    </div>
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link___4Fhva
+                      )}
+                      component={Link}
+                      href={"https://twitter.com/RedPandaStudios"}
+                      platform={"nextjs"}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__xTMln
+                        )}
+                      >
+                        <IconIcon
+                          className={classNames(
+                            projectcss.all,
+                            sty.svg___6GMw3
+                          )}
+                          role={"img"}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__rIhZz
+                          )}
+                        >
+                          {"Twitter"}
+                        </div>
+                      </div>
+                    </p.PlasmicLink>
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__zB4Mc
+                      )}
+                      component={Link}
+                      href={"https://www.instagram.com/redpandastudios_/"}
+                      platform={"nextjs"}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__luykD
+                        )}
+                      >
+                        <BrandInstagramsvgIcon
+                          className={classNames(
+                            projectcss.all,
+                            sty.svg___1Va8Y
+                          )}
+                          role={"img"}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__n17Yf
+                          )}
+                        >
+                          {"Instagram"}
+                        </div>
+                      </div>
+                    </p.PlasmicLink>
+                    <p.PlasmicLink
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.a,
+                        sty.link__jKmhG
+                      )}
+                      component={Link}
+                      href={"https://www.facebook.com/redpandastudio2/"}
+                      platform={"nextjs"}
+                    >
+                      <div
+                        className={classNames(projectcss.all, sty.freeBox__sCJ)}
+                      >
+                        <BrandFacebooksvgIcon
+                          className={classNames(projectcss.all, sty.svg__gz0We)}
+                          role={"img"}
+                        />
+
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__l99Ma
+                          )}
+                        >
+                          {"Facebook"}
+                        </div>
+                      </div>
+                    </p.PlasmicLink>
+                  </div>
+                </Reveal>
               </div>
             </div>
-          ) : null}
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -943,8 +857,8 @@ export const PlasmicHomepage = Object.assign(
       description:
         "~Red Panda Studios~\nGames, Music, Comics\nDigital Artist Collective",
       ogImageSrc:
-        "https://site-assets.plasmic.app/d58a47bfe90ae5acd650ca29bcce987f.png",
-      canonical: "https://redpandamedia.net"
+        "https://site-assets.plasmic.app/a2c33f01c1400c74a999e4a32898279d.png",
+      canonical: "https://redpandastudios.net"
     }
   }
 );

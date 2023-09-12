@@ -69,14 +69,6 @@ export interface DefaultNavBarProps {
   className?: string;
 }
 
-const __wrapUserFunction =
-  globalThis.__PlasmicWrapUserFunction ?? ((loc, fn) => fn());
-const __wrapUserPromise =
-  globalThis.__PlasmicWrapUserPromise ??
-  (async (loc, promise) => {
-    return await promise;
-  });
-
 function useNextRouter() {
   try {
     return useRouter();
@@ -91,21 +83,20 @@ function PlasmicNavBar__RenderFunc(props: {
   forNode?: string;
 }) {
   const { variants, overrides, forNode } = props;
-  const __nextRouter = useNextRouter();
 
-  const $ctx = ph.useDataEnv?.() || {};
   const args = React.useMemo(() => Object.assign({}, props.args), [props.args]);
 
   const $props = {
     ...args,
     ...variants
   };
+
+  const __nextRouter = useNextRouter();
+  const $ctx = ph.useDataEnv?.() || {};
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
   const currentUser = p.useCurrentUser?.() || {};
-
-  const [$queries, setDollarQueries] = React.useState({});
 
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantszpgDFsEUbio()
@@ -138,12 +129,12 @@ function PlasmicNavBar__RenderFunc(props: {
           data-plasmic-override={overrides.img}
           alt={""}
           className={classNames(sty.img)}
-          displayHeight={"81px" as const}
-          displayMaxHeight={"none" as const}
-          displayMaxWidth={"none" as const}
-          displayMinHeight={"0" as const}
-          displayMinWidth={"0" as const}
-          displayWidth={"378px" as const}
+          displayHeight={"81px"}
+          displayMaxHeight={"none"}
+          displayMaxWidth={"none"}
+          displayMinHeight={"0"}
+          displayMinWidth={"0"}
+          displayWidth={"378px"}
           src={{
             src: "/plasmic/red_panda_media_website/images/rpmLogopng2.png",
             fullWidth: 2018,
@@ -159,7 +150,7 @@ function PlasmicNavBar__RenderFunc(props: {
         >
           <Button2
             className={classNames("__wab_instance", sty.button2___0Y5Fe)}
-            color={"clear" as const}
+            color={"clear"}
             endIcon={
               <Icon38Icon
                 className={classNames(projectcss.all, sty.svg__xKsh)}
@@ -186,7 +177,7 @@ function PlasmicNavBar__RenderFunc(props: {
           </Button2>
           <Button2
             className={classNames("__wab_instance", sty.button2__o8NDa)}
-            color={"clear" as const}
+            color={"clear"}
             endIcon={
               <Icon38Icon
                 className={classNames(projectcss.all, sty.svg___1JFSg)}
@@ -213,7 +204,7 @@ function PlasmicNavBar__RenderFunc(props: {
           </Button2>
           <Button2
             className={classNames("__wab_instance", sty.button2__x0TSj)}
-            color={"clear" as const}
+            color={"clear"}
             endIcon={
               <Icon38Icon
                 className={classNames(projectcss.all, sty.svg__k0ROz)}
@@ -240,7 +231,7 @@ function PlasmicNavBar__RenderFunc(props: {
           </Button2>
           <Button2
             className={classNames("__wab_instance", sty.button2__omIIp)}
-            color={"clear" as const}
+            color={"clear"}
             endIcon={
               <Icon38Icon
                 className={classNames(projectcss.all, sty.svg__dFsqb)}
@@ -280,35 +271,33 @@ function PlasmicNavBar__RenderFunc(props: {
             >
               {"Sign up"}
             </button>
-            {true ? (
-              <Button2
-                className={classNames("__wab_instance", sty.button2__cfqN)}
-                color={"clear" as const}
-                endIcon={
-                  <Icon38Icon
-                    className={classNames(projectcss.all, sty.svg__hsWd7)}
-                    role={"img"}
-                  />
-                }
-                startIcon={
-                  <ChecksvgIcon
-                    className={classNames(projectcss.all, sty.svg__vKyA)}
-                    role={"img"}
-                  />
-                }
-                submitsForm={true}
+            <Button2
+              className={classNames("__wab_instance", sty.button2__cfqN)}
+              color={"clear"}
+              endIcon={
+                <Icon38Icon
+                  className={classNames(projectcss.all, sty.svg__hsWd7)}
+                  role={"img"}
+                />
+              }
+              startIcon={
+                <ChecksvgIcon
+                  className={classNames(projectcss.all, sty.svg__vKyA)}
+                  role={"img"}
+                />
+              }
+              submitsForm={true}
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__cnTiE
+                )}
               >
-                <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__cnTiE
-                  )}
-                >
-                  {"Log in"}
-                </div>
-              </Button2>
-            ) : null}
+                {"Log in"}
+              </div>
+            </Button2>
           </div>
         ) : null}
       </p.Stack>

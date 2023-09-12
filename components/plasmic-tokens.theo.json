@@ -31,9 +31,19 @@
       }
     },
     {
+      "name": "Light 2023",
+      "type": "color",
+      "value": "#FFF4F0",
+      "category": "color",
+      "meta": {
+        "projectId": "nazLgTEW7V6FTXLkGvtboX",
+        "id": "JsBSyf2xM-P-"
+      }
+    },
+    {
       "name": "Off White",
       "type": "color",
-      "value": "#FFFFFF",
+      "value": "#FFF4F0",
       "category": "color",
       "meta": {
         "projectId": "nazLgTEW7V6FTXLkGvtboX",
@@ -43,11 +53,21 @@
     {
       "name": "Orange",
       "type": "color",
-      "value": "#F47D31",
+      "value": "#F38441",
       "category": "color",
       "meta": {
         "projectId": "nazLgTEW7V6FTXLkGvtboX",
         "id": "oKVpvPi0x"
+      }
+    },
+    {
+      "name": "Orange 2023",
+      "type": "color",
+      "value": "#F38441",
+      "category": "color",
+      "meta": {
+        "projectId": "nazLgTEW7V6FTXLkGvtboX",
+        "id": "ukAbDriWTafL"
       }
     },
     {
