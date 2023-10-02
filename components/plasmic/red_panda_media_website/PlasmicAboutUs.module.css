@@ -234,7 +234,6 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .link__iJk1 {
     background: none;
-    display: flex;
     border-radius: 0px;
   }
 }
@@ -438,7 +437,6 @@
 @media (min-width: 0px) and (max-width: 768px) {
   .reveal:global(.__wab_instance) {
     height: auto;
-    display: flex;
   }
 }
 .freeBox__qLKv7 {
@@ -1899,7 +1897,6 @@
     left: auto;
     top: auto;
     min-width: 0;
-    display: flex;
     margin: 0px;
   }
 }
@@ -2154,7 +2151,6 @@
     left: auto;
     top: auto;
     min-width: 0;
-    display: flex;
   }
 }
 .freeBox__kQbyF {
@@ -2391,7 +2387,6 @@
     left: auto;
     top: auto;
     min-width: 0;
-    display: flex;
     margin: 0px;
   }
 }

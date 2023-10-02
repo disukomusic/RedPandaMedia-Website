@@ -137,7 +137,7 @@ function PlasmicNavBar2__RenderFunc(props: {
           displayMinWidth={"0"}
           displayWidth={"100%"}
           src={{
-            src: "/plasmic/red_panda_studios_website/images/rpsLogo2023Png.png",
+            src: "/plasmic/red_panda_studios_website/images/rpsBranding2023Png.png",
             fullWidth: 2421,
             fullHeight: 532,
             aspectRatio: undefined
@@ -314,7 +314,7 @@ const PlasmicDescendants = {
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
-  typeof PlasmicDescendants[T][number];
+  (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   navBar: "div";
   img: typeof p.PlasmicImg;

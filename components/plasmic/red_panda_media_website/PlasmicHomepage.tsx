@@ -73,6 +73,8 @@ export type PlasmicHomepage__OverridesType = {
   grooveMachines?: p.Flex<"div">;
   microcosm2?: p.Flex<"div">;
   eggRanger2?: p.Flex<"div">;
+  frogFindignGame?: p.Flex<"div">;
+  frogFindignGame2?: p.Flex<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -604,6 +606,150 @@ function PlasmicHomepage__RenderFunc(props: {
                         </div>
                       </div>
                     </div>
+                    <div
+                      className={classNames(projectcss.all, sty.columns__c5Dtu)}
+                    >
+                      <div
+                        data-plasmic-name={"frogFindignGame"}
+                        data-plasmic-override={overrides.frogFindignGame}
+                        className={classNames(
+                          projectcss.all,
+                          sty.frogFindignGame
+                        )}
+                      >
+                        <Tilt
+                          className={classNames(
+                            "__wab_instance",
+                            sty.tilt__cshdh
+                          )}
+                          glareEnable={false}
+                          tiltMaxAngleX={20}
+                          tiltMaxAngleY={20}
+                          tiltReverse={true}
+                        >
+                          <p.PlasmicLink
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              sty.link__jy60K
+                            )}
+                            component={Link}
+                            href={
+                              "https://midnightsyntax.itch.io/tesss-cool-finding-game"
+                            }
+                            platform={"nextjs"}
+                            target={"_blank"}
+                          >
+                            <p.PlasmicImg
+                              alt={""}
+                              className={classNames(sty.img__uh8Bb)}
+                              displayHeight={"auto"}
+                              displayMaxHeight={"none"}
+                              displayMaxWidth={"100%"}
+                              displayMinHeight={"0"}
+                              displayMinWidth={"0"}
+                              displayWidth={"auto"}
+                              loading={"lazy"}
+                              src={{
+                                src: "/plasmic/red_panda_studios_website/images/tessGamepng.png",
+                                fullWidth: 289,
+                                fullHeight: 200,
+                                aspectRatio: undefined
+                              }}
+                            />
+                          </p.PlasmicLink>
+                        </Tilt>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__i4Tz
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "#F47D31" }}
+                            >
+                              {"Made for Ludum Dare 54"}
+                            </span>
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__oOl1S
+                          )}
+                        >
+                          {
+                            "Tess's cool frog finding game is a game where you move around the window to find frogs with Tess. The frogs are cool."
+                          }
+                        </div>
+                      </div>
+                      <div
+                        data-plasmic-name={"frogFindignGame2"}
+                        data-plasmic-override={overrides.frogFindignGame2}
+                        className={classNames(
+                          projectcss.all,
+                          sty.frogFindignGame2
+                        )}
+                      >
+                        <Tilt
+                          className={classNames(
+                            "__wab_instance",
+                            sty.tilt__ayM8D
+                          )}
+                          glareEnable={false}
+                          tiltMaxAngleX={20}
+                          tiltMaxAngleY={20}
+                          tiltReverse={true}
+                        >
+                          <p.PlasmicLink
+                            className={classNames(
+                              projectcss.all,
+                              projectcss.a,
+                              sty.link__w3LFc
+                            )}
+                            component={Link}
+                            href={
+                              "https://midnightsyntax.itch.io/tesss-cool-finding-game"
+                            }
+                            platform={"nextjs"}
+                            target={"_blank"}
+                          />
+                        </Tilt>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text___3Bklk
+                          )}
+                        >
+                          <React.Fragment>
+                            <span
+                              className={
+                                "plasmic_default__all plasmic_default__span"
+                              }
+                              style={{ color: "#F47D31" }}
+                            >
+                              {""}
+                            </span>
+                          </React.Fragment>
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__wi3Z
+                          )}
+                        >
+                          {""}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </Reveal>
               </div>
@@ -755,7 +901,9 @@ const PlasmicDescendants = {
     "disukoDatingSim",
     "grooveMachines",
     "microcosm2",
-    "eggRanger2"
+    "eggRanger2",
+    "frogFindignGame",
+    "frogFindignGame2"
   ],
   navBar2: ["navBar2"],
   embedHtml: ["embedHtml"],
@@ -763,11 +911,13 @@ const PlasmicDescendants = {
   disukoDatingSim: ["disukoDatingSim"],
   grooveMachines: ["grooveMachines"],
   microcosm2: ["microcosm2"],
-  eggRanger2: ["eggRanger2"]
+  eggRanger2: ["eggRanger2"],
+  frogFindignGame: ["frogFindignGame"],
+  frogFindignGame2: ["frogFindignGame2"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
-  typeof PlasmicDescendants[T][number];
+  (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
   navBar2: typeof NavBar2;
@@ -777,6 +927,8 @@ type NodeDefaultElementType = {
   grooveMachines: "div";
   microcosm2: "div";
   eggRanger2: "div";
+  frogFindignGame: "div";
+  frogFindignGame2: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -846,6 +998,8 @@ export const PlasmicHomepage = Object.assign(
     grooveMachines: makeNodeComponent("grooveMachines"),
     microcosm2: makeNodeComponent("microcosm2"),
     eggRanger2: makeNodeComponent("eggRanger2"),
+    frogFindignGame: makeNodeComponent("frogFindignGame"),
+    frogFindignGame2: makeNodeComponent("frogFindignGame2"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
